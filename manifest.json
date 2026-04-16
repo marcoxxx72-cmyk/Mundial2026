@@ -1,20 +1,41 @@
 {
   "name": "Mundial 2026 - Coupe du Monde FIFA",
   "short_name": "Mundial 2026",
-  "description": "Groupes, Pronostics, Quiz et Stars de la Coupe du Monde 2026",
+  "description": "Application Coupe du Monde FIFA 2026 - Groupes, Pronostics, Quiz, Stars. USA, Canada, Mexique.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#08091a",
   "theme_color": "#d4af37",
   "orientation": "portrait",
   "lang": "fr",
+  "scope": "/",
   "icons": [
     {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "categories": ["sports", "entertainment"]
+  "categories": ["sports", "entertainment"],
+  "shortcuts": [
+    {
+      "name": "Groupes",
+      "short_name": "Groupes",
+      "url": "/?tab=1",
+      "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]
+    },
+    {
+      "name": "Quiz",
+      "short_name": "Quiz",
+      "url": "/?tab=3",
+      "icons": [{"src": "/icon-192.png", "sizes": "192x192"}]
+    }
+  ]
 }
