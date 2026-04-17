@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
 <meta name="theme-color" content="#08091a"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-title" content="Mundial 2026"/>
-<title>Mundial 2026 ⚽</title>
+<meta name="apple-mobile-web-app-title" content="World Cup 2026"/>
+<title>World Cup 2026 ⚽</title>
   <!-- Google AdSense - remplace ca-pub-XXXXXXXX par ton ID -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-REMPLACE_TON_ID" crossorigin="anonymous"></script>
 <link rel="manifest" href="/manifest.json"/>
@@ -227,7 +227,7 @@ var POLLS_DATA = {
   ]
 };
 
-var LANGS = [{code:'fr',flag:'FR',label:'FR'},{code:'en',flag:'EN',label:'EN'},{code:'es',flag:'ES',label:'ES'},{code:'pt',flag:'PT',label:'PT'}];
+var LANGS = [{code:'en',flag:'EN',label:'EN'},{code:'fr',flag:'FR',label:'FR'},{code:'es',flag:'ES',label:'ES'},{code:'pt',flag:'PT',label:'PT'}];
 
 // ── STRIPE : cree ton lien sur dashboard.stripe.com/payment-links
 var STRIPE_LINK = 'https://buy.stripe.com/REMPLACE_TON_LIEN';
@@ -273,7 +273,7 @@ function Card(props) {
 
 function App() {
   var r1=useState(0); var tab=r1[0]; var setTab=r1[1];
-  var r2=useState('fr'); var lang=r2[0]; var setLang=r2[1];
+  var r2=useState('en'); var lang=r2[0]; var setLang=r2[1];
   var r3=useState('A'); var selGroup=r3[0]; var setSelGroup=r3[1];
   var r4=useState(false); var premium=r4[0]; var setPremium=r4[1];
   var r5=useState(false); var shareCopied=r5[0]; var setShareCopied=r5[1];
