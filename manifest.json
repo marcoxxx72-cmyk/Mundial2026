@@ -1,7 +1,7 @@
 {
   "name": "World Cup 2026",
-  "short_name": "World Cup 2026",
-  "description": "The ultimate FIFA World Cup 2026 app - Groups, Predictions, Quiz, Stars. USA, Canada, Mexico. FR | EN | ES | PT",
+  "short_name": "WC 2026",
+  "description": "The ultimate FIFA World Cup 2026 Fan App - Groups, Predictions, Quiz, Stars. EN | FR | ES | PT | IT | DE",
   "id": "com.marco72.mundial2026",
   "start_url": "/",
   "display": "standalone",
@@ -12,25 +12,25 @@
   "scope": "/",
   "icons": [
     {
-      "src": "https://wc2026app-marco.netlify.app/icon-192.png",
+      "src": "https://wc2026app.netlify.app/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://wc2026app-marco.netlify.app/icon-192.png",
+      "src": "https://wc2026app.netlify.app/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "https://wc2026app-marco.netlify.app/icon-512.png",
+      "src": "https://wc2026app.netlify.app/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://wc2026app-marco.netlify.app/icon-512.png",
+      "src": "https://wc2026app.netlify.app/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -45,11 +45,11 @@
     {
       "name": "Groups",
       "short_name": "Groups",
-      "description": "View the 12 World Cup groups",
+      "description": "View all 12 World Cup groups",
       "url": "/?tab=1",
       "icons": [
         {
-          "src": "https://wc2026app-marco.netlify.app/icon-192.png",
+          "src": "https://wc2026app.netlify.app/icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -58,11 +58,11 @@
     {
       "name": "Quiz",
       "short_name": "Quiz",
-      "description": "Play the football quiz",
+      "description": "Play the football quiz — EN | FR | ES | PT | IT | DE",
       "url": "/?tab=3",
       "icons": [
         {
-          "src": "https://wc2026app-marco.netlify.app/icon-192.png",
+          "src": "https://wc2026app.netlify.app/icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -75,7 +75,7 @@
       "url": "/?tab=2",
       "icons": [
         {
-          "src": "https://wc2026app-marco.netlify.app/icon-192.png",
+          "src": "https://wc2026app.netlify.app/icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -84,12 +84,14 @@
   ],
   "screenshots": [
     {
-      "src": "https://wc2026app-marco.netlify.app/icon-512.png",
+      "src": "https://wc2026app.netlify.app/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "World Cup 2026 App"
+      "label": "World Cup 2026 - 6 Languages"
     }
   ],
-  "dir": "ltr"
+  "dir": "ltr",
+  "iarc_rating_id": "",
+  "prefer_related_applications": false
 }
