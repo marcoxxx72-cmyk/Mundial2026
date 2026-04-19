@@ -201,20 +201,28 @@ var STRIPE_GBP = 'https://buy.stripe.com/REMPLACE_GBP';
 function getPrice(lang){return lang==='en'?'1.99 GBP':'1,99 EUR';}
 function getStripeLink(lang){return lang==='en'?STRIPE_GBP:STRIPE_EUR;}
 
-// ── FIFA CARD STYLE ──────────────────────────────────────────
+// ── FIFA CARD STYLE ── World Cup 2026 ───────────────────────
 function PlayerAvatar(props){
   var s=props.star;
-  var cardColor=s.rating>=96?'linear-gradient(135deg,#d4af37,#ff9900)':
-                s.rating>=94?'linear-gradient(135deg,#c0c0c0,#e8e8e8)':
-                s.rating>=92?'linear-gradient(135deg,#cd7f32,#e8a857)':
-                'linear-gradient(135deg,#1a3a6b,#2a5a9b)';
-  var textColor=s.rating>=92?'#0a0a1a':'#ffffff';
-  return e('div',{style:{width:64,height:84,borderRadius:10,background:cardColor,flexShrink:0,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:4,boxShadow:'0 4px 12px rgba(0,0,0,0.4)',position:'relative'}},
-    e('div',{style:{fontSize:18,fontWeight:'bold',color:textColor,lineHeight:1}},s.rating),
-    e('div',{style:{fontSize:7,color:textColor,opacity:0.8,marginBottom:3}},s.pos),
-    e('div',{style:{fontSize:16,marginBottom:2}},s.flag),
-    e('div',{style:{fontSize:7,fontWeight:'bold',color:textColor,textAlign:'center',lineHeight:1.2,maxWidth:58,overflow:'hidden'}},s.name.split(' ').pop()),
-    e('div',{style:{fontSize:6,color:textColor,opacity:0.7,marginTop:1}},s.club.substring(0,10))
+  var isGold=s.rating>=96;
+  var isSilver=s.rating>=94&&s.rating<96;
+  var isBronze=s.rating>=92&&s.rating<94;
+  var cardBg=isGold?'linear-gradient(160deg,#f5e06e,#d4af37,#b8963e)':
+             isSilver?'linear-gradient(160deg,#e8e8e8,#c0c0c0,#a8a8a8)':
+             isBronze?'linear-gradient(160deg,#e8a857,#cd7f32,#a86520)':
+             'linear-gradient(160deg,#2a5ab8,#1a3a6b,#0f2040)';
+  var textColor=isGold||isSilver||isBronze?'#0a0a1a':'#ffffff';
+  var borderColor=isGold?'rgba(255,240,100,0.8)':isSilver?'rgba(255,255,255,0.6)':isBronze?'rgba(255,180,80,0.6)':'rgba(100,150,255,0.3)';
+  var cardLabel=isGold?'GOLD WC':isSilver?'SILVER WC':isBronze?'BRONZE WC':'WORLD CUP';
+  return e('div',{style:{width:72,height:98,borderRadius:10,background:cardBg,flexShrink:0,display:'flex',flexDirection:'column',alignItems:'center',padding:'5px 4px 4px',boxShadow:'0 6px 20px rgba(0,0,0,0.6)',position:'relative',border:'2px solid '+borderColor}},
+    e('div',{style:{fontSize:6,color:textColor,opacity:0.75,letterSpacing:0.5,marginBottom:1,fontWeight:'bold'}},cardLabel),
+    e('div',{style:{fontSize:22,fontWeight:'bold',color:textColor,lineHeight:1}},s.rating),
+    e('div',{style:{fontSize:8,color:textColor,opacity:0.9,marginBottom:2,fontWeight:'bold'}},s.pos),
+    e('div',{style:{fontSize:20,marginBottom:2}},s.flag),
+    e('div',{style:{width:'80%',height:1,background:textColor,opacity:0.25,marginBottom:2}}),
+    e('div',{style:{fontSize:7,fontWeight:'bold',color:textColor,textAlign:'center',lineHeight:1.3,maxWidth:68,overflow:'hidden'}},s.name.split(' ').slice(-1)[0].toUpperCase()),
+    e('div',{style:{fontSize:6,color:textColor,opacity:0.7,marginTop:1}},s.club.substring(0,12)),
+    isGold&&e('div',{style:{position:'absolute',top:2,right:3,fontSize:9}},'★')
   );
 }
 
