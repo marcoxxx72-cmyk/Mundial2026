@@ -341,6 +341,29 @@ var STRIPE_GBP = 'https://buy.stripe.com/REMPLACE_GBP';
 function getPrice(lang){return lang==='en'?'1.99 GBP':'1,99 EUR';}
 function getStripeLink(lang){return lang==='en'?STRIPE_GBP:STRIPE_EUR;}
 
+
+var STARS = [
+  {name:'Kylian Mbappe',flag:'🇫🇷',club:'Real Madrid',pos:'FW',age:27,stat:'46 intl goals',rating:96,group:'I'},
+  {name:'Erling Haaland',flag:'🇳🇴',club:'Man. City',pos:'FW',age:25,stat:'44 intl goals',rating:95,group:'I'},
+  {name:'Vinicius Jr.',flag:'🇧🇷',club:'Real Madrid',pos:'FW',age:25,stat:'Ballon dOr nominee 2024',rating:94,group:'C'},
+  {name:'Pedri',flag:'🇪🇸',club:'FC Barcelona',pos:'MF',age:23,stat:'Euro 2024 champion',rating:93,group:'H'},
+  {name:'Jude Bellingham',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Real Madrid',pos:'MF',age:22,stat:'Best player Euro 2024',rating:93,group:'L'},
+  {name:'Harry Kane',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Bayern Munich',pos:'FW',age:32,stat:'England all-time top scorer',rating:92,group:'L'},
+  {name:'Rodri',flag:'🇪🇸',club:'Man. City',pos:'MF',age:29,stat:'Ballon dOr 2024',rating:92,group:'H'},
+  {name:'Lamine Yamal',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:18,stat:'Euro 2024 champion',rating:91,group:'H'},
+  {name:'Cristiano Ronaldo',flag:'🇵🇹',club:'Al Nassr',pos:'FW',age:41,stat:'915 career goals',rating:90,group:'K'},
+  {name:'Ruben Dias',flag:'🇵🇹',club:'Man. City',pos:'DF',age:28,stat:'Best defender PL 2021',rating:89,group:'K'},
+  {name:'Bukayo Saka',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Arsenal',pos:'FW',age:24,stat:'PFA Young Player 2024',rating:89,group:'L'},
+  {name:'Gavi',flag:'🇪🇸',club:'FC Barcelona',pos:'MF',age:21,stat:'Euro 2024 champion',rating:88,group:'H'},
+  {name:'Phil Foden',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Man. City',pos:'MF',age:26,stat:'PFA Player of Year 2024',rating:88,group:'L'},
+  {name:'Federico Valverde',flag:'🇺🇾',club:'Real Madrid',pos:'MF',age:27,stat:'Copa America 2024',rating:88,group:'H'},
+  {name:'Lionel Messi',flag:'🇦🇷',club:'Inter Miami',pos:'FW',age:39,stat:'8x Ballon dOr winner',rating:88,group:'J'},
+  {name:'Achraf Hakimi',flag:'🇲🇦',club:'PSG',pos:'DF',age:27,stat:'African Player of Year 2022',rating:87,group:'C'},
+  {name:'Marcus Thuram',flag:'🇫🇷',club:'Inter Milan',pos:'FW',age:27,stat:'Serie A champion 2024',rating:87,group:'I'},
+  {name:'Sadio Mane',flag:'🇸🇳',club:'Al Nassr',pos:'FW',age:33,stat:'AFCON winner 2022',rating:85,group:'I'},
+  {name:'Raphinha',flag:'🇧🇷',club:'FC Barcelona',pos:'FW',age:29,stat:'Champions League 2025',rating:85,group:'C'}
+];
+
 // - FIFA CARD STYLE - World Cup 2026 -
 function PlayerAvatar(props){
   var s=props.star;
@@ -590,6 +613,9 @@ function App(){
   var s20=useState(false);var fixtureMyOnly=s20[0];var setFixtureMyOnly=s20[1];
   var s21=useState(false);var showPickTeam=s21[0];var setShowPickTeam=s21[1];
 
+  var sA=useState('');var manTeam1=sA[0];var setManTeam1=sA[1];
+  var sB=useState('');var manTeam2=sB[0];var setManTeam2=sB[1];
+  var sC=useState(null);var manResult=sC[0];var setManResult=sC[1];
   var s27=useState(null);var tournament=s27[0];var setTournament=s27[1];
   // Interactive tournament state
   var s30=useState('idle');var iPhase=s30[0];var setIPhase=s30[1]; // idle|groups|r32|r16|qf|sf|final|done
@@ -601,6 +627,8 @@ function App(){
   var s29=useState('bracket');var simView=s29[0];var setSimView=s29[1];
 
   var t=T[lang];
+  var activeTeam=myTeam||defaultTeam;
+  var filteredFixtures=fixtureMyOnly?FIXTURES.filter(function(f){return f.home===activeTeam.team||f.away===activeTeam.team;}):FIXTURES;
   var questions=QUIZ[lang];
   var polls=POLLS[lang];
   var affiliates=AFFILIATES[lang];
