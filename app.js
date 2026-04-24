@@ -33,129 +33,241 @@ var GROUPS = {
   L:{teams:['England','Croatia','Ghana','Panama']}
 };
 
+
+// ── TEAM NAME TRANSLATIONS ────────────────────────────────────
+var TEAM_NAMES = {
+  en:{
+    'Mexico':'Mexico','South Africa':'South Africa','South Korea':'South Korea',
+    'Czechia':'Czechia','Canada':'Canada','Bosnia':'Bosnia & Herzegovina',
+    'Qatar':'Qatar','Switzerland':'Switzerland','Brazil':'Brazil','Morocco':'Morocco',
+    'Haiti':'Haiti','Scotland':'Scotland','USA':'USA','Paraguay':'Paraguay',
+    'Australia':'Australia','Turkey':'Turkey','Germany':'Germany','Curacao':'Curacao',
+    'Ivory Coast':'Ivory Coast','Ecuador':'Ecuador','Netherlands':'Netherlands',
+    'Japan':'Japan','Sweden':'Sweden','Tunisia':'Tunisia','Belgium':'Belgium',
+    'Egypt':'Egypt','Iran':'Iran','New Zealand':'New Zealand','Spain':'Spain',
+    'Cape Verde':'Cape Verde','Saudi Arabia':'Saudi Arabia','Uruguay':'Uruguay',
+    'France':'France','Senegal':'Senegal','Iraq':'Iraq','Norway':'Norway',
+    'Argentina':'Argentina','Algeria':'Algeria','Austria':'Austria','Jordan':'Jordan',
+    'Portugal':'Portugal','DR Congo':'DR Congo','Uzbekistan':'Uzbekistan',
+    'Colombia':'Colombia','England':'England','Croatia':'Croatia','Ghana':'Ghana',
+    'Panama':'Panama'
+  },
+  fr:{
+    'Mexico':'Mexique','South Africa':'Afrique du Sud','South Korea':'Coree du Sud',
+    'Czechia':'Republique Tcheque','Canada':'Canada','Bosnia':'Bosnie-Herzegovine',
+    'Qatar':'Qatar','Switzerland':'Suisse','Brazil':'Bresil','Morocco':'Maroc',
+    'Haiti':'Haiti','Scotland':'Ecosse','USA':'Etats-Unis','Paraguay':'Paraguay',
+    'Australia':'Australie','Turkey':'Turquie','Germany':'Allemagne','Curacao':'Curacao',
+    'Ivory Coast':'Cote d Ivoire','Ecuador':'Equateur','Netherlands':'Pays-Bas',
+    'Japan':'Japon','Sweden':'Suede','Tunisia':'Tunisie','Belgium':'Belgique',
+    'Egypt':'Egypte','Iran':'Iran','New Zealand':'Nouvelle-Zelande','Spain':'Espagne',
+    'Cape Verde':'Cap-Vert','Saudi Arabia':'Arabie Saoudite','Uruguay':'Uruguay',
+    'France':'France','Senegal':'Senegal','Iraq':'Irak','Norway':'Norvege',
+    'Argentina':'Argentine','Algeria':'Algerie','Austria':'Autriche','Jordan':'Jordanie',
+    'Portugal':'Portugal','DR Congo':'RD Congo','Uzbekistan':'Ouzbekistan',
+    'Colombia':'Colombie','England':'Angleterre','Croatia':'Croatie','Ghana':'Ghana',
+    'Panama':'Panama'
+  },
+  es:{
+    'Mexico':'Mexico','South Africa':'Sudafrica','South Korea':'Corea del Sur',
+    'Czechia':'Republica Checa','Canada':'Canada','Bosnia':'Bosnia y Herzegovina',
+    'Qatar':'Qatar','Switzerland':'Suiza','Brazil':'Brasil','Morocco':'Marruecos',
+    'Haiti':'Haiti','Scotland':'Escocia','USA':'EE.UU.','Paraguay':'Paraguay',
+    'Australia':'Australia','Turkey':'Turquia','Germany':'Alemania','Curacao':'Curacao',
+    'Ivory Coast':'Costa de Marfil','Ecuador':'Ecuador','Netherlands':'Paises Bajos',
+    'Japan':'Japon','Sweden':'Suecia','Tunisia':'Tunez','Belgium':'Belgica',
+    'Egypt':'Egipto','Iran':'Iran','New Zealand':'Nueva Zelanda','Spain':'Espana',
+    'Cape Verde':'Cabo Verde','Saudi Arabia':'Arabia Saudita','Uruguay':'Uruguay',
+    'France':'Francia','Senegal':'Senegal','Iraq':'Irak','Norway':'Noruega',
+    'Argentina':'Argentina','Algeria':'Argelia','Austria':'Austria','Jordan':'Jordania',
+    'Portugal':'Portugal','DR Congo':'R.D. Congo','Uzbekistan':'Uzbekistan',
+    'Colombia':'Colombia','England':'Inglaterra','Croatia':'Croacia','Ghana':'Ghana',
+    'Panama':'Panama'
+  },
+  pt:{
+    'Mexico':'Mexico','South Africa':'Africa do Sul','South Korea':'Coreia do Sul',
+    'Czechia':'Republica Tcheca','Canada':'Canada','Bosnia':'Bosnia e Herzegovina',
+    'Qatar':'Catar','Switzerland':'Suica','Brazil':'Brasil','Morocco':'Marrocos',
+    'Haiti':'Haiti','Scotland':'Escocia','USA':'EUA','Paraguay':'Paraguai',
+    'Australia':'Australia','Turkey':'Turquia','Germany':'Alemanha','Curacao':'Curacao',
+    'Ivory Coast':'Costa do Marfim','Ecuador':'Equador','Netherlands':'Paises Baixos',
+    'Japan':'Japao','Sweden':'Suecia','Tunisia':'Tunisia','Belgium':'Belgica',
+    'Egypt':'Egito','Iran':'Ira','New Zealand':'Nova Zelandia','Spain':'Espanha',
+    'Cape Verde':'Cabo Verde','Saudi Arabia':'Arabia Saudita','Uruguay':'Uruguai',
+    'France':'Franca','Senegal':'Senegal','Iraq':'Iraque','Norway':'Noruega',
+    'Argentina':'Argentina','Algeria':'Algeria','Austria':'Austria','Jordan':'Jordania',
+    'Portugal':'Portugal','DR Congo':'R.D. Congo','Uzbekistan':'Uzbequistao',
+    'Colombia':'Colombia','England':'Inglaterra','Croatia':'Croacia','Ghana':'Gana',
+    'Panama':'Panama'
+  },
+  it:{
+    'Mexico':'Messico','South Africa':'Sudafrica','South Korea':'Corea del Sud',
+    'Czechia':'Repubblica Ceca','Canada':'Canada','Bosnia':'Bosnia ed Erzegovina',
+    'Qatar':'Qatar','Switzerland':'Svizzera','Brazil':'Brasile','Morocco':'Marocco',
+    'Haiti':'Haiti','Scotland':'Scozia','USA':'USA','Paraguay':'Paraguay',
+    'Australia':'Australia','Turkey':'Turchia','Germany':'Germania','Curacao':'Curacao',
+    'Ivory Coast':'Costa d Avorio','Ecuador':'Ecuador','Netherlands':'Paesi Bassi',
+    'Japan':'Giappone','Sweden':'Svezia','Tunisia':'Tunisia','Belgium':'Belgio',
+    'Egypt':'Egitto','Iran':'Iran','New Zealand':'Nuova Zelanda','Spain':'Spagna',
+    'Cape Verde':'Capo Verde','Saudi Arabia':'Arabia Saudita','Uruguay':'Uruguay',
+    'France':'Francia','Senegal':'Senegal','Iraq':'Iraq','Norway':'Norvegia',
+    'Argentina':'Argentina','Algeria':'Algeria','Austria':'Austria','Jordan':'Giordania',
+    'Portugal':'Portogallo','DR Congo':'R.D. Congo','Uzbekistan':'Uzbekistan',
+    'Colombia':'Colombia','England':'Inghilterra','Croatia':'Croazia','Ghana':'Ghana',
+    'Panama':'Panama'
+  },
+  de:{
+    'Mexico':'Mexiko','South Africa':'Sudafrika','South Korea':'Sudkorea',
+    'Czechia':'Tschechien','Canada':'Kanada','Bosnia':'Bosnien-Herzegowina',
+    'Qatar':'Katar','Switzerland':'Schweiz','Brazil':'Brasilien','Morocco':'Marokko',
+    'Haiti':'Haiti','Scotland':'Schottland','USA':'USA','Paraguay':'Paraguay',
+    'Australia':'Australien','Turkey':'Turkei','Germany':'Deutschland','Curacao':'Curacao',
+    'Ivory Coast':'Elfenbeinkuste','Ecuador':'Ecuador','Netherlands':'Niederlande',
+    'Japan':'Japan','Sweden':'Schweden','Tunisia':'Tunesien','Belgium':'Belgien',
+    'Egypt':'Agypten','Iran':'Iran','New Zealand':'Neuseeland','Spain':'Spanien',
+    'Cape Verde':'Kap Verde','Saudi Arabia':'Saudi-Arabien','Uruguay':'Uruguay',
+    'France':'Frankreich','Senegal':'Senegal','Iraq':'Irak','Norway':'Norwegen',
+    'Argentina':'Argentinien','Algeria':'Algerien','Austria':'Osterreich','Jordan':'Jordanien',
+    'Portugal':'Portugal','DR Congo':'DR Kongo','Uzbekistan':'Usbekistan',
+    'Colombia':'Kolumbien','England':'England','Croatia':'Kroatien','Ghana':'Ghana',
+    'Panama':'Panama'
+  }
+};
+
+function tn(team, lang){ return (TEAM_NAMES[lang]&&TEAM_NAMES[lang][team])||team; }
+
 var ALL_TEAMS = Object.values(GROUPS).reduce(function(a,g){return a.concat(g.teams);},[]).sort();
 
 // ── FIXTURES ──────────────────────────────────────────────────
 var FIXTURES = [
-  {date:'2026-06-11',time:'19:00',home:'Mexico',away:'South Africa',group:'A',stadium:'Estadio Azteca',city:'Mexico City'},
-  {date:'2026-06-12',time:'02:00',home:'South Korea',away:'Czechia',group:'A',stadium:'Estadio Akron',city:'Guadalajara'},
-  {date:'2026-06-12',time:'19:00',home:'Canada',away:'Bosnia',group:'B',stadium:'BMO Field',city:'Toronto'},
-  {date:'2026-06-13',time:'01:00',home:'USA',away:'Paraguay',group:'D',stadium:'SoFi Stadium',city:'Los Angeles'},
-  {date:'2026-06-13',time:'19:00',home:'Qatar',away:'Switzerland',group:'B',stadium:'Levis Stadium',city:'SF Bay Area'},
-  {date:'2026-06-13',time:'22:00',home:'Brazil',away:'Morocco',group:'C',stadium:'MetLife Stadium',city:'New York'},
-  {date:'2026-06-14',time:'01:00',home:'Haiti',away:'Scotland',group:'C',stadium:'Gillette Stadium',city:'Boston'},
-  {date:'2026-06-14',time:'04:00',home:'Australia',away:'Turkey',group:'D',stadium:'BC Place',city:'Vancouver'},
-  {date:'2026-06-14',time:'17:00',home:'Germany',away:'Curacao',group:'E',stadium:'NRG Stadium',city:'Houston'},
-  {date:'2026-06-14',time:'20:00',home:'Netherlands',away:'Japan',group:'F',stadium:'AT&T Stadium',city:'Dallas'},
-  {date:'2026-06-14',time:'23:00',home:'Ivory Coast',away:'Ecuador',group:'E',stadium:'Lincoln Financial',city:'Philadelphia'},
-  {date:'2026-06-15',time:'02:00',home:'Sweden',away:'Tunisia',group:'F',stadium:'Estadio BBVA',city:'Monterrey'},
-  {date:'2026-06-15',time:'16:00',home:'Spain',away:'Cape Verde',group:'H',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
-  {date:'2026-06-15',time:'19:00',home:'Belgium',away:'Egypt',group:'G',stadium:'Lumen Field',city:'Seattle'},
-  {date:'2026-06-15',time:'22:00',home:'Saudi Arabia',away:'Uruguay',group:'H',stadium:'Hard Rock Stadium',city:'Miami'},
-  {date:'2026-06-16',time:'01:00',home:'Iran',away:'New Zealand',group:'G',stadium:'SoFi Stadium',city:'Los Angeles'},
-  {date:'2026-06-16',time:'19:00',home:'France',away:'Senegal',group:'I',stadium:'MetLife Stadium',city:'New York'},
-  {date:'2026-06-16',time:'22:00',home:'Iraq',away:'Norway',group:'I',stadium:'Gillette Stadium',city:'Boston'},
-  {date:'2026-06-17',time:'01:00',home:'Argentina',away:'Algeria',group:'J',stadium:'Arrowhead Stadium',city:'Kansas City'},
-  {date:'2026-06-17',time:'04:00',home:'Austria',away:'Jordan',group:'J',stadium:'Levis Stadium',city:'SF Bay Area'},
-  {date:'2026-06-17',time:'17:00',home:'Portugal',away:'DR Congo',group:'K',stadium:'NRG Stadium',city:'Houston'},
-  {date:'2026-06-17',time:'20:00',home:'England',away:'Croatia',group:'L',stadium:'AT&T Stadium',city:'Dallas'},
-  {date:'2026-06-17',time:'23:00',home:'Ghana',away:'Panama',group:'L',stadium:'BMO Field',city:'Toronto'},
-  {date:'2026-06-18',time:'02:00',home:'Uzbekistan',away:'Colombia',group:'K',stadium:'Estadio Azteca',city:'Mexico City'},
-  {date:'2026-06-18',time:'16:00',home:'Czechia',away:'South Africa',group:'A',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
-  {date:'2026-06-18',time:'19:00',home:'Switzerland',away:'Bosnia',group:'B',stadium:'SoFi Stadium',city:'Los Angeles'},
-  {date:'2026-06-18',time:'22:00',home:'Canada',away:'Qatar',group:'B',stadium:'BC Place',city:'Vancouver'},
-  {date:'2026-06-19',time:'01:00',home:'Mexico',away:'South Korea',group:'A',stadium:'Estadio Akron',city:'Guadalajara'},
-  {date:'2026-06-19',time:'19:00',home:'USA',away:'Australia',group:'D',stadium:'Lumen Field',city:'Seattle'},
-  {date:'2026-06-19',time:'22:00',home:'Scotland',away:'Morocco',group:'C',stadium:'Gillette Stadium',city:'Boston'},
-  {date:'2026-06-20',time:'00:30',home:'Brazil',away:'Haiti',group:'C',stadium:'Lincoln Financial',city:'Philadelphia'},
-  {date:'2026-06-20',time:'03:00',home:'Turkey',away:'Paraguay',group:'D',stadium:'Levis Stadium',city:'SF Bay Area'},
-  {date:'2026-06-20',time:'17:00',home:'Netherlands',away:'Sweden',group:'F',stadium:'NRG Stadium',city:'Houston'},
-  {date:'2026-06-20',time:'20:00',home:'Germany',away:'Ivory Coast',group:'E',stadium:'BMO Field',city:'Toronto'},
-  {date:'2026-06-21',time:'00:00',home:'Ecuador',away:'Curacao',group:'E',stadium:'Arrowhead Stadium',city:'Kansas City'},
-  {date:'2026-06-21',time:'04:00',home:'Tunisia',away:'Japan',group:'F',stadium:'Estadio BBVA',city:'Monterrey'},
-  {date:'2026-06-21',time:'16:00',home:'Spain',away:'Saudi Arabia',group:'H',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
-  {date:'2026-06-21',time:'19:00',home:'Belgium',away:'Iran',group:'G',stadium:'SoFi Stadium',city:'Los Angeles'},
-  {date:'2026-06-21',time:'22:00',home:'Uruguay',away:'Cape Verde',group:'H',stadium:'Hard Rock Stadium',city:'Miami'},
-  {date:'2026-06-22',time:'01:00',home:'New Zealand',away:'Egypt',group:'G',stadium:'BC Place',city:'Vancouver'},
-  {date:'2026-06-22',time:'17:00',home:'Argentina',away:'Austria',group:'J',stadium:'AT&T Stadium',city:'Dallas'},
-  {date:'2026-06-22',time:'21:00',home:'France',away:'Iraq',group:'I',stadium:'Lincoln Financial',city:'Philadelphia'},
-  {date:'2026-06-23',time:'00:00',home:'Norway',away:'Senegal',group:'I',stadium:'MetLife Stadium',city:'New York'},
-  {date:'2026-06-23',time:'03:00',home:'Jordan',away:'Algeria',group:'J',stadium:'Levis Stadium',city:'SF Bay Area'},
-  {date:'2026-06-23',time:'17:00',home:'Portugal',away:'Uzbekistan',group:'K',stadium:'NRG Stadium',city:'Houston'},
-  {date:'2026-06-23',time:'20:00',home:'England',away:'Ghana',group:'L',stadium:'Gillette Stadium',city:'Boston'},
-  {date:'2026-06-23',time:'23:00',home:'Panama',away:'Croatia',group:'L',stadium:'BMO Field',city:'Toronto'},
-  {date:'2026-06-24',time:'02:00',home:'Colombia',away:'DR Congo',group:'K',stadium:'Estadio Akron',city:'Guadalajara'},
-  {date:'2026-06-24',time:'19:00',home:'Switzerland',away:'Canada',group:'B',stadium:'BC Place',city:'Vancouver'},
-  {date:'2026-06-24',time:'19:00',home:'Bosnia',away:'Qatar',group:'B',stadium:'Lumen Field',city:'Seattle'},
-  {date:'2026-06-24',time:'22:00',home:'Scotland',away:'Brazil',group:'C',stadium:'Hard Rock Stadium',city:'Miami'},
-  {date:'2026-06-24',time:'22:00',home:'Morocco',away:'Haiti',group:'C',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
-  {date:'2026-06-25',time:'01:00',home:'Czechia',away:'Mexico',group:'A',stadium:'Estadio Azteca',city:'Mexico City'},
-  {date:'2026-06-25',time:'01:00',home:'South Africa',away:'South Korea',group:'A',stadium:'Estadio BBVA',city:'Monterrey'},
-  {date:'2026-06-25',time:'20:00',home:'Curacao',away:'Ivory Coast',group:'E',stadium:'Lincoln Financial',city:'Philadelphia'},
-  {date:'2026-06-25',time:'20:00',home:'Ecuador',away:'Germany',group:'E',stadium:'MetLife Stadium',city:'New York'},
-  {date:'2026-06-25',time:'23:00',home:'Japan',away:'Sweden',group:'F',stadium:'AT&T Stadium',city:'Dallas'},
-  {date:'2026-06-25',time:'23:00',home:'Tunisia',away:'Netherlands',group:'F',stadium:'Arrowhead Stadium',city:'Kansas City'},
-  {date:'2026-06-26',time:'02:00',home:'Turkey',away:'USA',group:'D',stadium:'SoFi Stadium',city:'Los Angeles'},
-  {date:'2026-06-26',time:'02:00',home:'Paraguay',away:'Australia',group:'D',stadium:'Levis Stadium',city:'SF Bay Area'},
-  {date:'2026-06-26',time:'19:00',home:'Norway',away:'France',group:'I',stadium:'Gillette Stadium',city:'Boston'},
-  {date:'2026-06-26',time:'19:00',home:'Senegal',away:'Iraq',group:'I',stadium:'BMO Field',city:'Toronto'},
+  // ── JUNE 11 ──────────────────────────────────────────────────
+  {date:'2026-06-11',time:'15:00',home:'Mexico',away:'South Africa',group:'A',stadium:'Estadio Azteca',city:'Mexico City'},
+  {date:'2026-06-11',time:'22:00',home:'South Korea',away:'Czechia',group:'A',stadium:'Estadio Akron',city:'Guadalajara'},
+  // ── JUNE 12 ──────────────────────────────────────────────────
+  {date:'2026-06-12',time:'15:00',home:'Canada',away:'Bosnia',group:'B',stadium:'BMO Field',city:'Toronto'},
+  {date:'2026-06-12',time:'21:00',home:'USA',away:'Paraguay',group:'D',stadium:'SoFi Stadium',city:'Los Angeles'},
+  // ── JUNE 13 ──────────────────────────────────────────────────
+  {date:'2026-06-13',time:'15:00',home:'Qatar',away:'Switzerland',group:'B',stadium:'Levis Stadium',city:'San Francisco'},
+  {date:'2026-06-13',time:'18:00',home:'Brazil',away:'Morocco',group:'C',stadium:'MetLife Stadium',city:'New York'},
+  {date:'2026-06-13',time:'21:00',home:'Haiti',away:'Scotland',group:'C',stadium:'Gillette Stadium',city:'Boston'},
+  {date:'2026-06-14',time:'00:00',home:'Australia',away:'Turkey',group:'D',stadium:'BC Place',city:'Vancouver'},
+  // ── JUNE 14 ──────────────────────────────────────────────────
+  {date:'2026-06-14',time:'15:00',home:'Germany',away:'Curacao',group:'E',stadium:'NRG Stadium',city:'Houston'},
+  {date:'2026-06-14',time:'18:00',home:'Netherlands',away:'Japan',group:'F',stadium:'AT&T Stadium',city:'Dallas'},
+  {date:'2026-06-14',time:'21:00',home:'Ivory Coast',away:'Ecuador',group:'E',stadium:'Lincoln Financial',city:'Philadelphia'},
+  // ── JUNE 15 ──────────────────────────────────────────────────
+  {date:'2026-06-15',time:'00:00',home:'Sweden',away:'Tunisia',group:'F',stadium:'Estadio BBVA',city:'Monterrey'},
+  {date:'2026-06-15',time:'15:00',home:'Spain',away:'Cape Verde',group:'H',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
+  {date:'2026-06-15',time:'18:00',home:'Belgium',away:'Egypt',group:'G',stadium:'Lumen Field',city:'Seattle'},
+  {date:'2026-06-15',time:'21:00',home:'Saudi Arabia',away:'Uruguay',group:'H',stadium:'Hard Rock Stadium',city:'Miami'},
+  // ── JUNE 16 ──────────────────────────────────────────────────
+  {date:'2026-06-16',time:'00:00',home:'Iran',away:'New Zealand',group:'G',stadium:'SoFi Stadium',city:'Los Angeles'},
+  {date:'2026-06-16',time:'15:00',home:'France',away:'Senegal',group:'I',stadium:'MetLife Stadium',city:'New York'},
+  {date:'2026-06-16',time:'18:00',home:'Iraq',away:'Norway',group:'I',stadium:'Gillette Stadium',city:'Boston'},
+  {date:'2026-06-16',time:'21:00',home:'Argentina',away:'Algeria',group:'J',stadium:'Arrowhead Stadium',city:'Kansas City'},
+  // ── JUNE 17 ──────────────────────────────────────────────────
+  {date:'2026-06-17',time:'00:00',home:'Austria',away:'Jordan',group:'J',stadium:'Levis Stadium',city:'San Francisco'},
+  {date:'2026-06-17',time:'15:00',home:'Portugal',away:'DR Congo',group:'K',stadium:'NRG Stadium',city:'Houston'},
+  {date:'2026-06-17',time:'18:00',home:'England',away:'Croatia',group:'L',stadium:'AT&T Stadium',city:'Dallas'},
+  {date:'2026-06-17',time:'21:00',home:'Ghana',away:'Panama',group:'L',stadium:'BMO Field',city:'Toronto'},
+  // ── JUNE 18 ──────────────────────────────────────────────────
+  {date:'2026-06-18',time:'00:00',home:'Uzbekistan',away:'Colombia',group:'K',stadium:'Estadio Azteca',city:'Mexico City'},
+  {date:'2026-06-18',time:'15:00',home:'Czechia',away:'South Africa',group:'A',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
+  {date:'2026-06-18',time:'18:00',home:'Switzerland',away:'Bosnia',group:'B',stadium:'SoFi Stadium',city:'Los Angeles'},
+  {date:'2026-06-18',time:'21:00',home:'Canada',away:'Qatar',group:'B',stadium:'BC Place',city:'Vancouver'},
+  // ── JUNE 19 ──────────────────────────────────────────────────
+  {date:'2026-06-19',time:'00:00',home:'Mexico',away:'South Korea',group:'A',stadium:'Estadio Akron',city:'Guadalajara'},
+  {date:'2026-06-19',time:'15:00',home:'USA',away:'Australia',group:'D',stadium:'Lumen Field',city:'Seattle'},
+  {date:'2026-06-19',time:'18:00',home:'Scotland',away:'Morocco',group:'C',stadium:'Gillette Stadium',city:'Boston'},
+  {date:'2026-06-19',time:'21:00',home:'Brazil',away:'Haiti',group:'C',stadium:'Lincoln Financial',city:'Philadelphia'},
+  // ── JUNE 20 ──────────────────────────────────────────────────
+  {date:'2026-06-20',time:'00:00',home:'Turkey',away:'Paraguay',group:'D',stadium:'Levis Stadium',city:'San Francisco'},
+  {date:'2026-06-20',time:'15:00',home:'Netherlands',away:'Sweden',group:'F',stadium:'NRG Stadium',city:'Houston'},
+  {date:'2026-06-20',time:'18:00',home:'Germany',away:'Ivory Coast',group:'E',stadium:'BMO Field',city:'Toronto'},
+  {date:'2026-06-20',time:'21:00',home:'Ecuador',away:'Curacao',group:'E',stadium:'Arrowhead Stadium',city:'Kansas City'},
+  // ── JUNE 21 ──────────────────────────────────────────────────
+  {date:'2026-06-21',time:'00:00',home:'Tunisia',away:'Japan',group:'F',stadium:'Estadio BBVA',city:'Monterrey'},
+  {date:'2026-06-21',time:'15:00',home:'Spain',away:'Saudi Arabia',group:'H',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
+  {date:'2026-06-21',time:'18:00',home:'Belgium',away:'Iran',group:'G',stadium:'SoFi Stadium',city:'Los Angeles'},
+  {date:'2026-06-21',time:'21:00',home:'Uruguay',away:'Cape Verde',group:'H',stadium:'Hard Rock Stadium',city:'Miami'},
+  // ── JUNE 22 ──────────────────────────────────────────────────
+  {date:'2026-06-22',time:'00:00',home:'New Zealand',away:'Egypt',group:'G',stadium:'BC Place',city:'Vancouver'},
+  {date:'2026-06-22',time:'15:00',home:'Argentina',away:'Austria',group:'J',stadium:'AT&T Stadium',city:'Dallas'},
+  {date:'2026-06-22',time:'18:00',home:'France',away:'Iraq',group:'I',stadium:'Lincoln Financial',city:'Philadelphia'},
+  {date:'2026-06-22',time:'21:00',home:'Norway',away:'Senegal',group:'I',stadium:'MetLife Stadium',city:'New York'},
+  // ── JUNE 23 ──────────────────────────────────────────────────
+  {date:'2026-06-23',time:'00:00',home:'Jordan',away:'Algeria',group:'J',stadium:'Levis Stadium',city:'San Francisco'},
+  {date:'2026-06-23',time:'15:00',home:'Portugal',away:'Uzbekistan',group:'K',stadium:'NRG Stadium',city:'Houston'},
+  {date:'2026-06-23',time:'18:00',home:'England',away:'Ghana',group:'L',stadium:'Gillette Stadium',city:'Boston'},
+  {date:'2026-06-23',time:'21:00',home:'Panama',away:'Croatia',group:'L',stadium:'BMO Field',city:'Toronto'},
+  // ── JUNE 24 ──────────────────────────────────────────────────
+  {date:'2026-06-24',time:'00:00',home:'Colombia',away:'DR Congo',group:'K',stadium:'Estadio Akron',city:'Guadalajara'},
+  {date:'2026-06-24',time:'18:00',home:'Switzerland',away:'Canada',group:'B',stadium:'BC Place',city:'Vancouver'},
+  {date:'2026-06-24',time:'18:00',home:'Bosnia',away:'Qatar',group:'B',stadium:'Lumen Field',city:'Seattle'},
+  {date:'2026-06-24',time:'21:00',home:'Scotland',away:'Brazil',group:'C',stadium:'Hard Rock Stadium',city:'Miami'},
+  {date:'2026-06-24',time:'21:00',home:'Morocco',away:'Haiti',group:'C',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
+  // ── JUNE 25 ──────────────────────────────────────────────────
+  {date:'2026-06-25',time:'00:00',home:'Czechia',away:'Mexico',group:'A',stadium:'Estadio Azteca',city:'Mexico City'},
+  {date:'2026-06-25',time:'00:00',home:'South Africa',away:'South Korea',group:'A',stadium:'Estadio BBVA',city:'Monterrey'},
+  {date:'2026-06-25',time:'18:00',home:'Curacao',away:'Ivory Coast',group:'E',stadium:'Lincoln Financial',city:'Philadelphia'},
+  {date:'2026-06-25',time:'18:00',home:'Ecuador',away:'Germany',group:'E',stadium:'MetLife Stadium',city:'New York'},
+  {date:'2026-06-25',time:'21:00',home:'Japan',away:'Sweden',group:'F',stadium:'AT&T Stadium',city:'Dallas'},
+  {date:'2026-06-25',time:'21:00',home:'Tunisia',away:'Netherlands',group:'F',stadium:'Arrowhead Stadium',city:'Kansas City'},
+  // ── JUNE 26 ──────────────────────────────────────────────────
+  {date:'2026-06-26',time:'00:00',home:'Turkey',away:'USA',group:'D',stadium:'SoFi Stadium',city:'Los Angeles'},
+  {date:'2026-06-26',time:'00:00',home:'Paraguay',away:'Australia',group:'D',stadium:'Levis Stadium',city:'San Francisco'},
+  {date:'2026-06-26',time:'18:00',home:'Norway',away:'France',group:'I',stadium:'Gillette Stadium',city:'Boston'},
+  {date:'2026-06-26',time:'18:00',home:'Senegal',away:'Iraq',group:'I',stadium:'BMO Field',city:'Toronto'},
+  // ── JUNE 27 ──────────────────────────────────────────────────
   {date:'2026-06-27',time:'00:00',home:'Cape Verde',away:'Saudi Arabia',group:'H',stadium:'NRG Stadium',city:'Houston'},
   {date:'2026-06-27',time:'00:00',home:'Uruguay',away:'Spain',group:'H',stadium:'Estadio Akron',city:'Guadalajara'},
   {date:'2026-06-27',time:'03:00',home:'Egypt',away:'Iran',group:'G',stadium:'Lumen Field',city:'Seattle'},
   {date:'2026-06-27',time:'03:00',home:'New Zealand',away:'Belgium',group:'G',stadium:'BC Place',city:'Vancouver'},
-  {date:'2026-06-27',time:'21:00',home:'Panama',away:'England',group:'L',stadium:'MetLife Stadium',city:'New York'},
-  {date:'2026-06-27',time:'21:00',home:'Croatia',away:'Ghana',group:'L',stadium:'Lincoln Financial',city:'Philadelphia'},
-  {date:'2026-06-27',time:'23:30',home:'Colombia',away:'Portugal',group:'K',stadium:'Hard Rock Stadium',city:'Miami'},
-  {date:'2026-06-27',time:'23:30',home:'DR Congo',away:'Uzbekistan',group:'K',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
-  {date:'2026-06-28',time:'02:00',home:'Algeria',away:'Austria',group:'J',stadium:'Arrowhead Stadium',city:'Kansas City'},
-  {date:'2026-06-28',time:'02:00',home:'Jordan',away:'Argentina',group:'J',stadium:'AT&T Stadium',city:'Dallas'},
-  {date:'2026-06-28',time:'19:00',home:'2nd A',away:'2nd B',group:'R32',stadium:'SoFi Stadium',city:'Los Angeles'},
-  {date:'2026-06-29',time:'17:00',home:'1st C',away:'2nd F',group:'R32',stadium:'NRG Stadium',city:'Houston'},
-  {date:'2026-06-29',time:'20:30',home:'1st E',away:'Best 3rd',group:'R32',stadium:'Gillette Stadium',city:'Boston'},
-  {date:'2026-06-30',time:'01:00',home:'1st F',away:'2nd C',group:'R32',stadium:'Estadio BBVA',city:'Monterrey'},
-  {date:'2026-06-30',time:'17:00',home:'2nd E',away:'2nd I',group:'R32',stadium:'AT&T Stadium',city:'Dallas'},
-  {date:'2026-06-30',time:'21:00',home:'1st I',away:'Best 3rd',group:'R32',stadium:'MetLife Stadium',city:'New York'},
-  {date:'2026-07-01',time:'01:00',home:'1st A',away:'Best 3rd',group:'R32',stadium:'Estadio Azteca',city:'Mexico City'},
-  {date:'2026-07-01',time:'16:00',home:'1st L',away:'Best 3rd',group:'R32',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
-  {date:'2026-07-01',time:'20:00',home:'1st D',away:'Best 3rd',group:'R32',stadium:'Levis Stadium',city:'SF Bay Area'},
-  {date:'2026-07-02',time:'00:00',home:'1st G',away:'Best 3rd',group:'R32',stadium:'Lumen Field',city:'Seattle'},
-  {date:'2026-07-02',time:'19:00',home:'2nd K',away:'2nd L',group:'R32',stadium:'BMO Field',city:'Toronto'},
-  {date:'2026-07-02',time:'20:00',home:'1st H',away:'2nd J',group:'R32',stadium:'SoFi Stadium',city:'Los Angeles'},
-  {date:'2026-07-03',time:'01:00',home:'1st B',away:'Best 3rd',group:'R32',stadium:'BC Place',city:'Vancouver'},
-  {date:'2026-07-03',time:'17:00',home:'2nd D',away:'2nd G',group:'R32',stadium:'AT&T Stadium',city:'Dallas'},
-  {date:'2026-07-03',time:'21:00',home:'1st J',away:'2nd H',group:'R32',stadium:'Hard Rock Stadium',city:'Miami'},
-  {date:'2026-07-04',time:'02:30',home:'1st K',away:'Best 3rd',group:'R32',stadium:'Arrowhead Stadium',city:'Kansas City'},
-  {date:'2026-07-07',time:'17:00',home:'QF1',away:'QF2',group:'QF',stadium:'NRG Stadium',city:'Houston'},
-  {date:'2026-07-07',time:'21:00',home:'QF3',away:'QF4',group:'QF',stadium:'MetLife Stadium',city:'New York'},
-  {date:'2026-07-08',time:'21:00',home:'QF5',away:'QF6',group:'QF',stadium:'AT&T Stadium',city:'Dallas'},
-  {date:'2026-07-09',time:'01:00',home:'QF7',away:'QF8',group:'QF',stadium:'SoFi Stadium',city:'Los Angeles'},
-  {date:'2026-07-14',time:'00:00',home:'Semi-Final 1',away:'Semi-Final 2',group:'SF',stadium:'MetLife Stadium',city:'New York'},
-  {date:'2026-07-15',time:'23:00',home:'Semi-Final 3',away:'Semi-Final 4',group:'SF',stadium:'AT&T Stadium',city:'Dallas'},
-  {date:'2026-07-18',time:'23:00',home:'3rd Place',away:'3rd Place',group:'3P',stadium:'Hard Rock Stadium',city:'Miami'},
-  {date:'2026-07-19',time:'19:00',home:'FINAL',away:'FINAL',group:'FIN',stadium:'MetLife Stadium',city:'New York'}
+  {date:'2026-06-27',time:'18:00',home:'Panama',away:'England',group:'L',stadium:'MetLife Stadium',city:'New York'},
+  {date:'2026-06-27',time:'18:00',home:'Croatia',away:'Ghana',group:'L',stadium:'Lincoln Financial',city:'Philadelphia'},
+  {date:'2026-06-27',time:'21:00',home:'Colombia',away:'Portugal',group:'K',stadium:'Hard Rock Stadium',city:'Miami'},
+  {date:'2026-06-27',time:'21:00',home:'DR Congo',away:'Uzbekistan',group:'K',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
+  // ── JUNE 28 ──────────────────────────────────────────────────
+  {date:'2026-06-28',time:'00:00',home:'Algeria',away:'Austria',group:'J',stadium:'Arrowhead Stadium',city:'Kansas City'},
+  {date:'2026-06-28',time:'00:00',home:'Jordan',away:'Argentina',group:'J',stadium:'AT&T Stadium',city:'Dallas'},
+  // ── ROUND OF 32 (June 28 - July 1) ──────────────────────────
+  {date:'2026-06-28',time:'15:00',home:'2nd A',away:'2nd B',group:'R32',stadium:'SoFi Stadium',city:'Los Angeles'},
+  {date:'2026-06-29',time:'13:00',home:'1st C',away:'2nd F',group:'R32',stadium:'NRG Stadium',city:'Houston'},
+  {date:'2026-06-29',time:'16:30',home:'1st E',away:'Best 3rd',group:'R32',stadium:'Gillette Stadium',city:'Boston'},
+  {date:'2026-06-29',time:'21:00',home:'1st F',away:'2nd C',group:'R32',stadium:'Estadio BBVA',city:'Monterrey'},
+  {date:'2026-06-30',time:'13:00',home:'2nd E',away:'2nd I',group:'R32',stadium:'AT&T Stadium',city:'Dallas'},
+  {date:'2026-06-30',time:'17:00',home:'1st I',away:'Best 3rd',group:'R32',stadium:'MetLife Stadium',city:'New York'},
+  {date:'2026-06-30',time:'21:00',home:'1st A',away:'Best 3rd',group:'R32',stadium:'Estadio Azteca',city:'Mexico City'},
+  {date:'2026-07-01',time:'12:00',home:'1st L',away:'Best 3rd',group:'R32',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
+  {date:'2026-07-01',time:'16:00',home:'1st G',away:'Best 3rd',group:'R32',stadium:'Lumen Field',city:'Seattle'},
+  {date:'2026-07-01',time:'17:00',home:'1st D',away:'Best 3rd',group:'R32',stadium:'Levis Stadium',city:'San Francisco'},
+  {date:'2026-07-02',time:'12:00',home:'2nd K',away:'2nd L',group:'R32',stadium:'BMO Field',city:'Toronto'},
+  {date:'2026-07-02',time:'14:00',home:'1st H',away:'2nd J',group:'R32',stadium:'SoFi Stadium',city:'Los Angeles'},
+  {date:'2026-07-03',time:'13:00',home:'1st B',away:'Best 3rd',group:'R32',stadium:'BC Place',city:'Vancouver'},
+  {date:'2026-07-03',time:'15:00',home:'2nd D',away:'2nd G',group:'R32',stadium:'AT&T Stadium',city:'Dallas'},
+  {date:'2026-07-03',time:'18:00',home:'1st J',away:'2nd H',group:'R32',stadium:'Hard Rock Stadium',city:'Miami'},
+  {date:'2026-07-04',time:'09:30',home:'1st K',away:'Best 3rd',group:'R32',stadium:'Arrowhead Stadium',city:'Kansas City'},
+  // ── ROUND OF 16 (July 4-7) ───────────────────────────────────
+  {date:'2026-07-04',time:'13:00',home:'R16 Match 1',away:'R16 Match 1',group:'R16',stadium:'NRG Stadium',city:'Houston'},
+  {date:'2026-07-04',time:'17:00',home:'R16 Match 2',away:'R16 Match 2',group:'R16',stadium:'Lincoln Financial',city:'Philadelphia'},
+  {date:'2026-07-05',time:'16:00',home:'R16 Match 3',away:'R16 Match 3',group:'R16',stadium:'MetLife Stadium',city:'New York'},
+  {date:'2026-07-05',time:'20:00',home:'R16 Match 4',away:'R16 Match 4',group:'R16',stadium:'Estadio Azteca',city:'Mexico City'},
+  {date:'2026-07-06',time:'15:00',home:'R16 Match 5',away:'R16 Match 5',group:'R16',stadium:'AT&T Stadium',city:'Dallas'},
+  {date:'2026-07-06',time:'17:00',home:'R16 Match 6',away:'R16 Match 6',group:'R16',stadium:'Lumen Field',city:'Seattle'},
+  {date:'2026-07-07',time:'12:00',home:'R16 Match 7',away:'R16 Match 7',group:'R16',stadium:'Mercedes-Benz Stadium',city:'Atlanta'},
+  {date:'2026-07-07',time:'16:00',home:'R16 Match 8',away:'R16 Match 8',group:'R16',stadium:'BC Place',city:'Vancouver'},
+  // ── QUARTER FINALS (July 9-10) ───────────────────────────────
+  {date:'2026-07-09',time:'16:00',home:'QF1',away:'QF2',group:'QF',stadium:'Gillette Stadium',city:'Boston'},
+  {date:'2026-07-10',time:'15:00',home:'QF3',away:'QF4',group:'QF',stadium:'SoFi Stadium',city:'Los Angeles'},
+  {date:'2026-07-10',time:'19:00',home:'QF5',away:'QF6',group:'QF',stadium:'NRG Stadium',city:'Houston'},
+  {date:'2026-07-11',time:'01:00',home:'QF7',away:'QF8',group:'QF',stadium:'AT&T Stadium',city:'Dallas'},
+  // ── SEMI FINALS (July 13-14) ─────────────────────────────────
+  {date:'2026-07-14',time:'19:00',home:'Semi-Final 1',away:'Semi-Final 2',group:'SF',stadium:'MetLife Stadium',city:'New York'},
+  {date:'2026-07-15',time:'19:00',home:'Semi-Final 3',away:'Semi-Final 4',group:'SF',stadium:'AT&T Stadium',city:'Dallas'},
+  // ── 3RD PLACE + FINAL ────────────────────────────────────────
+  {date:'2026-07-18',time:'19:00',home:'3rd Place',away:'3rd Place',group:'3P',stadium:'Hard Rock Stadium',city:'Miami'},
+  {date:'2026-07-19',time:'19:00',home:'FINAL',away:'FINAL',group:'FIN',stadium:'MetLife Stadium',city:'New York / New Jersey'}
 ]
-
-// ── STARS WITH AVATARS ─────────────────────────────────────────
-var STARS = [
-  {name:'Kylian Mbappe',flag:'🇫🇷',club:'Real Madrid',pos:'FW',age:27,stat:'46 intl goals',rating:96,group:'I',hair:'#1a1a1a',skin:'#c8a882',shirt:'#ffffff'},
-  {name:'Erling Haaland',flag:'🇳🇴',club:'Man. City',pos:'FW',age:25,stat:'44 intl goals',rating:95,group:'I',hair:'#f5d78e',skin:'#f5c5a3',shirt:'#6cabdd'},
-  {name:'Vinicius Jr.',flag:'🇧🇷',club:'Real Madrid',pos:'FW',age:25,stat:'Ballon dOr nominee 2024',rating:94,group:'C',hair:'#1a1a1a',skin:'#8d5524',shirt:'#ffffff'},
-  {name:'Pedri',flag:'🇪🇸',club:'FC Barcelona',pos:'MF',age:23,stat:'Euro 2024 champion',rating:93,group:'H',hair:'#3d2b1f',skin:'#d4a574',shirt:'#a50044'},
-  {name:'Jude Bellingham',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Real Madrid',pos:'MF',age:22,stat:'Best player Euro 2024',rating:93,group:'L',hair:'#1a1a1a',skin:'#8d5524',shirt:'#ffffff'},
-  {name:'Harry Kane',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Bayern Munich',pos:'FW',age:32,stat:'England all-time top scorer',rating:92,group:'L',hair:'#8b7355',skin:'#f5c5a3',shirt:'#ffffff'},
-  {name:'Rodri',flag:'🇪🇸',club:'Man. City',pos:'MF',age:29,stat:'Ballon dOr 2024',rating:92,group:'H',hair:'#2c1810',skin:'#c8a882',shirt:'#6cabdd'},
-  {name:'Lamine Yamal',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:18,stat:'Euro 2024 champion',rating:91,group:'H',hair:'#1a1a1a',skin:'#c8a882',shirt:'#a50044'},
-  {name:'Cristiano Ronaldo',flag:'🇵🇹',club:'Al Nassr',pos:'FW',age:41,stat:'915 career goals',rating:90,group:'K',hair:'#1a1a1a',skin:'#d4a574',shirt:'#006600'},
-  {name:'Ruben Dias',flag:'🇵🇹',club:'Man. City',pos:'DF',age:28,stat:'Best defender PL 2021',rating:89,group:'K',hair:'#1a1a1a',skin:'#d4a574',shirt:'#6cabdd'},
-  {name:'Bukayo Saka',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Arsenal',pos:'FW',age:24,stat:'PFA Young Player 2024',rating:89,group:'L',hair:'#1a1a1a',skin:'#8d5524',shirt:'#ef0107'},
-  {name:'Gavi',flag:'🇪🇸',club:'FC Barcelona',pos:'MF',age:21,stat:'Euro 2024 champion',rating:88,group:'H',hair:'#3d2b1f',skin:'#d4a574',shirt:'#a50044'},
-  {name:'Phil Foden',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Man. City',pos:'MF',age:26,stat:'PFA Player of Year 2024',rating:88,group:'L',hair:'#f5d78e',skin:'#f5c5a3',shirt:'#6cabdd'},
-  {name:'Federico Valverde',flag:'🇺🇾',club:'Real Madrid',pos:'MF',age:27,stat:'Copa America 2024',rating:88,group:'H',hair:'#3d2b1f',skin:'#d4a574',shirt:'#ffffff'},
-  {name:'Lionel Messi',flag:'🇦🇷',club:'Inter Miami',pos:'FW',age:39,stat:'8x Ballon dOr winner',rating:88,group:'J',hair:'#3d2b1f',skin:'#d4a574',shirt:'#74acdf'},
-  {name:'Achraf Hakimi',flag:'🇲🇦',club:'PSG',pos:'DF',age:27,stat:'African Player of Year 2022',rating:87,group:'C',hair:'#1a1a1a',skin:'#8d5524',shirt:'#004170'},
-  {name:'Sadio Mane',flag:'🇸🇳',club:'Al Nassr',pos:'FW',age:33,stat:'AFCON winner 2022',rating:85,group:'I',hair:'#1a1a1a',skin:'#4a2800',shirt:'#23a455'},
-  {name:'Raphinha',flag:'🇧🇷',club:'FC Barcelona',pos:'FW',age:29,stat:'Champions League 2025',rating:85,group:'C',hair:'#1a1a1a',skin:'#8d5524',shirt:'#a50044'}
-];
 
 // ── TRANSLATIONS ───────────────────────────────────────────────
 var T = {
@@ -177,12 +289,42 @@ var QUIZ = {
 };
 
 var POLLS = {
-  en:[{id:'p1',q:'Who will be World Champion 2026?',opts:['England','Argentina','Spain','Brazil'],votes:[1580,1240,980,1100]},{id:'p2',q:'Who will be the best player?',opts:['Mbappe','Haaland','Vinicius','Bellingham'],votes:[2100,1300,980,760]},{id:'p3',q:'Will ENGLAND reach the Final?',opts:['Yes champion','Yes finalist','Semi-final','Group stage'],votes:[1200,800,600,150]}],
-  fr:[{id:'p1',q:'Qui sera champion du Monde 2026?',opts:['France','Argentine','Espagne','Bresil'],votes:[1240,1580,980,1100]},{id:'p2',q:'Quel sera le meilleur joueur?',opts:['Mbappe','Haaland','Vinicius','Bellingham'],votes:[2100,1300,980,760]},{id:'p3',q:'La FRANCE ira-t-elle en finale?',opts:['Oui championne','Oui finaliste','Demi-finale','Phase de groupes'],votes:[1200,800,600,150]}],
-  es:[{id:'p1',q:'Quien sera campeon del Mundo 2026?',opts:['Espana','Argentina','Francia','Brasil'],votes:[1580,1240,980,1100]},{id:'p2',q:'Quien sera el mejor jugador?',opts:['Mbappe','Haaland','Vinicius','Bellingham'],votes:[2100,1300,980,760]},{id:'p3',q:'Llegara ESPANA a la Final?',opts:['Si campeona','Si finalista','Semifinal','Fase de grupos'],votes:[1200,800,600,150]}],
-  pt:[{id:'p1',q:'Quem sera campeao do Mundo 2026?',opts:['Portugal','Argentina','Franca','Brasil'],votes:[1580,1240,980,1100]},{id:'p2',q:'Quem sera o melhor jogador?',opts:['Mbappe','Haaland','Vinicius','Bellingham'],votes:[2100,1300,980,760]},{id:'p3',q:'PORTUGAL chegara a Final?',opts:['Sim campeao','Sim finalista','Semifinal','Fase de grupos'],votes:[1200,800,600,150]}],
-  it:[{id:'p1',q:'Chi sara campione del Mondo 2026?',opts:['Argentina','Francia','Spagna','Brasile'],votes:[1580,1240,980,1100]},{id:'p2',q:'Chi sara il miglior giocatore?',opts:['Mbappe','Haaland','Vinicius','Bellingham'],votes:[2100,1300,980,760]},{id:'p3',q:'L ITALIA tornera al Mondiale 2030?',opts:['Certamente','Probabilmente','Forse','No'],votes:[1200,800,600,150]}],
-  de:[{id:'p1',q:'Wer wird Weltmeister 2026?',opts:['Deutschland','Argentinien','Spanien','Brasilien'],votes:[1580,1240,980,1100]},{id:'p2',q:'Wer wird der beste Spieler?',opts:['Mbappe','Haaland','Vinicius','Bellingham'],votes:[2100,1300,980,760]},{id:'p3',q:'Kommt DEUTSCHLAND ins Finale?',opts:['Ja Weltmeister','Ja Finalist','Halbfinale','Gruppenphase'],votes:[1200,800,600,150]}]
+  en:[
+    {id:'p1',q:'Who will be World Champion 2026?',opts:['England','France','Spain','Brazil','Argentina','Germany','Portugal'],votes:[1580,1240,980,1100,1420,760,890]},
+    {id:'p2',q:'Who will be the best player?',opts:['Mbappe','Haaland','Bellingham','Kane','Vinicius','Rodri','Yamal'],votes:[2100,1300,980,1150,760,620,540]},
+    {id:'p3',q:'Will ENGLAND reach the Final?',opts:['Yes champion','Yes finalist','Semi-final','Group stage'],votes:[1200,800,600,150]},
+    {id:'p4',q:'Who will top-score in 2026?',opts:['Kane','Mbappe','Haaland','Vinicius','Ronaldo'],votes:[980,1400,1100,760,540]}
+  ],
+  fr:[
+    {id:'p1',q:'Qui sera champion du Monde 2026?',opts:['France','Argentine','Espagne','Bresil','Angleterre','Allemagne','Portugal'],votes:[1580,1420,980,1100,760,680,890]},
+    {id:'p2',q:'Quel sera le meilleur joueur?',opts:['Mbappe','Haaland','Bellingham','Kane','Vinicius','Rodri','Yamal'],votes:[2400,1300,760,890,820,620,540]},
+    {id:'p3',q:'La FRANCE ira-t-elle en finale?',opts:['Oui championne','Oui finaliste','Demi-finale','Phase de groupes'],votes:[1600,900,500,120]},
+    {id:'p4',q:'Qui sera meilleur buteur 2026?',opts:['Mbappe','Kane','Haaland','Vinicius','Ronaldo'],votes:[1800,890,1100,760,540]}
+  ],
+  es:[
+    {id:'p1',q:'Quien sera campeon del Mundo 2026?',opts:['Espana','Argentina','Francia','Brasil','Inglaterra','Alemania','Portugal'],votes:[1800,1420,980,1100,760,680,890]},
+    {id:'p2',q:'Quien sera el mejor jugador?',opts:['Mbappe','Haaland','Bellingham','Kane','Vinicius','Rodri','Yamal'],votes:[1800,1300,760,890,820,1200,980]},
+    {id:'p3',q:'Llegara ESPANA a la Final?',opts:['Si campeona','Si finalista','Semifinal','Fase de grupos'],votes:[1600,900,500,120]},
+    {id:'p4',q:'Quien sera el Pichichi del Mundial?',opts:['Yamal','Mbappe','Haaland','Vinicius','Kane'],votes:[980,1400,1100,760,890]}
+  ],
+  pt:[
+    {id:'p1',q:'Quem sera campeao do Mundo 2026?',opts:['Portugal','Argentina','Franca','Brasil','Espanha','Alemanha','Inglaterra'],votes:[1800,1420,980,1350,880,680,760]},
+    {id:'p2',q:'Quem sera o melhor jogador?',opts:['Mbappe','Haaland','Bellingham','Kane','Vinicius','Ronaldo','Rodri'],votes:[1800,1300,760,890,820,1100,620]},
+    {id:'p3',q:'PORTUGAL chegara a Final?',opts:['Sim campeao','Sim finalista','Semifinal','Fase de grupos'],votes:[1600,900,500,120]},
+    {id:'p4',q:'Quem sera artilheiro da Copa?',opts:['Ronaldo','Mbappe','Haaland','Vinicius','Kane'],votes:[1200,1400,1100,760,890]}
+  ],
+  it:[
+    {id:'p1',q:'Chi sara campione del Mondo 2026?',opts:['Francia','Argentina','Spagna','Brasile','Inghilterra','Germania','Portogallo'],votes:[1240,1420,980,1100,760,680,890]},
+    {id:'p2',q:'Chi sara il miglior giocatore?',opts:['Mbappe','Haaland','Bellingham','Kane','Vinicius','Rodri','Yamal'],votes:[1800,1300,760,890,820,620,540]},
+    {id:'p3',q:'L ITALIA tornera al Mondiale 2030?',opts:['Certamente','Probabilmente','Forse','No'],votes:[1200,800,600,150]},
+    {id:'p4',q:'Chi sara capocannoniere 2026?',opts:['Mbappe','Haaland','Kane','Vinicius','Ronaldo'],votes:[1400,1100,890,760,540]}
+  ],
+  de:[
+    {id:'p1',q:'Wer wird Weltmeister 2026?',opts:['Deutschland','Argentinien','Spanien','Brasilien','England','Frankreich','Portugal'],votes:[1800,1420,980,1100,760,1240,890]},
+    {id:'p2',q:'Wer wird der beste Spieler?',opts:['Mbappe','Haaland','Bellingham','Kane','Vinicius','Rodri','Yamal'],votes:[1800,1500,760,890,820,620,540]},
+    {id:'p3',q:'Kommt DEUTSCHLAND ins Finale?',opts:['Ja Weltmeister','Ja Finalist','Halbfinale','Gruppenphase'],votes:[1600,900,500,120]},
+    {id:'p4',q:'Wer wird Torschutzkoenig 2026?',opts:['Haaland','Mbappe','Kane','Vinicius','Muller'],votes:[1600,1400,890,760,540]}
+  ]
 };
 
 var AFFILIATES = {
@@ -245,6 +387,35 @@ var TEAM_STRENGTH = {
 };
 
 function getStrength(team){return TEAM_STRENGTH[team]||70;}
+
+// ── TV CHANNELS PER COUNTRY ──────────────────────────────────
+var TV_CHANNELS = {
+  en:['ITV1','BBC One','ITV4','BBC iPlayer'],
+  fr:['TF1','M6','beIN Sports','France 2'],
+  es:['TVE La 1','Telecinco','DAZN','Gol'],
+  pt:['RTP1','Sport TV','SIC','Eleven Sports'],
+  it:['RAI 1','Mediaset','Sky Sport','DAZN'],
+  de:['ARD','ZDF','MagentaTV','RTL']
+};
+
+// Match-specific TV - which channel shows which match per country
+var MATCH_TV = {
+  'France':   {en:'ITV1',    fr:'TF1',    es:'TVE La 1', pt:'Sport TV', it:'RAI 1',    de:'ZDF'},
+  'England':  {en:'ITV1',    fr:'beIN',   es:'DAZN',     pt:'Sport TV', it:'Sky Sport', de:'MagentaTV'},
+  'Spain':    {en:'BBC One', fr:'M6',     es:'TVE La 1', pt:'RTP1',     it:'RAI 1',    de:'ARD'},
+  'Germany':  {en:'BBC One', fr:'M6',     es:'TVE La 1', pt:'Sport TV', it:'DAZN',     de:'ARD'},
+  'Portugal': {en:'ITV1',    fr:'beIN',   es:'DAZN',     pt:'RTP1',     it:'Sky Sport', de:'MagentaTV'},
+  'Brazil':   {en:'BBC One', fr:'TF1',    es:'Gol',      pt:'SIC',      it:'RAI 1',    de:'ZDF'},
+  'Argentina':{en:'ITV1',    fr:'TF1',    es:'TVE La 1', pt:'Sport TV', it:'RAI 1',    de:'ARD'},
+  'Mexico':   {en:'BBC One', fr:'beIN',   es:'Telecinco', pt:'Eleven',  it:'DAZN',     de:'MagentaTV'},
+  'USA':      {en:'ITV4',    fr:'M6',     es:'DAZN',     pt:'Sport TV', it:'Sky Sport', de:'ZDF'},
+  'default':  {en:'ITV/BBC', fr:'TF1/M6', es:'TVE/DAZN', pt:'RTP/Sport TV', it:'RAI/Sky', de:'ARD/ZDF'}
+};
+
+function getTV(team, lang){
+  var ch=MATCH_TV[team]||MATCH_TV['default'];
+  return ch[lang]||ch['en']||'';
+}
 
 function Card(props){
   return e('div',{style:Object.assign({background:props.gold?'linear-gradient(135deg,rgba(212,175,55,0.14),rgba(184,150,62,0.07))':CB,border:'1px solid '+(props.gold?G:BD),borderRadius:14,padding:16},props.style||{})},props.children);
@@ -317,6 +488,30 @@ function App(){
   function savePronto(){setPronoSaved(true);setTimeout(function(){setPronoSaved(false);},2000);}
   function handleShare(){if(navigator.share){navigator.share({title:'World Cup 2026',url:window.location.href});}else if(navigator.clipboard){navigator.clipboard.writeText(window.location.href);setShareCopied(true);setTimeout(function(){setShareCopied(false);},2000);}}
   function pad(n){return String(n||0).padStart(2,'0');}
+
+  function formatFullDate(dateStr,langCode){
+    if(!dateStr)return '';
+    var dt=new Date(dateStr+'T12:00:00');
+    var days={
+      en:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+      fr:['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+      es:['Dom','Lun','Mar','Mie','Jue','Vie','Sab'],
+      pt:['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+      it:['Dom','Lun','Mar','Mer','Gio','Ven','Sab'],
+      de:['So','Mo','Di','Mi','Do','Fr','Sa']
+    };
+    var months={
+      en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      fr:['Jan','Fev','Mar','Avr','Mai','Juin','Juil','Aout','Sep','Oct','Nov','Dec'],
+      es:['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+      pt:['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+      it:['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'],
+      de:['Jan','Feb','Mar','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez']
+    };
+    var d=days[langCode]||days['en'];
+    var m=months[langCode]||months['en'];
+    return d[dt.getDay()]+' '+dt.getDate()+' '+m[dt.getMonth()];
+  }
 
   // ── MANUAL SIMULATOR ─────────────────────────────────────────
   function runManual(){
@@ -804,7 +999,7 @@ function App(){
 
   var filteredFixtures=fixtureMyOnly?FIXTURES.filter(function(f){return f.home===activeTeam.team||f.away===activeTeam.team;}):FIXTURES;
 
-  function formatDate(d){var dt=new Date(d);return dt.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});}
+  function formatDate(d){var dt=new Date(d+'T12:00:00');return dt.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});}
 
   return e('div',{style:{minHeight:'100vh',background:'linear-gradient(160deg,'+DARK+',#0c1e44 50%,'+DARK+')',fontFamily:"'Open Sans',sans-serif",color:'#eee8d5'}},
 
@@ -882,7 +1077,7 @@ function App(){
             var isMyTeam=team===activeTeam.team;
             return e('div',{key:team,style:{display:'flex',alignItems:'center',gap:9,background:isMyTeam?'rgba(212,175,55,0.2)':'rgba(255,255,255,0.04)',borderRadius:8,padding:'8px 11px',marginBottom:6,border:isMyTeam?'1px solid '+G:'none'}},
               e('span',{style:{fontSize:10,color:G,minWidth:16}},i+1,'.'),
-              e('span',{style:{fontSize:12,fontWeight:isMyTeam?'bold':'normal'}},team),
+              e('span',{style:{fontSize:12,fontWeight:isMyTeam?'bold':'normal'}},tn(team,lang)),
               isMyTeam&&e('span',{style:{marginLeft:'auto',fontSize:9,color:G}},'⭐')
             );
           })
@@ -914,20 +1109,53 @@ function App(){
         e('div',{style:{display:'flex',flexWrap:'wrap',gap:5,justifyContent:'center',marginBottom:15}},
           Object.keys(GROUPS).map(function(g){return e('button',{key:g,onClick:function(){setSelGroup(g);},style:{width:32,height:32,borderRadius:7,background:selGroup===g?'linear-gradient(135deg,'+G+',#b8963e)':'rgba(10,20,50,0.88)',border:selGroup===g?'none':'1px solid rgba(212,175,55,0.24)',color:selGroup===g?'#0a0a1a':G,fontSize:12,fontWeight:'bold',cursor:'pointer'}},g);})
         ),
-        e(Card,{style:{marginBottom:14,border:'1px solid '+G}},
-          e('div',{style:{fontSize:15,fontWeight:'bold',color:G,marginBottom:11,textAlign:'center'}},t.groupLabel,' ',selGroup,GROUPS[selGroup].host&&e('span',{style:{fontSize:9,color:'#6a86a0',marginLeft:8}},'(',t.hostLabel,': ',GROUPS[selGroup].hostName,')')),
+        e(Card,{style:{marginBottom:14,border:'1px solid '+G,padding:'12px 8px'}},
+          e('div',{style:{fontSize:14,fontWeight:'bold',color:G,marginBottom:10,textAlign:'center',letterSpacing:1}},
+            t.groupLabel,' ',selGroup,
+            GROUPS[selGroup].host&&e('span',{style:{fontSize:9,color:'#6a86a0',marginLeft:8}},'(',t.hostLabel,': ',GROUPS[selGroup].hostName,')')
+          ),
+          // Table header
+          e('div',{style:{display:'grid',gridTemplateColumns:'1fr 24px 24px 24px 24px 24px 24px 24px 28px',gap:1,alignItems:'center',padding:'4px 6px',marginBottom:4,borderBottom:'1px solid rgba(212,175,55,0.3)'}},
+            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold'}},'Team'),
+            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'MP'),
+            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'W'),
+            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'D'),
+            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'L'),
+            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'GF'),
+            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'GA'),
+            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'GD'),
+            e('div',{style:{fontSize:9,color:G,fontWeight:'bold',textAlign:'center'}},'Pts')
+          ),
+          // Team rows
           GROUPS[selGroup].teams.map(function(team,i){
             var isMyTeam=team===activeTeam.team;
-            return e('div',{key:team,style:{display:'flex',alignItems:'center',gap:10,background:isMyTeam?'rgba(212,175,55,0.14)':i===0&&GROUPS[selGroup].host?'rgba(212,175,55,0.08)':'rgba(255,255,255,0.04)',border:'1px solid '+(isMyTeam?G:'rgba(212,175,55,0.1)'),borderRadius:9,padding:'10px 13px',marginBottom:7}},
-              e('div',{style:{width:22,height:22,borderRadius:5,flexShrink:0,background:isMyTeam?G:i===0&&GROUPS[selGroup].host?G:'rgba(212,175,55,0.18)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:10,fontWeight:'bold',color:isMyTeam||i===0&&GROUPS[selGroup].host?'#0a0a1a':G}},i+1),
-              e('span',{style:{fontSize:13,fontWeight:isMyTeam?'bold':'normal'}},team),
-              isMyTeam&&e('span',{style:{marginLeft:'auto',fontSize:9,color:G,background:'rgba(212,175,55,0.15)',padding:'2px 7px',borderRadius:8}},'⭐ '+t.myTeamLabel),
-              !isMyTeam&&i===0&&GROUPS[selGroup].host&&e('span',{style:{marginLeft:'auto',fontSize:9,color:G,background:'rgba(212,175,55,0.12)',padding:'2px 7px',borderRadius:8}},t.hostLabel)
+            var isQual=i<2;
+            return e('div',{key:team,style:{display:'grid',gridTemplateColumns:'1fr 24px 24px 24px 24px 24px 24px 24px 28px',gap:1,alignItems:'center',padding:'6px 6px',background:isMyTeam?'rgba(212,175,55,0.14)':isQual?'rgba(40,100,40,0.12)':'rgba(255,255,255,0.03)',borderRadius:6,marginBottom:3,border:'1px solid '+(isMyTeam?G:isQual?'rgba(40,200,40,0.2)':'rgba(255,255,255,0.05)')}},
+              e('div',{style:{display:'flex',alignItems:'center',gap:5}},
+                e('div',{style:{width:16,height:16,borderRadius:3,background:isMyTeam?G:isQual?'rgba(40,200,40,0.5)':'rgba(212,175,55,0.15)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:8,fontWeight:'bold',color:isMyTeam?'#0a0a1a':isQual?'#fff':G,flexShrink:0}},i+1),
+                e('div',{style:{fontSize:10,fontWeight:isMyTeam?'bold':'normal',color:isMyTeam?G:'#eee',overflow:'hidden',whiteSpace:'nowrap',textOverflow:'ellipsis'}},team,isMyTeam?' ⭐':'')
+              ),
+              e('div',{style:{fontSize:10,color:'#9bb0c8',textAlign:'center'}},'0'),
+              e('div',{style:{fontSize:10,color:'#90ee90',textAlign:'center'}},'0'),
+              e('div',{style:{fontSize:10,color:'#aaa',textAlign:'center'}},'0'),
+              e('div',{style:{fontSize:10,color:'#ff8888',textAlign:'center'}},'0'),
+              e('div',{style:{fontSize:10,color:'#9bb0c8',textAlign:'center'}},'0'),
+              e('div',{style:{fontSize:10,color:'#9bb0c8',textAlign:'center'}},'0'),
+              e('div',{style:{fontSize:10,color:'#9bb0c8',textAlign:'center'}},'0'),
+              e('div',{style:{fontSize:11,fontWeight:'bold',color:G,textAlign:'center'}},'0')
             );
-          })
+          }),
+          // Legend
+          e('div',{style:{display:'flex',gap:12,marginTop:8,paddingTop:6,borderTop:'1px solid rgba(212,175,55,0.1)'}},
+            e('div',{style:{display:'flex',alignItems:'center',gap:4}},
+              e('div',{style:{width:10,height:10,borderRadius:2,background:'rgba(40,200,40,0.5)'}}),
+              e('span',{style:{fontSize:8,color:'#6a86a0'}},'Qualified')
+            ),
+            e('div',{style:{fontSize:8,color:'#6a86a0'}},'MP=Played W=Won D=Draw L=Lost GF/GA=Goals GD=Diff')
+          )
         ),
         e('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:7}},
-          Object.entries(GROUPS).map(function(entry){var g=entry[0];var data=entry[1];var hasMyTeam=data.teams.indexOf(activeTeam.team)>=0;return e('div',{key:g,onClick:function(){setSelGroup(g);},style:{background:hasMyTeam?'rgba(212,175,55,0.12)':g===selGroup?'rgba(212,175,55,0.09)':'rgba(10,20,50,0.8)',border:'1px solid '+(hasMyTeam?G:g===selGroup?G:BD),borderRadius:10,padding:10,cursor:'pointer'}},e('div',{style:{fontSize:10,fontWeight:'bold',color:G,marginBottom:5}},t.groupLabel,' ',g,hasMyTeam&&' ⭐'),data.teams.map(function(team){return e('div',{key:team,style:{fontSize:9,color:team===activeTeam.team?G:'#90aabf',marginBottom:2,fontWeight:team===activeTeam.team?'bold':'normal'}},team);}));})
+          Object.entries(GROUPS).map(function(entry){var g=entry[0];var data=entry[1];var hasMyTeam=data.teams.indexOf(activeTeam.team)>=0;return e('div',{key:g,onClick:function(){setSelGroup(g);},style:{background:hasMyTeam?'rgba(212,175,55,0.12)':g===selGroup?'rgba(212,175,55,0.09)':'rgba(10,20,50,0.8)',border:'1px solid '+(hasMyTeam?G:g===selGroup?G:BD),borderRadius:10,padding:10,cursor:'pointer'}},e('div',{style:{fontSize:10,fontWeight:'bold',color:G,marginBottom:5}},t.groupLabel,' ',g,hasMyTeam&&' ⭐'),data.teams.map(function(team){return e('div',{key:team,style:{fontSize:9,color:team===activeTeam.team?G:'#90aabf',marginBottom:2,fontWeight:team===activeTeam.team?'bold':'normal'}},tn(team,lang));}));})
         )
       ),
 
@@ -944,13 +1172,13 @@ function App(){
             var isMyMatch=f.home===activeTeam.team||f.away===activeTeam.team;
             return e(Card,{key:i,style:{padding:'12px 14px',border:'1px solid '+(isMyMatch?G:BD),background:isMyMatch?'linear-gradient(135deg,rgba(212,175,55,0.12),rgba(184,150,62,0.05))':CB}},
               e('div',{style:{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:6}},
-                e('div',{style:{fontSize:9,color:isMyMatch?G:'#6a86a0'}},formatDate(f.date),' ',f.time,' UTC',f.group&&' - '+t.groupLabel+' '+f.group),
+                e('div',{style:{fontSize:9,color:isMyMatch?G:'#6a86a0'}},formatDate(f.date),' ',f.time,' ET',f.group&&' - '+t.groupLabel+' '+f.group),
                 isMyMatch&&e('span',{style:{fontSize:9,color:G,background:'rgba(212,175,55,0.15)',padding:'2px 6px',borderRadius:6}},'⭐ '+t.myTeamLabel)
               ),
               e('div',{style:{display:'flex',alignItems:'center',justifyContent:'space-between'}},
-                e('div',{style:{flex:1,textAlign:'left',fontSize:13,fontWeight:f.home===activeTeam.team?'bold':'normal',color:f.home===activeTeam.team?G:'#eee8d5'}},f.home),
+                e('div',{style:{flex:1,textAlign:'left',fontSize:13,fontWeight:f.home===activeTeam.team?'bold':'normal',color:f.home===activeTeam.team?G:'#eee8d5'}},tn(f.home,lang)),
                 e('div',{style:{padding:'4px 12px',background:'rgba(212,175,55,0.15)',borderRadius:8,fontSize:12,fontWeight:'bold',color:G,margin:'0 8px'}},'VS'),
-                e('div',{style:{flex:1,textAlign:'right',fontSize:13,fontWeight:f.away===activeTeam.team?'bold':'normal',color:f.away===activeTeam.team?G:'#eee8d5'}},f.away)
+                e('div',{style:{flex:1,textAlign:'right',fontSize:13,fontWeight:f.away===activeTeam.team?'bold':'normal',color:f.away===activeTeam.team?G:'#eee8d5'}},tn(f.away,lang))
               ),
               f.stadium&&e('div',{style:{fontSize:9,color:'#5a7090',marginTop:6}},f.stadium,' - ',f.city)
             );
@@ -1160,7 +1388,7 @@ function App(){
                 var gd=iGroupStandings[iSelGroup].gd[team];
                 return e('div',{key:team,style:{display:'flex',alignItems:'center',gap:8,padding:'6px 0',borderBottom:i<3?'1px solid rgba(212,175,55,0.08)':'none'}},
                   e('div',{style:{width:20,height:20,borderRadius:4,background:i<2?G:'rgba(212,175,55,0.2)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:9,fontWeight:'bold',color:i<2?'#0a0a1a':G}},i+1),
-                  e('div',{style:{flex:1,fontSize:11,color:i<2?'#eee':'#888'}},team),
+                  e('div',{style:{flex:1,fontSize:11,color:i<2?'#eee':'#888'}},tn(team,lang)),
                   e('div',{style:{fontSize:10,fontWeight:'bold',color:G,minWidth:24,textAlign:'center'}},pts,'pts'),
                   e('div',{style:{fontSize:9,color:'#6a86a0',minWidth:28,textAlign:'right'}},(gd>0?'+':'')+gd)
                 );
@@ -1178,7 +1406,7 @@ function App(){
                 return e('div',{key:m.id,style:{marginBottom:10,padding:'8px 10px',background:'rgba(0,0,0,0.2)',borderRadius:9,border:'1px solid '+(m.played?'rgba(40,200,40,0.3)':BD)}},
                   m.label&&e('div',{style:{fontSize:9,color:'#6a86a0',marginBottom:5,textAlign:'center',letterSpacing:0.5}},m.label),
                   e('div',{style:{display:'flex',alignItems:'center',gap:6}},
-                    e('div',{style:{flex:1,fontSize:11,fontWeight:'bold',textAlign:'right',color:m.played&&m.goalsHome>m.goalsAway?G:'#eee'}},m.home),
+                    e('div',{style:{flex:1,fontSize:11,fontWeight:'bold',textAlign:'right',color:m.played&&m.goalsHome>m.goalsAway?G:'#eee'}},tn(m.home,lang)),
                     e('input',{type:'number',min:0,max:9,value:m.goalsHome===null?'':m.goalsHome,onChange:function(ev){
                       var gh=parseInt(ev.target.value)||0;
                       setIMatches(function(prev){return prev.map(function(x){return x.id===m.id?Object.assign({},x,{goalsHome:gh,played:x.goalsAway!==null}):x;});});
@@ -1188,7 +1416,7 @@ function App(){
                       var ga=parseInt(ev.target.value)||0;
                       setIMatches(function(prev){return prev.map(function(x){return x.id===m.id?Object.assign({},x,{goalsAway:ga,played:x.goalsHome!==null}):x;});});
                     },style:{width:36,height:32,textAlign:'center',background:'rgba(10,20,50,0.95)',color:G,border:'1px solid '+G,borderRadius:7,fontSize:16,fontWeight:'bold'}}),
-                    e('div',{style:{flex:1,fontSize:11,fontWeight:'bold',color:m.played&&m.goalsAway>m.goalsHome?G:'#eee'}},m.away)
+                    e('div',{style:{flex:1,fontSize:11,fontWeight:'bold',color:m.played&&m.goalsAway>m.goalsHome?G:'#eee'}},tn(m.away,lang))
                   ),
                   m.played&&m.goalsHome===m.goalsAway&&e('div',{style:{fontSize:9,color:'#ff9900',textAlign:'center',marginTop:4}},'⚠️ Draw → winner by penalty simulation')
                 );
@@ -1208,7 +1436,7 @@ function App(){
           e('div',{style:{background:'linear-gradient(135deg,rgba(212,175,55,0.3),rgba(184,150,62,0.15))',border:'2px solid '+G,borderRadius:18,padding:'24px 16px',marginBottom:14}},
             e('div',{style:{fontSize:14,color:G,letterSpacing:3,marginBottom:8}},'🏆 WORLD CUP 2026 CHAMPION'),
             e('div',{style:{fontSize:40,marginBottom:6}},'🥇'),
-            e('div',{style:{fontSize:26,fontWeight:'bold',color:G}},iChampion),
+            e('div',{style:{fontSize:26,fontWeight:'bold',color:G}},tn(iChampion,lang)),
             e('div',{style:{fontSize:12,color:'#eee',marginTop:6}}),'WORLD CHAMPION 2026!'
           ),
           e('button',{onClick:function(){setIPhase('idle');setIMatches([]);setIGroupStandings({});setIChampion(null);},style:{width:'100%',background:'linear-gradient(135deg,'+G+',#b8963e)',border:'none',borderRadius:12,padding:'13px 0',fontSize:14,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer'}},'🔄 Play Again')
