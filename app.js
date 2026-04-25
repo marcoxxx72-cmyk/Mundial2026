@@ -1498,19 +1498,23 @@ function App(){
                   var dayStr=dt?dt.toLocaleDateString(lang==='fr'?'fr-FR':lang==='de'?'de-DE':lang==='es'?'es-ES':lang==='pt'?'pt-PT':lang==='it'?'it-IT':'en-GB',{weekday:'short',day:'numeric',month:'short'}):'';
                   var homeWin=m.played&&m.goalsHome>m.goalsAway;
                   var awayWin=m.played&&m.goalsAway>m.goalsHome;
-                  return e('div',{key:m.id,style:{display:'grid',gridTemplateColumns:'58px 1fr 30px 10px 30px 1fr',gap:2,alignItems:'center',padding:'5px 4px',borderBottom:'1px solid rgba(255,255,255,0.04)',background:m.played?'rgba(40,160,40,0.06)':'transparent'}},
-                    e('div',{style:{fontSize:8,color:'#6a86a0',lineHeight:1.3}},dayStr,' ',item.time?item.time:''),
-                    e('div',{style:{fontSize:10,fontWeight:homeWin?'bold':'normal',color:homeWin?G:'#eee',textAlign:'right',overflow:'hidden',whiteSpace:'nowrap',textOverflow:'ellipsis'}},tn(m.home,lang)),
-                    e('input',{type:'number',min:0,max:9,
-                      value:m.goalsHome===null?'':m.goalsHome,
-                      onChange:function(ev){setMatchScore(m.id,parseInt(ev.target.value)||0,m.goalsAway===null?0:m.goalsAway);},
-                      style:{width:30,height:26,textAlign:'center',background:'rgba(10,20,50,0.95)',color:G,border:'1px solid '+(m.played?'rgba(40,200,40,0.5)':G),borderRadius:5,fontSize:14,fontWeight:'bold'}}),
-                    e('div',{style:{fontSize:9,color:'#6a86a0',textAlign:'center'}},'-'),
-                    e('input',{type:'number',min:0,max:9,
-                      value:m.goalsAway===null?'':m.goalsAway,
-                      onChange:function(ev){setMatchScore(m.id,m.goalsHome===null?0:m.goalsHome,parseInt(ev.target.value)||0);},
-                      style:{width:30,height:26,textAlign:'center',background:'rgba(10,20,50,0.95)',color:G,border:'1px solid '+(m.played?'rgba(40,200,40,0.5)':G),borderRadius:5,fontSize:14,fontWeight:'bold'}}),
-                    e('div',{style:{fontSize:10,fontWeight:awayWin?'bold':'normal',color:awayWin?G:'#eee',overflow:'hidden',whiteSpace:'nowrap',textOverflow:'ellipsis'}},tn(m.away,lang))
+                  var tvCh=getTV(m.home,lang)||getTV(m.away,lang);
+                  return e('div',{key:m.id,style:{padding:'5px 4px',borderBottom:'1px solid rgba(255,255,255,0.06)',background:m.played?'rgba(40,160,40,0.06)':'transparent'}},
+                    e('div',{style:{display:'grid',gridTemplateColumns:'58px 1fr 30px 10px 30px 1fr',gap:2,alignItems:'center'}},
+                      e('div',{style:{fontSize:8,color:'#6a86a0',lineHeight:1.3}},dayStr,' ',item.time?item.time:''),
+                      e('div',{style:{fontSize:10,fontWeight:homeWin?'bold':'normal',color:homeWin?G:'#eee',textAlign:'right',overflow:'hidden',whiteSpace:'nowrap',textOverflow:'ellipsis'}},tn(m.home,lang)),
+                      e('input',{type:'number',min:0,max:9,
+                        value:m.goalsHome===null?'':m.goalsHome,
+                        onChange:function(ev){setMatchScore(m.id,parseInt(ev.target.value)||0,m.goalsAway===null?0:m.goalsAway);},
+                        style:{width:30,height:26,textAlign:'center',background:'rgba(10,20,50,0.95)',color:G,border:'1px solid '+(m.played?'rgba(40,200,40,0.5)':G),borderRadius:5,fontSize:14,fontWeight:'bold'}}),
+                      e('div',{style:{fontSize:9,color:'#6a86a0',textAlign:'center'}},'-'),
+                      e('input',{type:'number',min:0,max:9,
+                        value:m.goalsAway===null?'':m.goalsAway,
+                        onChange:function(ev){setMatchScore(m.id,m.goalsHome===null?0:m.goalsHome,parseInt(ev.target.value)||0);},
+                        style:{width:30,height:26,textAlign:'center',background:'rgba(10,20,50,0.95)',color:G,border:'1px solid '+(m.played?'rgba(40,200,40,0.5)':G),borderRadius:5,fontSize:14,fontWeight:'bold'}}),
+                      e('div',{style:{fontSize:10,fontWeight:awayWin?'bold':'normal',color:awayWin?G:'#eee',overflow:'hidden',whiteSpace:'nowrap',textOverflow:'ellipsis'}},tn(m.away,lang))
+                    ),
+                    tvCh&&e('div',{style:{fontSize:8,color:'rgba(212,175,55,0.6)',marginTop:2,paddingLeft:2}},'📺 ',tvCh)
                   );
                 });
               })(),
@@ -1550,8 +1554,8 @@ function App(){
                 var homeWin=m.played&&m.goalsHome>m.goalsAway;
                 var awayWin=m.played&&m.goalsAway>m.goalsHome;
                 return e('div',{key:m.id,style:{marginBottom:10,padding:'8px 10px',background:'rgba(0,0,0,0.2)',borderRadius:9,border:'1px solid '+(m.played?'rgba(40,200,40,0.3)':BD)}},
-                  m.label&&e('div',{style:{fontSize:9,color:'#6a86a0',marginBottom:5,textAlign:'center'}},m.label),
-                  m.home&&m.home!=='TBD'&&e('div',{style:{fontSize:8,color:'rgba(212,175,55,0.5)',marginBottom:4,textAlign:'center'}},'📺 ',getTV(m.home,lang)||getTV(m.away,lang)),
+                  m.label&&e('div',{style:{fontSize:9,color:'#6a86a0',marginBottom:4,textAlign:'center'}},m.label),
+                  (m.home&&m.home!=='TBD')&&e('div',{style:{fontSize:8,color:'rgba(212,175,55,0.55)',marginBottom:5,textAlign:'center'}},'📺 ',getTV(m.home,lang)||getTV(m.away,lang)),
                   e('div',{style:{display:'grid',gridTemplateColumns:'1fr 32px 10px 32px 1fr',gap:4,alignItems:'center'}},
                     e('div',{style:{fontSize:11,fontWeight:homeWin?'bold':'normal',color:homeWin?G:'#eee',textAlign:'right',overflow:'hidden',whiteSpace:'nowrap',textOverflow:'ellipsis'}},tn(m.home,lang)),
                     e('input',{type:'number',min:0,max:9,
