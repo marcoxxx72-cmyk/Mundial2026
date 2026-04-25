@@ -563,37 +563,37 @@ var TV_INFO = {
   en:{
     free:['BBC','ITV'],
     paid:['BBC iPlayer','ITVX'],
-    note:'All 104 matches FREE on BBC & ITV',
+    note:'All 104 matches FREE on BBC & ITV. No subscription needed!',
     stream:'BBC iPlayer / ITVX'
   },
   fr:{
     free:['M6'],
     paid:['beIN Sports'],
-    note:'54 matchs gratuits sur M6 (dont tous les matchs France). Reste sur beIN Sports',
+    note:'54 matchs gratuits sur M6 dont tous les matchs France. Reste sur beIN Sports.',
     stream:'6play (gratuit) / beIN CONNECT'
   },
   es:{
     free:['RTVE / La 1'],
     paid:['Mediapro','DAZN'],
-    note:'Tous les matchs Espagne gratuits sur RTVE. Couverture complete sur DAZN',
-    stream:'RTVE Play (gratuit) / DAZN'
+    note:'Todos los partidos de Espana gratis en RTVE. Cobertura completa en DAZN.',
+    stream:'RTVE Play (gratis) / DAZN'
   },
   pt:{
     free:['Sport TV Portugal'],
     paid:['Livemode'],
-    note:'Couverture complete sur Sport TV Portugal',
+    note:'Cobertura completa na Sport TV Portugal. Streaming na app Sport TV.',
     stream:'Sport TV App'
   },
   it:{
     free:['RAI 1','RAI 2'],
     paid:['DAZN'],
-    note:'28 matchs gratuits sur RAI (ouverture, QF, SF, Finale). Tous les matchs sur DAZN',
-    stream:'RaiPlay (gratuit) / DAZN'
+    note:'28 partite gratis su RAI (apertura, QF, SF, Finale). Tutte le partite su DAZN.',
+    stream:'RaiPlay (gratis) / DAZN'
   },
   de:{
     free:['ARD','ZDF'],
     paid:['MagentaTV'],
-    note:'Matchs selectionnes gratuits sur ARD/ZDF. Tous les 104 matchs en 4K sur MagentaTV',
+    note:'Ausgewahlte Spiele gratis auf ARD/ZDF. Alle 104 Spiele in 4K auf MagentaTV.',
     stream:'ARD Mediathek / ZDF Mediathek / MagentaTV'
   }
 };
@@ -1551,6 +1551,7 @@ function App(){
                 var awayWin=m.played&&m.goalsAway>m.goalsHome;
                 return e('div',{key:m.id,style:{marginBottom:10,padding:'8px 10px',background:'rgba(0,0,0,0.2)',borderRadius:9,border:'1px solid '+(m.played?'rgba(40,200,40,0.3)':BD)}},
                   m.label&&e('div',{style:{fontSize:9,color:'#6a86a0',marginBottom:5,textAlign:'center'}},m.label),
+                  m.home&&m.home!=='TBD'&&e('div',{style:{fontSize:8,color:'rgba(212,175,55,0.5)',marginBottom:4,textAlign:'center'}},'📺 ',getTV(m.home,lang)||getTV(m.away,lang)),
                   e('div',{style:{display:'grid',gridTemplateColumns:'1fr 32px 10px 32px 1fr',gap:4,alignItems:'center'}},
                     e('div',{style:{fontSize:11,fontWeight:homeWin?'bold':'normal',color:homeWin?G:'#eee',textAlign:'right',overflow:'hidden',whiteSpace:'nowrap',textOverflow:'ellipsis'}},tn(m.home,lang)),
                     e('input',{type:'number',min:0,max:9,
