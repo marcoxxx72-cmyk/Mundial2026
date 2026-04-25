@@ -1,30 +1,9 @@
 {
-  "version": 2,
-  "buildCommand": null,
   "outputDirectory": ".",
-  "framework": null,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/$1" }
-  ],
-  "headers": [
+  "crons": [
     {
-      "source": "/manifest.json",
-      "headers": [
-        { "key": "Content-Type", "value": "application/manifest+json" }
-      ]
-    },
-    {
-      "source": "/sw.js",
-      "headers": [
-        { "key": "Service-Worker-Allowed", "value": "/" },
-        { "key": "Content-Type", "value": "application/javascript" }
-      ]
-    },
-    {
-      "source": "/(.*).png",
-      "headers": [
-        { "key": "Content-Type", "value": "image/png" }
-      ]
+      "path": "/api/notify",
+      "schedule": "0 * * * *"
     }
   ]
 }
