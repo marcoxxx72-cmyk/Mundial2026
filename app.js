@@ -1604,7 +1604,7 @@ function App(){
               style:{
                 position:'absolute',
                 top:keeperDir==='left'?5:keeperDir==='right'?5:12,
-                left:keeperDir==='left'?'14%':keeperDir==='right'?'55%':'38%',
+                left:keeperDir==='left'?'14%':keeperDir==='right'?'52%':'35%',
                 width:56,height:82,
                 transition:'all 0.45s cubic-bezier(0.25,0.46,0.45,0.94)',
                 transform:keeperDir==='left'?'rotate(-28deg) scaleX(-1)':keeperDir==='right'?'rotate(28deg)':'rotate(0deg)',
@@ -1695,12 +1695,11 @@ function App(){
               shotResult!=='saved'&&e('ellipse',{cx:20,cy:72,rx:8,ry:4,fill:'#1a1a2e'}),
               shotResult!=='saved'&&e('ellipse',{cx:36,cy:72,rx:8,ry:4,fill:'#1a1a2e'}),
 
-              // REAL SCORPION KICK - legs curve UP BEHIND the back!
-              shotResult==='saved'&&e('path',{d:'M18 56 Q10 48 14 36 Q18 24 28 22',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round',fill:'none'}),
-              shotResult==='saved'&&e('path',{d:'M38 56 Q46 48 42 36 Q38 24 28 22',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round',fill:'none'}),
-              shotResult==='saved'&&e('ellipse',{cx:24,cy:20,rx:7,ry:4,fill:'#1a1a2e',stroke:'#333',strokeWidth:1,transform:'rotate(-20,24,20)'}),
-              shotResult==='saved'&&e('ellipse',{cx:32,cy:20,rx:7,ry:4,fill:'#1a1a2e',stroke:'#333',strokeWidth:1,transform:'rotate(20,32,20)'}),
-              shotResult==='saved'&&e('text',{x:28,y:82,textAnchor:'middle',fontSize:16},'🦂')
+              // SCORPION KICK - legs fly up when saving!
+              shotResult==='saved'&&e('path',{d:'M15 56 Q8 42 6 30',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'}),
+              shotResult==='saved'&&e('path',{d:'M41 56 Q48 42 50 30',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'}),
+              shotResult==='saved'&&e('ellipse',{cx:6,cy:28,rx:8,ry:4,fill:'#1a1a2e',stroke:'#333',strokeWidth:1}),
+              shotResult==='saved'&&e('ellipse',{cx:50,cy:28,rx:8,ry:4,fill:'#1a1a2e',stroke:'#333',strokeWidth:1})
             ),
             shotDir&&e('div',{style:{position:'absolute',bottom:shotResult?50:8,left:shotDir==='left'?'22%':shotDir==='right'?'60%':'40%',fontSize:22,transition:'all 0.6s ease'}},'⚽'),
             shotResult&&e('div',{style:{position:'absolute',top:'35%',left:'50%',transform:'translate(-50%,-50%)',fontSize:18,fontWeight:'bold',color:shotResult==='goal'?'#90ee90':'#ff8888',textShadow:'0 2px 8px rgba(0,0,0,0.8)'}},shotResult==='goal'?'⚽ GOAL !':'✗ '+(lang==='fr'?'ARRETE !':lang==='es'?'PARADO !':lang==='pt'?'DEFENDIDO !':lang==='it'?'PARATO !':lang==='de'?'GEHALTEN !':'SAVED !'))
