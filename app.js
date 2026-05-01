@@ -280,119 +280,70 @@ var T = {
 };
 
 
-// QUIZ CHAMPIONSHIP DATA
+// QUIZ CHAMPIONSHIP - 3 levels, 50 real WC history questions
 var QUIZ_CHAMPIONSHIP = {
-  en:[
-    {q:'How many teams in World Cup 2026?',opts:['32','40','48','56'],a:2,pts:1},
-    {q:'Which stadium hosts the Final?',opts:['Azteca','AT&T Stadium','MetLife Stadium','SoFi'],a:2,pts:1},
-    {q:'Which country is NOT a host?',opts:['USA','Canada','Mexico','Brazil'],a:3,pts:1},
-    {q:'How many total matches?',opts:['64','80','96','104'],a:3,pts:1},
-    {q:'Who won Ballon dOr 2024?',opts:['Mbappe','Bellingham','Rodri','Vinicius'],a:2,pts:2},
-    {q:'Who won World Cup 2022?',opts:['France','Brazil','Croatia','Argentina'],a:3,pts:1},
-    {q:'Which group is England in?',opts:['Group A','Group C','Group J','Group L'],a:3,pts:2},
-    {q:'Who is Englands all-time top scorer?',opts:['Rooney','Lineker','Kane','Shearer'],a:2,pts:2},
-    {q:'Opening match stadium?',opts:['MetLife','Azteca','AT&T','BC Place'],a:1,pts:1},
-    {q:'Norwegian star in Group I?',opts:['Odegaard','Haaland','Sorloth','King'],a:1,pts:2},
-    {q:'How many WC has Brazil won?',opts:['3','4','5','6'],a:2,pts:2},
-    {q:'Who invented the Scorpion Kick?',opts:['Buffon','Higuita','Casillas','Yashin'],a:1,pts:3},
-    {q:'Final city?',opts:['Los Angeles','Dallas','Miami','New York'],a:3,pts:2},
-    {q:'Italy last qualified for WC in?',opts:['2014','2018','2022','Never'],a:0,pts:3},
-    {q:'Mbappe goals at WC 2022?',opts:['6','7','8','9'],a:2,pts:3}
+  easy:[
+    {q:'Which country won the first FIFA World Cup in 1930?',opts:['Brazil','Argentina','Uruguay','Italy'],a:2,pts:5,cat:'History'},
+    {q:'How many times has Brazil won the World Cup?',opts:['3','4','5','6'],a:2,pts:5,cat:'Winners'},
+    {q:'Who is the all-time top scorer in World Cup history?',opts:['Pele','Ronaldo','Klose','Maradona'],a:2,pts:5,cat:'Records'},
+    {q:'Which country hosted the 2022 World Cup?',opts:['UAE','Saudi Arabia','Qatar','Bahrain'],a:2,pts:5,cat:'Hosts'},
+    {q:'Who won the 2022 World Cup?',opts:['France','Brazil','Croatia','Argentina'],a:3,pts:5,cat:'Winners'},
+    {q:'How many teams in the 2026 World Cup?',opts:['32','40','48','56'],a:2,pts:5,cat:'2026'},
+    {q:'Who scored the Hand of God goal in 1986?',opts:['Pele','Zidane','Maradona','Ronaldo'],a:2,pts:5,cat:'Legends'},
+    {q:'Which country has won the World Cup most times?',opts:['Germany','Italy','Brazil','Argentina'],a:2,pts:5,cat:'Winners'},
+    {q:'Where is the 2026 World Cup Final?',opts:['SoFi Stadium','AT&T Stadium','MetLife Stadium','Azteca'],a:2,pts:5,cat:'2026'},
+    {q:'Who won the Golden Ball at 2022 World Cup?',opts:['Mbappe','Messi','Modric','Neymar'],a:1,pts:5,cat:'Awards'},
+    {q:'Which country won the 2018 World Cup?',opts:['Croatia','England','France','Belgium'],a:2,pts:5,cat:'Winners'},
+    {q:'Who hosted the 2014 World Cup?',opts:['Argentina','Chile','Brazil','Colombia'],a:2,pts:5,cat:'Hosts'},
+    {q:'How many goals did Miroslav Klose score in WC history?',opts:['14','15','16','17'],a:2,pts:5,cat:'Records'},
+    {q:'Which country won the 2010 World Cup?',opts:['Brazil','Netherlands','Germany','Spain'],a:3,pts:5,cat:'Winners'},
+    {q:'Who scored the winning goal in the 2010 final?',opts:['Torres','Villa','Iniesta','Xavi'],a:2,pts:5,cat:'History'},
+    {q:'How often is the World Cup held?',opts:['Every 2 years','Every 3 years','Every 4 years','Every 5 years'],a:2,pts:5,cat:'General'},
+    {q:'Which stadium hosts the opening match of WC 2026?',opts:['MetLife','SoFi','AT&T','Azteca'],a:3,pts:5,cat:'2026'},
+    {q:'Who won the World Cup in 1998?',opts:['Brazil','France','Italy','Germany'],a:1,pts:5,cat:'Winners'}
   ],
-  fr:[
-    {q:'Combien d equipes au Mondial 2026?',opts:['32','40','48','56'],a:2,pts:1},
-    {q:'Stade de la Finale?',opts:['Azteca','AT&T Stadium','MetLife Stadium','SoFi'],a:2,pts:1},
-    {q:'Quel pays n est PAS organisateur?',opts:['USA','Canada','Mexique','Bresil'],a:3,pts:1},
-    {q:'Combien de matchs au total?',opts:['64','80','96','104'],a:3,pts:1},
-    {q:'Ballon d Or 2024?',opts:['Mbappe','Bellingham','Rodri','Vinicius'],a:2,pts:2},
-    {q:'Vainqueur Mondial 2022?',opts:['France','Bresil','Croatie','Argentine'],a:3,pts:1},
-    {q:'Groupe de la France?',opts:['A','C','G','I'],a:3,pts:2},
-    {q:'Meilleur buteur historique de France?',opts:['Platini','Zidane','Giroud','Mbappe'],a:2,pts:2},
-    {q:'Stade du match d ouverture?',opts:['MetLife','Azteca','AT&T','BC Place'],a:1,pts:1},
-    {q:'Star norvegienne Groupe I?',opts:['Odegaard','Haaland','Sorloth','King'],a:1,pts:2},
-    {q:'Titres mondiaux du Bresil?',opts:['3','4','5','6'],a:2,pts:2},
-    {q:'Inventeur du coup du Scorpion?',opts:['Buffon','Higuita','Casillas','Yashin'],a:1,pts:3},
-    {q:'Ville de la Finale?',opts:['Los Angeles','Dallas','Miami','New York'],a:3,pts:2},
-    {q:'Derniere qualification de l Italie?',opts:['2014','2018','2022','Jamais'],a:0,pts:3},
-    {q:'Buts de Mbappe au Mondial 2022?',opts:['6','7','8','9'],a:2,pts:3}
+  medium:[
+    {q:'Who scored the fastest goal in WC history (10.8 sec)?',opts:['Inzaghi','Hakan Sukur','Owen','Batistuta'],a:1,pts:10,cat:'Records'},
+    {q:'Which player appeared in most WC matches (25)?',opts:['Cafu','Pele','Lothar Matthaus','Maldini'],a:2,pts:10,cat:'Records'},
+    {q:'Who is the only manager to win the WC twice?',opts:['Zagallo','Alf Ramsey','Vittorio Pozzo','Beckenbauer'],a:2,pts:10,cat:'History'},
+    {q:'Most goals in one WC tournament by one player?',opts:['11','12','13','14'],a:2,pts:10,cat:'Records'},
+    {q:'Which country won WC in both 1934 and 1938?',opts:['Germany','Brazil','Italy','France'],a:2,pts:10,cat:'History'},
+    {q:'Top scorer at 2018 WC with 6 goals?',opts:['Lukaku','Kane','Mbappe','Griezmann'],a:1,pts:10,cat:'Records'},
+    {q:'Highest attendance at a WC match?',opts:['150,000','174,000','199,854','220,000'],a:2,pts:10,cat:'Records'},
+    {q:'Most WC final appearances - 3 finals?',opts:['Beckenbauer','Pele','Cafu','Zidane'],a:2,pts:10,cat:'Records'},
+    {q:'Most clean sheets in WC history (10)?',opts:['Buffon','Casillas','Barthez','Neuer'],a:2,pts:10,cat:'Records'},
+    {q:'Which dog found the stolen Jules Rimet trophy in 1966?',opts:['Lassie','Pickles','Biscuit','Buddy'],a:1,pts:10,cat:'History'},
+    {q:'Who scored a hat-trick in a WC Final (before 2022)?',opts:['Pele','Zidane','Geoff Hurst','Ronaldo'],a:2,pts:10,cat:'History'},
+    {q:'Score of Germany vs Brazil at 2014 World Cup?',opts:['5-1','6-0','7-1','8-0'],a:2,pts:10,cat:'History'},
+    {q:'Which instrument was banned after 2010 WC?',opts:['Trumpet','Drum','Vuvuzela','Trombone'],a:2,pts:10,cat:'History'},
+    {q:'Who won Golden Ball in 2014 despite losing the final?',opts:['Robben','Messi','Muller','Neuer'],a:1,pts:10,cat:'Awards'},
+    {q:'Tim Howard made record saves (16) against which team in 2014?',opts:['Germany','France','Belgium','Argentina'],a:2,pts:10,cat:'Records'},
+    {q:'Who performed Waka Waka at the 2010 World Cup?',opts:['Rihanna','Shakira','Beyonce','Jennifer Lopez'],a:1,pts:10,cat:'Culture'},
+    {q:'Which country was first from Africa to host the WC?',opts:['Nigeria','Egypt','Morocco','South Africa'],a:3,pts:10,cat:'Hosts'},
+    {q:'First WC to use goal-line technology?',opts:['South Africa 2010','Brazil 2014','Russia 2018','Qatar 2022'],a:1,pts:10,cat:'History'}
   ],
-  es:[
-    {q:'Cuantos equipos en el Mundial 2026?',opts:['32','40','48','56'],a:2,pts:1},
-    {q:'Estadio de la Final?',opts:['Azteca','AT&T Stadium','MetLife Stadium','SoFi'],a:2,pts:1},
-    {q:'Que pais NO es organizador?',opts:['USA','Canada','Mexico','Brasil'],a:3,pts:1},
-    {q:'Cuantos partidos en total?',opts:['64','80','96','104'],a:3,pts:1},
-    {q:'Balon de Oro 2024?',opts:['Mbappe','Bellingham','Rodri','Vinicius'],a:2,pts:2},
-    {q:'Campeon Mundial 2022?',opts:['Francia','Brasil','Croacia','Argentina'],a:3,pts:1},
-    {q:'Grupo de Espana?',opts:['A','C','H','I'],a:2,pts:2},
-    {q:'Maximo goleador historico de Espana?',opts:['Raul','Villa','Torres','Morata'],a:0,pts:2},
-    {q:'Estadio del partido inaugural?',opts:['MetLife','Azteca','AT&T','BC Place'],a:1,pts:1},
-    {q:'Estrella noruega Grupo I?',opts:['Odegaard','Haaland','Sorloth','King'],a:1,pts:2},
-    {q:'Mundiales ganados por Brasil?',opts:['3','4','5','6'],a:2,pts:2},
-    {q:'Quien invento el golpe del Escorpion?',opts:['Buffon','Higuita','Casillas','Yashin'],a:1,pts:3},
-    {q:'Ciudad de la Final?',opts:['Los Angeles','Dallas','Miami','Nueva York'],a:3,pts:2},
-    {q:'Ultima clasificacion de Italia?',opts:['2014','2018','2022','Nunca'],a:0,pts:3},
-    {q:'Goles de Mbappe en el Mundial 2022?',opts:['6','7','8','9'],a:2,pts:3}
-  ],
-  pt:[
-    {q:'Quantas selecoes na Copa 2026?',opts:['32','40','48','56'],a:2,pts:1},
-    {q:'Estadio da Final?',opts:['Azteca','AT&T Stadium','MetLife Stadium','SoFi'],a:2,pts:1},
-    {q:'Qual pais NAO e sede?',opts:['USA','Canada','Mexico','Brasil'],a:3,pts:1},
-    {q:'Quantos jogos no total?',opts:['64','80','96','104'],a:3,pts:1},
-    {q:'Bola de Ouro 2024?',opts:['Mbappe','Bellingham','Rodri','Vinicius'],a:2,pts:2},
-    {q:'Campeao Copa 2022?',opts:['Franca','Brasil','Croacia','Argentina'],a:3,pts:1},
-    {q:'Grupo de Portugal?',opts:['A','C','K','I'],a:2,pts:2},
-    {q:'Maior artilheiro historico de Portugal?',opts:['Figo','Eusebio','Ronaldo','Joao Felix'],a:2,pts:2},
-    {q:'Estadio da abertura?',opts:['MetLife','Azteca','AT&T','BC Place'],a:1,pts:1},
-    {q:'Estrela norueguesa Grupo I?',opts:['Odegaard','Haaland','Sorloth','King'],a:1,pts:2},
-    {q:'Copas do Mundo do Brasil?',opts:['3','4','5','6'],a:2,pts:2},
-    {q:'Quem inventou o chute escorpiao?',opts:['Buffon','Higuita','Casillas','Yashin'],a:1,pts:3},
-    {q:'Cidade da Final?',opts:['Los Angeles','Dallas','Miami','Nova York'],a:3,pts:2},
-    {q:'Ultima classificacao da Italia?',opts:['2014','2018','2022','Nunca'],a:0,pts:3},
-    {q:'Gols de Mbappe na Copa 2022?',opts:['6','7','8','9'],a:2,pts:3}
-  ],
-  it:[
-    {q:'Quante squadre al Mondiale 2026?',opts:['32','40','48','56'],a:2,pts:1},
-    {q:'Stadio della Finale?',opts:['Azteca','AT&T Stadium','MetLife Stadium','SoFi'],a:2,pts:1},
-    {q:'Quale paese NON e organizzatore?',opts:['USA','Canada','Messico','Brasile'],a:3,pts:1},
-    {q:'Quante partite in totale?',opts:['64','80','96','104'],a:3,pts:1},
-    {q:'Pallone d Or 2024?',opts:['Mbappe','Bellingham','Rodri','Vinicius'],a:2,pts:2},
-    {q:'Vincitore Mondiale 2022?',opts:['Francia','Brasile','Croazia','Argentina'],a:3,pts:1},
-    {q:'L Italia e al Mondiale 2026?',opts:['Si gruppo A','Si gruppo B','No','Si gruppo C'],a:2,pts:2},
-    {q:'Miglior marcatore storico italiano?',opts:['Totti','Del Piero','Riva','Vieri'],a:2,pts:2},
-    {q:'Stadio partita inaugurale?',opts:['MetLife','Azteca','AT&T','BC Place'],a:1,pts:1},
-    {q:'Stella norvegese Girone I?',opts:['Odegaard','Haaland','Sorloth','King'],a:1,pts:2},
-    {q:'Mondiali vinti dal Brasile?',opts:['3','4','5','6'],a:2,pts:2},
-    {q:'Chi ha inventato il calcio dello scorpione?',opts:['Buffon','Higuita','Casillas','Yashin'],a:1,pts:3},
-    {q:'Citta della Finale?',opts:['Los Angeles','Dallas','Miami','New York'],a:3,pts:2},
-    {q:'Ultima qualificazione dell Italia?',opts:['2014','2018','2022','Mai'],a:0,pts:3},
-    {q:'Gol di Mbappe al Mondiale 2022?',opts:['6','7','8','9'],a:2,pts:3}
-  ],
-  de:[
-    {q:'Wie viele Teams bei der WM 2026?',opts:['32','40','48','56'],a:2,pts:1},
-    {q:'Stadion des Finales?',opts:['Azteca','AT&T Stadium','MetLife Stadium','SoFi'],a:2,pts:1},
-    {q:'Welches Land ist KEIN Gastgeber?',opts:['USA','Kanada','Mexiko','Brasilien'],a:3,pts:1},
-    {q:'Wie viele Spiele insgesamt?',opts:['64','80','96','104'],a:3,pts:1},
-    {q:'Ballon d Or 2024?',opts:['Mbappe','Bellingham','Rodri','Vinicius'],a:2,pts:2},
-    {q:'WM Sieger 2022?',opts:['Frankreich','Brasilien','Kroatien','Argentinien'],a:3,pts:1},
-    {q:'Deutschlands Gruppe?',opts:['A','C','E','I'],a:2,pts:2},
-    {q:'Historischer Torschutzkoenig Deutschlands?',opts:['Klose','Mueller','Rummenigge','Bierhoff'],a:0,pts:2},
-    {q:'Stadion Eroeffnungsspiel?',opts:['MetLife','Azteca','AT&T','BC Place'],a:1,pts:1},
-    {q:'Norwegischer Star Gruppe I?',opts:['Odegaard','Haaland','Sorloth','King'],a:1,pts:2},
-    {q:'WM Titel Brasilien?',opts:['3','4','5','6'],a:2,pts:2},
-    {q:'Wer erfand den Skorpion Tritt?',opts:['Buffon','Higuita','Casillas','Yashin'],a:1,pts:3},
-    {q:'Stadt des Finales?',opts:['Los Angeles','Dallas','Miami','New York'],a:3,pts:2},
-    {q:'Letzte WM Qualifikation Italiens?',opts:['2014','2018','2022','Nie'],a:0,pts:3},
-    {q:'Mbappe Tore WM 2022?',opts:['6','7','8','9'],a:2,pts:3}
+  hard:[
+    {q:'First player to receive a red card at a WC (1974)?',opts:['Montero','Carlos Caszely','Tardelli','Cruyff'],a:1,pts:20,cat:'History'},
+    {q:'Roger Milla scored at WC age 42. Which team?',opts:['Brazil','Bolivia','Russia','USA'],a:2,pts:20,cat:'Legends'},
+    {q:'Oleg Salenko scored 5 in one game in 1994. Against?',opts:['Mexico','Saudi Arabia','Cameroon','Bolivia'],a:2,pts:20,cat:'Records'},
+    {q:'Teams in the first World Cup in 1930?',opts:['12','13','14','16'],a:1,pts:20,cat:'History'},
+    {q:'Only player to win 3 World Cups?',opts:['Garrincha','Didi','Pele','Tostao'],a:2,pts:20,cat:'Legends'},
+    {q:'1950 WC had no final. What decided the winner?',opts:['Penalties','Extra time','Round-robin','Coin toss'],a:2,pts:20,cat:'History'},
+    {q:'Italian player headbutted by Zidane in 2006 final?',opts:['Cannavaro','Buffon','Materazzi','Totti'],a:2,pts:20,cat:'History'},
+    {q:'First siblings to play for different countries at a WC?',opts:['Boatengs','Inaki & Nico Williams','De Boers','None'],a:1,pts:20,cat:'History'},
+    {q:'Most consecutive WC wins (11) held by?',opts:['Germany','France','Brazil','Argentina'],a:2,pts:20,cat:'Records'},
+    {q:'Name of the 1966 World Cup mascot?',opts:['Willie','Fuleco','Zakumi','Pique'],a:0,pts:20,cat:'Mascots'},
+    {q:'Who scored 2 goals in the 2002 WC Final?',opts:['Ronaldinho','Rivaldo','Ronaldo R9','Roberto Carlos'],a:2,pts:20,cat:'History'},
+    {q:'Italy held WC title record 16 years due to?',opts:['Dominance','Cold War','World War II','FIFA ban'],a:2,pts:20,cat:'History'},
+    {q:'First WC co-hosted by two countries?',opts:['1998','2002','2006','2010'],a:1,pts:20,cat:'History'},
+    {q:'Fastest red card in WC history (52 seconds)?',opts:['Batista','Caszely','Zidane','Keane'],a:0,pts:20,cat:'Records'},
+    {q:'Which country withdrew from 1950 WC to play barefoot?',opts:['Haiti','Bolivia','India','Peru'],a:2,pts:20,cat:'History'},
+    {q:'What is the WC Trophy made of?',opts:['Silver','Platinum','18-karat gold','Bronze'],a:2,pts:20,cat:'Trophy'},
+    {q:'Highest scoring WC game ever (1954)?',opts:['Austria 7-5 Switzerland','Hungary 10-1 El Salvador','Germany 8-0 Saudi Arabia','Brazil 7-1 Sweden'],a:0,pts:20,cat:'Records'},
+    {q:'Only player to score for two different nations at WC?',opts:['Zidane','Prosinecki','Suarez','Di Stefano'],a:1,pts:20,cat:'History'}
   ]
 };
-var QC_OPPONENTS={
-  en:['Bolivia','Haiti','Panama','Ghana','Scotland','Croatia','Morocco','Norway','USA','Argentina','Brazil','Spain','France','Germany','England'],
-  fr:['Bolivie','Haiti','Panama','Ghana','Ecosse','Croatie','Maroc','Norvege','USA','Argentine','Bresil','Espagne','France','Allemagne','France'],
-  es:['Bolivia','Haiti','Panama','Ghana','Escocia','Croacia','Marruecos','Noruega','USA','Argentina','Brasil','Espana','Francia','Alemania','Espana'],
-  pt:['Bolivia','Haiti','Panama','Ghana','Escocia','Croacia','Marrocos','Noruega','USA','Argentina','Brasil','Espanha','Franca','Alemanha','Portugal'],
-  it:['Bolivia','Haiti','Panama','Ghana','Scozia','Croazia','Marocco','Norvegia','USA','Argentina','Brasile','Spagna','Francia','Germania','Italia'],
-  de:['Bolivien','Haiti','Panama','Ghana','Schottland','Kroatien','Marokko','Norwegen','USA','Argentinien','Brasilien','Spanien','Frankreich','Deutschland','Deutschland']
-};
+
 
 var QUIZ = {
   en:[{q:'How many teams in the 2026 World Cup?',opts:['32','40','48','56'],a:2},{q:'Which stadium hosts the Final?',opts:['Azteca','AT&T Stadium','MetLife Stadium','SoFi Stadium'],a:2},{q:'Which country is NOT a host?',opts:['USA','Canada','Mexico','Brazil'],a:3},{q:'Which group is ENGLAND in?',opts:['Group A','Group C','Group J','Group L'],a:3},{q:'Who won the 2024 Ballon dOr?',opts:['Mbappe','Bellingham','Rodri','Vinicius'],a:2},{q:'How many total matches?',opts:['64','80','96','104'],a:3},{q:'Which stadium hosts the opening match?',opts:['MetLife','Azteca','AT&T Stadium','BC Place'],a:1},{q:'Which country has won the most World Cups?',opts:['Germany','Italy','Brazil','Argentina'],a:2},{q:'Which country won the 2022 World Cup?',opts:['France','Brazil','Croatia','Argentina'],a:3},{q:'Which Norwegian player is a Group I star?',opts:['Odegaard','Haaland','Sorloth','King'],a:1}],
@@ -695,6 +646,9 @@ function App(){
   var sQ6=useState(1);var qcRound=sQ6[0];var setQcRound=sQ6[1];
   var sQ7=useState(null);var qcOpponent=sQ7[0];var setQcOpponent=sQ7[1];
   var sQ8=useState('idle');var qcPhase=sQ8[0];var setQcPhase=sQ8[1];
+  var sQ9=useState([]);var leaderboard=sQ9[0];var setLeaderboard=sQ9[1];
+  var sQ10=useState('');var playerName=sQ10[0];var setPlayerName=sQ10[1];
+  var sQ11=useState(false);var showLeaderboard=sQ11[0];var setShowLeaderboard=sQ11[1];
   var sF1=useState([]);var fantasyTeam=sF1[0];var setFantasyTeam=sF1[1];
   var sF2=useState(null);var fantasyPos=sF2[0];var setFantasyPos=sF2[1];
   var sF3=useState(false);var fantasyDone=sF3[0];var setFantasyDone=sF3[1];
@@ -1685,46 +1639,110 @@ function App(){
           e('div',{style:{position:'absolute',top:10,left:'20%',right:'20%',height:85,border:'3px solid white',borderBottom:'none',background:'rgba(255,255,255,0.08)'}}),
 
           e('div',{style:{position:'absolute',bottom:0,left:0,right:0,height:30,background:'rgba(255,255,255,0.05)',borderTop:'2px solid rgba(255,255,255,0.15)'}}),
-          // HIGUITA SVG
+          // HIGUITA SVG - El Loco
           e('svg',{
-            style:{position:'absolute',top:keeperDir==='left'?5:keeperDir==='right'?5:10,left:keeperDir==='left'?'18%':keeperDir==='right'?'54%':'39%',width:54,height:78,transition:'all 0.45s cubic-bezier(0.25,0.46,0.45,0.94)',transform:keeperDir==='left'?'rotate(-28deg) scaleX(-1)':keeperDir==='right'?'rotate(28deg)':'rotate(0deg)',filter:shotResult==='goal'?'grayscale(0.9) opacity(0.5)':shotResult==='saved'?'drop-shadow(0 0 10px #ffd700)':''},
-            viewBox:'0 0 54 78',xmlns:'http://www.w3.org/2000/svg'
+            style:{
+              position:'absolute',
+              top: shotResult==='saved'?0 : keeperDir==='left'?5:keeperDir==='right'?5:10,
+              left:keeperDir==='left'?'18%':keeperDir==='right'?'54%':'39%',
+              width:54,height:90,
+              transition:'all 0.5s cubic-bezier(0.25,0.46,0.45,0.94)',
+              transform:shotResult==='saved'
+                ?'rotate(30deg)'
+                :keeperDir==='left'?'rotate(-28deg) scaleX(-1)':keeperDir==='right'?'rotate(28deg)':'rotate(0deg)',
+              filter:shotResult==='goal'?'grayscale(0.9) opacity(0.5)':shotResult==='saved'?'drop-shadow(0 0 10px #ffd700)':'',
+              transformOrigin:'center bottom'
+            },
+            viewBox:'0 0 54 90',xmlns:'http://www.w3.org/2000/svg'
           },
-            e('rect',{x:13,y:28,width:24,height:24,rx:4,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1.5}),
-            e('rect',{x:13,y:35,width:24,height:5,fill:'#CE1126'}),
-            e('rect',{x:13,y:40,width:24,height:4,fill:'#003087'}),
-            e('text',{x:25,y:38,textAnchor:'middle',fontSize:4,fontWeight:'bold',fill:'white'},'EL LOCO'),
-            e('rect',{x:21,y:21,width:9,height:9,rx:2,fill:'#C68642'}),
-            e('ellipse',{cx:25,cy:13,rx:10,ry:11,fill:'#C68642',stroke:'#a0522d',strokeWidth:1}),
-            e('path',{d:'M15 7 Q19 1 25 0 Q31 1 35 7 Q32 4 25 3 Q18 4 15 7',fill:'#0d0500'}),
-            e('ellipse',{cx:13,cy:12,rx:4,ry:7,fill:'#0d0500'}),
-            e('ellipse',{cx:37,cy:12,rx:4,ry:7,fill:'#0d0500'}),
-            e('circle',{cx:13,cy:19,r:3,fill:'#0d0500'}),
-            e('circle',{cx:37,cy:19,r:3,fill:'#0d0500'}),
-            e('circle',{cx:20,cy:2,r:3,fill:'#0d0500'}),
-            e('circle',{cx:25,cy:0,r:3,fill:'#0d0500'}),
-            e('circle',{cx:30,cy:2,r:3,fill:'#0d0500'}),
-            e('ellipse',{cx:20,cy:13,rx:2.2,ry:1.8,fill:'white'}),
-            e('ellipse',{cx:30,cy:13,rx:2.2,ry:1.8,fill:'white'}),
-            e('circle',{cx:20,cy:13,r:1.3,fill:'#2a1500'}),
-            e('circle',{cx:30,cy:13,r:1.3,fill:'#2a1500'}),
-            e('path',{d:'M17 10 Q20 9 23 10',stroke:'#0d0500',strokeWidth:1.8,fill:'none',strokeLinecap:'round'}),
-            e('path',{d:'M27 10 Q30 9 33 10',stroke:'#0d0500',strokeWidth:1.8,fill:'none',strokeLinecap:'round'}),
-            e('path',{d:'M16 18 Q20 15 25 17 Q30 15 34 18 Q31 22 25 21 Q19 22 16 18',fill:'#0d0500'}),
-            e('path',{d:'M17 22 Q21 25 25 24 Q29 25 33 22',stroke:'#0d0500',strokeWidth:1.3,fill:'none',strokeLinecap:'round'}),
-            keeperDir==='left'?e('path',{d:'M13 32 L-4 18',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'}):e('path',{d:'M13 36 L6 50',stroke:'#FCD116',strokeWidth:6,strokeLinecap:'round'}),
-            keeperDir==='right'?e('path',{d:'M37 32 L54 18',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'}):e('path',{d:'M37 36 L44 50',stroke:'#FCD116',strokeWidth:6,strokeLinecap:'round'}),
-            keeperDir==='left'?e('circle',{cx:-4,cy:17,r:5.5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}):e('circle',{cx:6,cy:50,r:5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
-            keeperDir==='right'?e('circle',{cx:54,cy:17,r:5.5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}):e('circle',{cx:44,cy:50,r:5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
-            shotResult!=='saved'&&e('rect',{x:15,y:52,width:9,height:13,rx:2,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1}),
-            shotResult!=='saved'&&e('rect',{x:30,y:52,width:9,height:13,rx:2,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1}),
-            shotResult!=='saved'&&e('ellipse',{cx:19,cy:67,rx:7,ry:3.5,fill:'#111'}),
-            shotResult!=='saved'&&e('ellipse',{cx:34,cy:67,rx:7,ry:3.5,fill:'#111'}),
-            shotResult==='saved'&&e('path',{d:'M17 54 Q8 46 5 34 Q2 20 14 10',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round',fill:'none'}),
-            shotResult==='saved'&&e('path',{d:'M37 54 Q46 46 49 34 Q52 20 40 10',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round',fill:'none'}),
-            shotResult==='saved'&&e('ellipse',{cx:14,cy:8,rx:7,ry:3,fill:'#111',transform:'rotate(-25 14 8)'}),
-            shotResult==='saved'&&e('ellipse',{cx:40,cy:8,rx:7,ry:3,fill:'#111',transform:'rotate(25 40 8)'}),
-            shotResult==='saved'&&e('text',{x:25,y:3,textAnchor:'middle',fontSize:11},'🦂')
+            // ── BODY leaning forward during scorpion ──
+            // Jersey Colombia
+            e('rect',{x:13,y:shotResult==='saved'?38:28,width:24,height:24,rx:4,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1.5}),
+            e('rect',{x:13,y:shotResult==='saved'?45:35,width:24,height:5,fill:'#CE1126'}),
+            e('rect',{x:13,y:shotResult==='saved'?50:40,width:24,height:4,fill:'#003087'}),
+            e('text',{x:25,y:shotResult==='saved'?48:38,textAnchor:'middle',fontSize:4,fontWeight:'bold',fill:'white'},'EL LOCO'),
+
+            // Neck
+            e('rect',{x:21,y:shotResult==='saved'?31:21,width:9,height:9,rx:2,fill:'#C68642'}),
+
+            // HEAD
+            e('ellipse',{cx:25,cy:shotResult==='saved'?22:13,rx:10,ry:11,fill:'#C68642',stroke:'#a0522d',strokeWidth:1}),
+
+            // LONG CURLY HAIR - iconic
+            e('path',{d:'M15 '+(shotResult==='saved'?16:6)+' Q19 '+(shotResult==='saved'?10:0)+' 25 '+(shotResult==='saved'?9:-1)+' Q31 '+(shotResult==='saved'?10:0)+' 35 '+(shotResult==='saved'?16:6)+' Q32 '+(shotResult==='saved'?13:3)+' 25 '+(shotResult==='saved'?12:2)+' Q18 '+(shotResult==='saved'?13:3)+' 15 '+(shotResult==='saved'?16:6),fill:'#0d0500'}),
+            e('ellipse',{cx:13,cy:shotResult==='saved'?21:11,rx:4,ry:7,fill:'#0d0500'}),
+            e('ellipse',{cx:37,cy:shotResult==='saved'?21:11,rx:4,ry:7,fill:'#0d0500'}),
+            e('circle',{cx:13,cy:shotResult==='saved'?28:18,r:3,fill:'#0d0500'}),
+            e('circle',{cx:37,cy:shotResult==='saved'?28:18,r:3,fill:'#0d0500'}),
+            e('circle',{cx:20,cy:shotResult==='saved'?11:1,r:3,fill:'#0d0500'}),
+            e('circle',{cx:25,cy:shotResult==='saved'?9:-1,r:3,fill:'#0d0500'}),
+            e('circle',{cx:30,cy:shotResult==='saved'?11:1,r:3,fill:'#0d0500'}),
+
+            // EYES
+            e('ellipse',{cx:20,cy:shotResult==='saved'?22:13,rx:2.2,ry:1.8,fill:'white'}),
+            e('ellipse',{cx:30,cy:shotResult==='saved'?22:13,rx:2.2,ry:1.8,fill:'white'}),
+            e('circle',{cx:20,cy:shotResult==='saved'?22:13,r:1.3,fill:'#2a1500'}),
+            e('circle',{cx:30,cy:shotResult==='saved'?22:13,r:1.3,fill:'#2a1500'}),
+
+            // EYEBROWS
+            e('path',{d:'M17 '+(shotResult==='saved'?19:9)+' Q20 '+(shotResult==='saved'?18:8)+' 23 '+(shotResult==='saved'?19:9),stroke:'#0d0500',strokeWidth:1.8,fill:'none',strokeLinecap:'round'}),
+            e('path',{d:'M27 '+(shotResult==='saved'?19:9)+' Q30 '+(shotResult==='saved'?18:8)+' 33 '+(shotResult==='saved'?19:9),stroke:'#0d0500',strokeWidth:1.8,fill:'none',strokeLinecap:'round'}),
+
+            // BIG MOUSTACHE
+            e('path',{d:'M16 '+(shotResult==='saved'?27:17)+' Q20 '+(shotResult==='saved'?24:14)+' 25 '+(shotResult==='saved'?26:16)+' Q30 '+(shotResult==='saved'?24:14)+' 34 '+(shotResult==='saved'?27:17)+' Q31 '+(shotResult==='saved'?31:21)+' 25 '+(shotResult==='saved'?30:20)+' Q19 '+(shotResult==='saved'?31:21)+' 16 '+(shotResult==='saved'?27:17),fill:'#0d0500'}),
+
+            // BEARD stubble
+            e('path',{d:'M17 '+(shotResult==='saved'?31:21)+' Q21 '+(shotResult==='saved'?34:24)+' 25 '+(shotResult==='saved'?33:23)+' Q29 '+(shotResult==='saved'?34:24)+' 33 '+(shotResult==='saved'?31:21),stroke:'#0d0500',strokeWidth:1.2,fill:'none',strokeLinecap:'round'}),
+
+            // ARMS
+            keeperDir==='left'&&!shotResult
+              ?e('path',{d:'M13 32 L-4 18',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'})
+              :keeperDir==='right'&&!shotResult
+              ?e('path',{d:'M13 36 L6 50',stroke:'#FCD116',strokeWidth:6,strokeLinecap:'round'})
+              :null,
+            keeperDir==='right'&&!shotResult
+              ?e('path',{d:'M37 32 L54 18',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'})
+              :keeperDir==='left'&&!shotResult
+              ?e('path',{d:'M37 36 L44 50',stroke:'#FCD116',strokeWidth:6,strokeLinecap:'round'})
+              :null,
+
+            // Arms during scorpion - stretched forward/down
+            shotResult==='saved'&&e('path',{d:'M13 42 L-2 55',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'}),
+            shotResult==='saved'&&e('path',{d:'M37 42 L52 55',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'}),
+
+            // GLOVES
+            !shotResult&&keeperDir==='left'&&e('circle',{cx:-4,cy:17,r:5.5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
+            !shotResult&&keeperDir==='left'&&e('circle',{cx:6,cy:50,r:5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
+            !shotResult&&keeperDir==='right'&&e('circle',{cx:54,cy:17,r:5.5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
+            !shotResult&&keeperDir==='right'&&e('circle',{cx:44,cy:50,r:5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
+            shotResult==='saved'&&e('circle',{cx:-2,cy:55,r:5.5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
+            shotResult==='saved'&&e('circle',{cx:52,cy:55,r:5.5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
+
+            // NORMAL LEGS (hidden during scorpion)
+            !shotResult&&e('rect',{x:15,y:52,width:9,height:13,rx:2,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1}),
+            !shotResult&&e('rect',{x:30,y:52,width:9,height:13,rx:2,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1}),
+            !shotResult&&e('ellipse',{cx:19,cy:67,rx:7,ry:3.5,fill:'#111'}),
+            !shotResult&&e('ellipse',{cx:34,cy:67,rx:7,ry:3.5,fill:'#111'}),
+
+            // ── REAL SCORPION KICK ──
+            // Body leans forward, legs curl UP and OVER behind the back
+            // Left leg curves up behind
+            shotResult==='saved'&&e('path',{
+              d:'M18 62 C10 58 2 48 6 35 C8 26 18 20 22 14',
+              stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round',fill:'none'
+            }),
+            // Right leg curves up behind
+            shotResult==='saved'&&e('path',{
+              d:'M36 62 C44 58 52 48 48 35 C46 26 36 20 32 14',
+              stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round',fill:'none'
+            }),
+            // Boots at the top (behind head!)
+            shotResult==='saved'&&e('ellipse',{cx:22,cy:12,rx:7,ry:3.5,fill:'#111',stroke:'#333',strokeWidth:1,transform:'rotate(-20 22 12)'}),
+            shotResult==='saved'&&e('ellipse',{cx:32,cy:12,rx:7,ry:3.5,fill:'#111',stroke:'#333',strokeWidth:1,transform:'rotate(20 32 12)'}),
+
+            // Scorpion emoji above boots
+            shotResult==='saved'&&e('text',{x:27,y:7,textAnchor:'middle',fontSize:12},'🦂')
+          )
           ),
           // Ball
           shotDir&&e('div',{style:{position:'absolute',bottom:shotResult?55:5,left:shotDir==='left'?'22%':shotDir==='right'?'62%':'42%',fontSize:20,transition:'all 0.65s ease'}},'⚽'),
@@ -1782,119 +1800,351 @@ function App(){
           e('div',{style:{fontSize:24,marginBottom:6}},'🔒'),
           e('a',{href:getStripeLink(lang),target:'_blank',rel:'noopener',style:{background:'linear-gradient(135deg,'+G+',#ff9900)',border:'none',borderRadius:10,padding:'10px 24px',fontSize:12,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer',textDecoration:'none',display:'inline-block'}},'🏆 PRO - '+getPrice(lang))
         ),
-        premium&&e('div',{style:{textAlign:'center',padding:16,color:'#9bb0c8',fontSize:12}},'🎮 PRO Animated Penalty - Coming Soon !')
+        premium&&e('div',null,
+          // PRO PENALTY GAME - Full animated version
+          e('div',{style:{textAlign:'center',marginBottom:12}},
+            e('div',{style:{fontSize:11,color:'#9bb0c8'}},'🎮 '+(lang==='fr'?'Version animee PRO avec effets speciaux':lang==='es'?'Version animada PRO con efectos especiales':lang==='pt'?'Versao animada PRO com efeitos especiais':lang==='it'?'Versione animata PRO con effetti speciali':lang==='de'?'Animierte PRO Version mit Spezialeffekten':'PRO Animated version with special effects'))
+          ),
+
+          // Animated pitch
+          e('div',{style:{position:'relative',width:'100%',maxWidth:300,margin:'0 auto 14px',height:200,background:'linear-gradient(180deg,#0d3b0d,#1a5c1a,#2d8a2d)',borderRadius:12,overflow:'hidden',border:'2px solid rgba(255,255,255,0.3)',boxShadow:'0 0 20px rgba(0,255,0,0.1)'}},
+            // Pitch markings
+            e('div',{style:{position:'absolute',top:0,left:0,right:0,bottom:0,background:'repeating-linear-gradient(90deg,transparent,transparent 30px,rgba(255,255,255,0.03) 30px,rgba(255,255,255,0.03) 60px)'}}),
+            // Goal
+            e('div',{style:{position:'absolute',top:15,left:'15%',right:'15%',height:100,border:'3px solid white',borderBottom:'none',background:'rgba(255,255,255,0.06)',boxShadow:'inset 0 0 20px rgba(255,255,255,0.05)'}}),
+            // Goal net lines
+            e('div',{style:{position:'absolute',top:18,left:'16%',right:'16%',height:95,backgroundImage:'linear-gradient(rgba(255,255,255,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.08) 1px,transparent 1px)',backgroundSize:'20px 20px'}}),
+            // Crowd effect top
+            e('div',{style:{position:'absolute',top:0,left:0,right:0,height:15,background:'linear-gradient(180deg,rgba(255,200,100,0.15),transparent)',animation:'shimmer 2s infinite'}}),
+
+            // HIGUITA - animated
+            e('div',{style:{
+              position:'absolute',
+              top:shotResult==='saved'?10:keeperDir==='left'?15:keeperDir==='right'?15:25,
+              left:keeperDir==='left'?'14%':keeperDir==='right'?'52%':'36%',
+              fontSize:48,
+              transition:'all 0.45s cubic-bezier(0.25,0.46,0.45,0.94)',
+              transform:shotResult==='saved'
+                ?'rotate(25deg) scaleY(-0.8)'
+                :keeperDir==='left'?'rotate(-35deg) scaleX(-1)':keeperDir==='right'?'rotate(35deg)':'rotate(0deg)',
+              filter:shotResult==='goal'?'grayscale(1) opacity(0.4)':shotResult==='saved'?'drop-shadow(0 0 15px gold)':'drop-shadow(0 4px 8px rgba(0,0,0,0.5))',
+              lineHeight:1
+            }},'🧤'),
+
+            // Scorpion emoji when saves
+            shotResult==='saved'&&e('div',{style:{position:'absolute',top:keeperDir==='left'?5:keeperDir==='right'?5:5,left:keeperDir==='left'?'16%':keeperDir==='right'?'54%':'38%',fontSize:24,animation:'spin 0.5s ease'}},'🦂'),
+
+            // Ball with trail effect
+            shotDir&&e('div',{style:{
+              position:'absolute',
+              bottom:shotResult?80:5,
+              left:shotDir==='left'?'18%':shotDir==='right'?'64%':'40%',
+              fontSize:shotResult?32:22,
+              transition:'all 0.65s cubic-bezier(0.25,0.46,0.45,0.94)',
+              filter:shotResult?'none':'blur(1px)',
+              transform:shotResult==='goal'?'scale(1.3)':shotResult==='saved'?'scale(0.8)':'scale(1)'
+            }},'⚽'),
+
+            // GOAL flash effect
+            shotResult==='goal'&&e('div',{style:{position:'absolute',top:0,left:0,right:0,bottom:0,background:'rgba(255,255,100,0.2)',borderRadius:10,animation:'shimmer 0.3s ease'}}),
+
+            // Result banner
+            shotResult&&e('div',{style:{
+              position:'absolute',
+              top:'45%',left:'50%',
+              transform:'translate(-50%,-50%)',
+              fontSize:22,fontWeight:'bold',
+              color:shotResult==='goal'?'#ffff00':'#ff4444',
+              textShadow:'0 0 20px '+(shotResult==='goal'?'rgba(255,255,0,0.8)':'rgba(255,0,0,0.8)'),
+              letterSpacing:2,
+              whiteSpace:'nowrap'
+            }},
+            shotResult==='goal'?'⚽ GOAL !!':(lang==='fr'?'✋ ARRETE !':lang==='es'?'✋ PARADO !':lang==='pt'?'✋ DEFENDIDO !':lang==='it'?'✋ PARATO !':lang==='de'?'✋ GEHALTEN !':'✋ SAVED !!')),
+
+            // Crowd reaction
+            shotResult==='goal'&&e('div',{style:{position:'absolute',bottom:5,left:0,right:0,textAlign:'center',fontSize:16}},'🎉🎊🎉'),
+            shotResult==='saved'&&e('div',{style:{position:'absolute',bottom:5,left:0,right:0,textAlign:'center',fontSize:16}},'👏🦂👏')
+          ),
+
+          // Scoreboard PRO
+          e('div',{style:{display:'flex',justifyContent:'center',gap:10,marginBottom:10}},
+            e('div',{style:{textAlign:'center',background:'linear-gradient(135deg,rgba(40,160,40,0.3),rgba(40,200,40,0.1))',border:'1px solid rgba(40,200,40,0.5)',borderRadius:10,padding:'8px 14px',boxShadow:'0 0 10px rgba(40,200,40,0.1)'}},
+              e('div',{style:{fontSize:22,fontWeight:'bold',color:'#90ee90'}},'⚽ ',gameScore),
+              e('div',{style:{fontSize:9,color:'#6a86a0'}},'GOALS')
+            ),
+            e('div',{style:{textAlign:'center',background:'linear-gradient(135deg,rgba(212,175,55,0.2),rgba(184,150,62,0.05))',border:'1px solid '+G,borderRadius:10,padding:'8px 14px'}},
+              e('div',{style:{fontSize:22,fontWeight:'bold',color:G}},shotsLeft),
+              e('div',{style:{fontSize:9,color:'#6a86a0'}},'LEFT')
+            ),
+            e('div',{style:{textAlign:'center',background:'linear-gradient(135deg,rgba(200,40,40,0.3),rgba(200,60,60,0.1))',border:'1px solid rgba(200,60,60,0.5)',borderRadius:10,padding:'8px 14px'}},
+              e('div',{style:{fontSize:22,fontWeight:'bold',color:'#ff8888'}},'✗ ',gameMiss),
+              e('div',{style:{fontSize:9,color:'#6a86a0'}},'SAVED')
+            )
+          ),
+
+          // Shot dots PRO style
+          e('div',{style:{display:'flex',justifyContent:'center',gap:6,marginBottom:10}},
+            [0,1,2,3,4].map(function(i){
+              var h=shotHistory[i];
+              return e('div',{key:i,style:{width:28,height:28,borderRadius:'50%',background:h?(h.scored?'rgba(40,200,40,0.5)':'rgba(200,40,40,0.5)'):'rgba(255,255,255,0.08)',border:'2px solid '+(h?(h.scored?'#90ee90':'#ff6666'):'rgba(255,255,255,0.15)'),display:'flex',alignItems:'center',justifyContent:'center',fontSize:12,boxShadow:h&&h.scored?'0 0 8px rgba(40,200,40,0.4)':h?'0 0 8px rgba(200,40,40,0.4)':'none'}},h?(h.scored?'⚽':'✗'):'');
+            })
+          ),
+
+          // Combo
+          combo>=2&&e('div',{style:{textAlign:'center',marginBottom:8}},
+            e('div',{style:{background:'linear-gradient(135deg,rgba(255,150,0,0.3),rgba(212,175,55,0.2))',border:'1px solid '+G,borderRadius:10,padding:'5px 16px',display:'inline-block',fontSize:13,fontWeight:'bold',color:G,boxShadow:'0 0 12px rgba(212,175,55,0.3)'}},'🔥 COMBO x',combo,' !')
+          ),
+
+          // PRO Controls
+          gamePhase==='idle'&&e('button',{
+            onClick:function(){setGamePhase('shooting');setTimer(3);},
+            style:{width:'100%',background:'linear-gradient(135deg,#d4af37,#ff9900,#d4af37)',backgroundSize:'200% auto',border:'none',borderRadius:12,padding:'14px 0',fontSize:15,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer',boxShadow:'0 4px 15px rgba(212,175,55,0.4)'}
+          },'⚽ '+(lang==='fr'?'LANCER LE JEU PRO':lang==='es'?'INICIAR JUEGO PRO':lang==='pt'?'INICIAR JOGO PRO':lang==='it'?'INIZIA GIOCO PRO':lang==='de'?'PRO SPIEL STARTEN':'START PRO GAME')),
+
+          gamePhase==='shooting'&&e('div',null,
+            e('div',{style:{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}},
+              e('div',{style:{display:'flex',alignItems:'center',gap:6}},
+                e('div',{style:{width:36,height:36,borderRadius:'50%',background:timer<=1?'rgba(200,40,40,0.4)':timer===2?'rgba(255,165,0,0.3)':'rgba(40,200,40,0.2)',border:'2px solid '+(timer<=1?'#ff4444':timer===2?'orange':'#90ee90'),display:'flex',alignItems:'center',justifyContent:'center',fontSize:16,fontWeight:'bold',color:timer<=1?'#ff4444':timer===2?'orange':'#90ee90',boxShadow:timer<=1?'0 0 10px rgba(255,0,0,0.3)':'none'}},timer),
+                e('div',{style:{fontSize:9,color:'#6a86a0'}},'sec')
+              ),
+              e('div',{style:{fontSize:11,color:'#9bb0c8',fontWeight:'bold'}},lang==='fr'?'🎯 Ou tirez ?':lang==='es'?'🎯 Donde ?':lang==='pt'?'🎯 Para onde ?':lang==='it'?'🎯 Dove ?':lang==='de'?'🎯 Wohin ?':'🎯 Where?')
+            ),
+            e('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8}},
+              ['left','center','right'].map(function(dir){
+                var arrows={left:'⬅',center:'⬆',right:'➡'};
+                var lbls={left:{en:'Left',fr:'Gauche',es:'Izq',pt:'Esq',it:'Sin',de:'Links'},center:{en:'Center',fr:'Centre',es:'Centro',pt:'Centro',it:'Centro',de:'Mitte'},right:{en:'Right',fr:'Droite',es:'Der',pt:'Dir',it:'Des',de:'Rechts'}};
+                return e('button',{key:dir,onClick:function(){shootPenalty(dir);},style:{
+                  background:'linear-gradient(135deg,rgba(20,40,100,0.95),rgba(40,80,160,0.9))',
+                  border:'2px solid '+G,borderRadius:10,padding:'14px 4px',
+                  fontSize:11,fontWeight:'bold',color:G,cursor:'pointer',
+                  boxShadow:'0 4px 10px rgba(212,175,55,0.2)'
+                }},
+                  e('div',{style:{fontSize:24,marginBottom:4}},arrows[dir]),
+                  e('div',{style:{fontSize:10}},lbls[dir][lang]||lbls[dir].en)
+                );
+              })
+            )
+          ),
+
+          gamePhase==='animating'&&e('div',{style:{textAlign:'center',padding:'12px',color:G,fontSize:13,letterSpacing:2}},'• • •'),
+
+          gamePhase==='done'&&e('div',{style:{textAlign:'center'}},
+            e('div',{style:{background:'linear-gradient(135deg,rgba(212,175,55,0.25),rgba(184,150,62,0.12))',border:'2px solid '+G,borderRadius:18,padding:'22px 16px',marginBottom:12,boxShadow:'0 0 30px rgba(212,175,55,0.2)'}},
+              e('div',{style:{fontSize:52,marginBottom:8}},gameScore===5?'🏆':gameScore===4?'🥇':gameScore===3?'⭐':gameScore===2?'👍':'😢'),
+              e('div',{style:{fontSize:24,fontWeight:'bold',color:G,marginBottom:4}},gameScore,' / 5'),
+              e('div',{style:{fontSize:12,color:gameScore>=4?'#90ee90':gameScore>=3?G:'#ff8888',marginBottom:8}},
+                gameScore===5?(lang==='fr'?'🏆 PARFAIT ! Higuita capitule !':lang==='es'?'🏆 PERFECTO ! Higuita se rinde !':lang==='pt'?'🏆 PERFEITO ! Higuita se rende !':lang==='it'?'🏆 PERFETTO ! Higuita si arrende !':lang==='de'?'🏆 PERFEKT ! Higuita kapituliert !':'🏆 PERFECT! Higuita surrenders!'):
+                gameScore>=4?(lang==='fr'?'Excellent ! Higuita impressionne !':'Excellent! Higuita is impressed!'):
+                gameScore>=3?(lang==='fr'?'Pas mal ! Higuita a du boulot !':'Not bad! Higuita worked hard!'):
+                (lang==='fr'?'🦂 Higuita fait le Scorpion et tout arrete !':'🦂 Higuita scorpion-kicked everything!')
+              ),
+              e('div',{style:{display:'flex',justifyContent:'center',gap:5}},
+                shotHistory.map(function(h,i){return e('div',{key:i,style:{width:24,height:24,borderRadius:'50%',background:h.scored?'rgba(40,200,40,0.5)':'rgba(200,40,40,0.5)',border:'1px solid '+(h.scored?'#90ee90':'#ff6666'),display:'flex',alignItems:'center',justifyContent:'center',fontSize:11}},h.scored?'⚽':'✗');})
+              )
+            ),
+            e('button',{onClick:resetGame,style:{width:'100%',background:'linear-gradient(135deg,'+G+',#ff9900)',border:'none',borderRadius:12,padding:'13px 0',fontSize:14,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer',boxShadow:'0 4px 15px rgba(212,175,55,0.4)'}},
+              lang==='fr'?'🔄 Rejouer':lang==='es'?'🔄 Jugar':lang==='pt'?'🔄 Jogar':lang==='it'?'🔄 Rigioca':lang==='de'?'🔄 Nochmal':'🔄 Play Again'
+            )
+          )
+        )
       ),
 
       // ── TAB 4 - QUIZ CHAMPIONSHIP ─────────────────────────────
       tab===4&&e('div',null,
-        e('div',{style:{textAlign:'center',marginBottom:12}},
-          e('div',{style:{fontSize:13,fontWeight:'bold',color:G,letterSpacing:2}},'🏆 QUIZ CHAMPIONSHIP'),
+        e('div',{style:{textAlign:'center',marginBottom:14}},
+          e('div',{style:{fontSize:14,fontWeight:'bold',color:G,letterSpacing:2}},'🏆 QUIZ CHAMPIONSHIP'),
           e('div',{style:{fontSize:10,color:'#6a86a0',marginTop:3}},
-            lang==='fr'?'15 questions - 5 rounds - Battez toutes les equipes !':
-            lang==='es'?'15 preguntas - 5 rondas - Vence a todos los equipos !':
-            lang==='pt'?'15 perguntas - 5 rodadas - Venca todos os times !':
-            lang==='it'?'15 domande - 5 round - Batti tutte le squadre !':
-            lang==='de'?'15 Fragen - 5 Runden - Besiege alle Teams !':
-            '15 questions - 5 rounds - Beat all teams!'
+            lang==='fr'?'30 questions sur l histoire de la Coupe du Monde !':
+            lang==='es'?'30 preguntas sobre la historia del Mundial !':
+            lang==='pt'?'30 perguntas sobre a historia da Copa do Mundo !':
+            lang==='it'?'30 domande sulla storia del Mondiale !':
+            lang==='de'?'30 Fragen zur Geschichte der WM !':
+            '30 questions on World Cup history!'
           )
         ),
-        qcPhase==='idle'&&e('div',{style:{textAlign:'center'}},
-          e('div',{style:{background:CB,border:'1px solid '+BD,borderRadius:12,padding:16,marginBottom:14}},
-            e('div',{style:{display:'flex',justifyContent:'center',gap:6,marginBottom:12}},
-              ['🥉','🥈','🥇','🏅','🏆'].map(function(m,i){return e('div',{key:i,style:{fontSize:22,opacity:0.4}},m);})
-            ),
-            e('div',{style:{fontSize:11,color:'#9bb0c8',lineHeight:1.7}},
-              lang==='fr'?'Affrontez 5 adversaires ! Repondez correctement pour marquer des points bonus !':
-              lang==='es'?'Enfrenta 5 rivales ! Responde correctamente para conseguir puntos bonus !':
-              lang==='pt'?'Enfrente 5 adversarios ! Responda corretamente para ganhar pontos bonus !':
-              lang==='it'?'Affronta 5 avversari ! Rispondi correttamente per punti bonus !':
-              lang==='de'?'Besiege 5 Gegner ! Richtige Antworten bringen Bonuspunkte !':
-              'Face 5 opponents! Answer correctly for bonus points!'
-            )
+
+        // IDLE - Level selection
+        qcPhase==='idle'&&e('div',null,
+          e('div',{style:{display:'grid',gridTemplateColumns:'1fr',gap:10,marginBottom:14}},
+            [
+              {level:'easy',icon:'🟢',label:{en:'BEGINNER',fr:'DEBUTANT',es:'PRINCIPIANTE',pt:'INICIANTE',it:'PRINCIPIANTE',de:'ANFANGER'},desc:{en:'10 questions - 5 pts each - 50 pts max',fr:'10 questions - 5 pts chacune - 50 pts max',es:'10 preguntas - 5 pts cada una - 50 pts max',pt:'10 perguntas - 5 pts cada - 50 pts max',it:'10 domande - 5 pts ciascuna - 50 pts max',de:'10 Fragen - je 5 Pkte - max 50 Pkte'},color:'rgba(40,160,40,0.2)',border:'rgba(40,200,40,0.5)'},
+              {level:'medium',icon:'🟡',label:{en:'EXPERT',fr:'EXPERT',es:'EXPERTO',pt:'ESPECIALISTA',it:'ESPERTO',de:'EXPERTE'},desc:{en:'10 questions - 10 pts each - 100 pts max',fr:'10 questions - 10 pts chacune - 100 pts max',es:'10 preguntas - 10 pts cada una - 100 pts max',pt:'10 perguntas - 10 pts cada - 100 pts max',it:'10 domande - 10 pts ciascuna - 100 pts max',de:'10 Fragen - je 10 Pkte - max 100 Pkte'},color:'rgba(255,165,0,0.2)',border:'rgba(255,165,0,0.5)'},
+              {level:'hard',icon:'🔴',label:{en:'WORLD CLASS',fr:'CLASSE MONDIALE',es:'CLASE MUNDIAL',pt:'CLASSE MUNDIAL',it:'CLASSE MONDIALE',de:'WELTKLASSE'},desc:{en:'10 questions - 20 pts each - 200 pts max',fr:'10 questions - 20 pts chacune - 200 pts max',es:'10 preguntas - 20 pts cada una - 200 pts max',pt:'10 perguntas - 20 pts cada - 200 pts max',it:'10 domande - 20 pts ciascuna - 200 pts max',de:'10 Fragen - je 20 Pkte - max 200 Pkte'},color:'rgba(200,40,40,0.2)',border:'rgba(200,60,60,0.5)'}
+            ].map(function(lvl){
+              return e('div',{key:lvl.level,
+                onClick:function(){
+                  setQcRound(lvl.level==='easy'?0:lvl.level==='medium'?1:2);
+                  setQcIdx(0);setQcScore(0);setQcSelected(null);setQcAnswered(false);
+                  setQcPhase('playing');
+                },
+                style:{background:lvl.color,border:'2px solid '+lvl.border,borderRadius:14,padding:'14px 16px',cursor:'pointer',display:'flex',alignItems:'center',gap:12}
+              },
+                e('div',{style:{fontSize:28}},' ',lvl.icon),
+                e('div',null,
+                  e('div',{style:{fontSize:13,fontWeight:'bold',color:'#eee8d5',marginBottom:3}},lvl.label[lang]||lvl.label.en),
+                  e('div',{style:{fontSize:10,color:'#9bb0c8'}},(lvl.desc[lang]||lvl.desc.en))
+                )
+              );
+            })
           ),
-          e('button',{
-            onClick:function(){
-              var opps=(QC_OPPONENTS[lang]||QC_OPPONENTS.en);
-              setQcOpponent(opps[0]);setQcRound(1);setQcIdx(0);
-              setQcScore(0);setQcSelected(null);setQcAnswered(false);
-              setQcPhase('playing');
-            },
-            style:{width:'100%',background:'linear-gradient(135deg,'+G+',#b8963e)',border:'none',borderRadius:12,padding:'13px 0',fontSize:14,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer'}
-          },'🏆 '+(lang==='fr'?'Commencer':lang==='es'?'Empezar':lang==='pt'?'Comecar':lang==='it'?'Inizia':lang==='de'?'Starten':'Start Championship'))
+          // Records display
+          e('div',{style:{background:CB,border:'1px solid '+BD,borderRadius:10,padding:'10px 14px'}},
+            e('div',{style:{fontSize:10,color:G,fontWeight:'bold',marginBottom:6}},
+              lang==='fr'?'Records de la Coupe du Monde :':
+              lang==='es'?'Datos curiosos del Mundial :':
+              lang==='pt'?'Curiosidades da Copa do Mundo :':
+              lang==='it'?'Curiosita sul Mondiale :':
+              lang==='de'?'WM Rekorde :':
+              'World Cup Records:'
+            ),
+            [
+              {en:'🥅 Most WC goals: Miroslav Klose (16)',fr:'🥅 Record buts: Miroslav Klose (16)',es:'🥅 Record goles: Miroslav Klose (16)',pt:'🥅 Record gols: Miroslav Klose (16)',it:'🥅 Record gol: Miroslav Klose (16)',de:'🥅 Rekord Tore: Miroslav Klose (16)'},
+              {en:'⚡ Fastest goal: Hakan Sukur - 10.8 sec (2002)',fr:'⚡ But le plus rapide: Hakan Sukur - 10.8 sec',es:'⚡ Gol mas rapido: Hakan Sukur - 10.8 seg',pt:'⚡ Gol mais rapido: Hakan Sukur - 10.8 seg',it:'⚡ Gol piu veloce: Hakan Sukur - 10.8 sec',de:'⚡ Schnellstes Tor: Hakan Sukur - 10.8 Sek'},
+              {en:'🎯 Most in one tournament: Fontaine 13 goals (1958)',fr:'🎯 Plus de buts en un tournoi: Fontaine 13 (1958)',es:'🎯 Mas goles en un torneo: Fontaine 13 (1958)',pt:'🎯 Mais gols em torneio: Fontaine 13 (1958)',it:'🎯 Piu gol in torneo: Fontaine 13 (1958)',de:'🎯 Meiste Tore in Turnier: Fontaine 13 (1958)'},
+              {en:'👴 Oldest scorer: Roger Milla - 42 years (1994)',fr:'👴 Plus vieux buteur: Roger Milla - 42 ans (1994)',es:'👴 Goleador mas viejo: Roger Milla - 42 anos (1994)',pt:'👴 Goleador mais velho: Roger Milla - 42 anos (1994)',it:'👴 Marcatore piu anziano: Roger Milla - 42 anni (1994)',de:'👴 Altester Torschutze: Roger Milla - 42 Jahre (1994)'}
+            ].map(function(fact,i){
+              return e('div',{key:i,style:{fontSize:10,color:'#a0b8cc',padding:'4px 0',borderBottom:i<3?'1px solid rgba(255,255,255,0.05)':'none'}},fact[lang]||fact.en);
+            })
+          )
         ),
+
+        // PLAYING
         qcPhase==='playing'&&e('div',null,
-          e('div',{style:{background:'linear-gradient(135deg,rgba(212,175,55,0.15),rgba(184,150,62,0.08))',border:'1px solid '+G,borderRadius:10,padding:'10px 14px',marginBottom:10,display:'flex',justifyContent:'space-between',alignItems:'center'}},
-            e('div',null,
-              e('div',{style:{fontSize:9,color:'#6a86a0'}},'Round ',qcRound,' / 5'),
-              e('div',{style:{fontSize:12,fontWeight:'bold',color:G}},'vs ',qcOpponent||'')
-            ),
-            e('div',{style:{textAlign:'right'}},
-              e('div',{style:{fontSize:9,color:'#6a86a0'}},'Q ',qcIdx+1,' / 3'),
-              e('div',{style:{fontSize:13,fontWeight:'bold',color:G}},qcScore,' pts')
-            )
-          ),
-          e('div',{style:{height:4,background:'rgba(255,255,255,0.08)',borderRadius:2,marginBottom:12,overflow:'hidden'}},
-            e('div',{style:{width:(qcIdx/3*100)+'%',height:'100%',background:'linear-gradient(90deg,'+G+',#ff9900)',borderRadius:2,transition:'width 0.4s'}})
-          ),
           (function(){
-            var allQ=QUIZ_CHAMPIONSHIP[lang]||QUIZ_CHAMPIONSHIP.en;
-            var qi=((qcRound-1)*3)+qcIdx;
-            var q=allQ[Math.min(qi,allQ.length-1)];
+            var levelKey=qcRound===0?'easy':qcRound===1?'medium':'hard';
+            var questions=(QUIZ_CHAMPIONSHIP[levelKey]||[]).slice(0,10);
+            var q=questions[qcIdx];
             if(!q)return null;
+            var levelColors={easy:'#90ee90',medium:'orange',hard:'#ff6b6b'};
+            var levelColor=levelColors[levelKey]||G;
             return e('div',null,
-              e('div',{style:{background:CB,border:'1px solid '+BD,borderRadius:12,padding:'14px',marginBottom:10,textAlign:'center'}},
-                e('div',{style:{fontSize:9,color:G,marginBottom:5,letterSpacing:1}},'+',q.pts,' pts'),
-                e('div',{style:{fontSize:13,fontWeight:'bold',color:'#fff',lineHeight:1.5}},q.q)
+              // Header
+              e('div',{style:{background:CB,border:'1px solid '+BD,borderRadius:10,padding:'10px 14px',marginBottom:10,display:'flex',justifyContent:'space-between',alignItems:'center'}},
+                e('div',null,
+                  e('div',{style:{fontSize:9,color:levelColor,fontWeight:'bold',letterSpacing:1}},
+                    levelKey==='easy'?'🟢 '+(lang==='fr'?'DEBUTANT':'BEGINNER'):
+                    levelKey==='medium'?'🟡 '+(lang==='fr'?'EXPERT':'EXPERT'):
+                    '🔴 '+(lang==='fr'?'CLASSE MONDIALE':'WORLD CLASS')
+                  ),
+                  e('div',{style:{fontSize:10,color:'#6a86a0'}},'Q ',qcIdx+1,' / 10'),
+                  e('div',{style:{fontSize:9,color:'#5a7090',marginTop:2}},'📚 ',q.cat)
+                ),
+                e('div',{style:{textAlign:'right'}},
+                  e('div',{style:{fontSize:18,fontWeight:'bold',color:G}},qcScore),
+                  e('div',{style:{fontSize:9,color:'#6a86a0'}},'pts'),
+                  e('div',{style:{fontSize:9,color:levelColor}},'+',q.pts,' pts')
+                )
               ),
+              // Progress
+              e('div',{style:{height:5,background:'rgba(255,255,255,0.08)',borderRadius:3,marginBottom:12,overflow:'hidden'}},
+                e('div',{style:{width:(qcIdx/10*100)+'%',height:'100%',background:'linear-gradient(90deg,'+levelColor+','+G+')',borderRadius:3,transition:'width 0.4s'}})
+              ),
+              // Question
+              e('div',{style:{background:'linear-gradient(135deg,rgba(10,22,54,0.97),rgba(18,45,110,0.85))',border:'1px solid rgba(212,175,55,0.3)',borderRadius:14,padding:'18px 14px',marginBottom:12,textAlign:'center'}},
+                e('div',{style:{fontSize:15,fontWeight:'bold',color:'#fff',lineHeight:1.5}},q.q)
+              ),
+              // Options
               e('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:10}},
                 q.opts.map(function(opt,i){
                   var bg=CB,brd=BD,col='#eee8d5';
-                  if(qcAnswered){if(i===q.a){bg='rgba(40,160,40,0.25)';brd='rgba(40,200,40,0.6)';col='#90ee90';}else if(i===qcSelected){bg='rgba(200,40,40,0.25)';brd='rgba(200,60,60,0.6)';col='#ff8888';}}
-                  return e('button',{key:i,onClick:function(){
-                    if(qcAnswered)return;
-                    setQcSelected(i);setQcAnswered(true);
-                    if(i===q.a)setQcScore(function(s){return s+q.pts;});
-                  },style:{background:bg,border:'1px solid '+brd,borderRadius:10,padding:'11px 8px',fontSize:12,color:col,cursor:qcAnswered?'default':'pointer',fontWeight:qcAnswered&&i===q.a?'bold':'normal'}},
-                  qcAnswered&&i===q.a?'✅ ':qcAnswered&&i===qcSelected&&i!==q.a?'❌ ':'',opt);
+                  if(qcAnswered){
+                    if(i===q.a){bg='rgba(40,160,40,0.25)';brd='rgba(40,200,40,0.7)';col='#90ee90';}
+                    else if(i===qcSelected&&i!==q.a){bg='rgba(200,40,40,0.25)';brd='rgba(200,60,60,0.7)';col='#ff8888';}
+                  }
+                  return e('button',{key:i,
+                    onClick:function(){
+                      if(qcAnswered)return;
+                      setQcSelected(i);setQcAnswered(true);
+                      if(i===q.a)setQcScore(function(s){return s+q.pts;});
+                    },
+                    style:{background:bg,border:'1px solid '+brd,borderRadius:10,padding:'13px 8px',fontSize:12,color:col,cursor:qcAnswered?'default':'pointer',fontWeight:qcAnswered&&i===q.a?'bold':'normal',textAlign:'center',lineHeight:1.4}
+                  },
+                  qcAnswered&&i===q.a?'✅ ':qcAnswered&&i===qcSelected&&i!==q.a?'❌ ':'',
+                  opt);
                 })
               ),
+              // Answer feedback
+              qcAnswered&&e('div',{style:{textAlign:'center',fontSize:11,marginBottom:8,color:qcSelected===q.a?'#90ee90':'#ff8888',fontWeight:'bold'}},
+                qcSelected===q.a?
+                  (lang==='fr'?'Excellent ! +'+q.pts+' points !':lang==='es'?'Excelente ! +'+q.pts+' puntos !':lang==='pt'?'Excelente ! +'+q.pts+' pontos !':lang==='it'?'Eccellente ! +'+q.pts+' punti !':lang==='de'?'Ausgezeichnet ! +'+q.pts+' Punkte !':'Excellent! +'+q.pts+' points!'):
+                  (lang==='fr'?'Mauvaise reponse ! La bonne etait: ':lang==='es'?'Respuesta incorrecta ! La correcta era: ':lang==='pt'?'Resposta errada ! A correta era: ':lang==='it'?'Risposta sbagliata ! La corretta era: ':lang==='de'?'Falsche Antwort ! Richtig war: ':'Wrong! The answer was: ')+q.opts[q.a]
+              ),
+              // Next button
               qcAnswered&&e('button',{
                 onClick:function(){
-                  if(qcIdx<2){setQcIdx(function(n){return n+1;});setQcSelected(null);setQcAnswered(false);}
-                  else{
-                    var opps=(QC_OPPONENTS[lang]||QC_OPPONENTS.en);
-                    if(qcRound<5){setQcRound(function(r){return r+1;});setQcOpponent(opps[qcRound]);setQcIdx(0);setQcSelected(null);setQcAnswered(false);setQcPhase('roundend');}
-                    else{setQcPhase('done');}
-                  }
+                  if(qcIdx<9){setQcIdx(function(n){return n+1;});setQcSelected(null);setQcAnswered(false);}
+                  else{setQcPhase('done');}
                 },
                 style:{width:'100%',background:'linear-gradient(135deg,'+G+',#b8963e)',border:'none',borderRadius:10,padding:'12px 0',fontSize:13,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer'}
-              },qcIdx<2?(lang==='fr'?'Question suivante':lang==='es'?'Siguiente':lang==='pt'?'Proxima':lang==='it'?'Successiva':lang==='de'?'Nachste':'Next'):(lang==='fr'?'Round suivant !':lang==='es'?'Siguiente ronda !':lang==='pt'?'Proxima rodada !':lang==='it'?'Round successivo !':lang==='de'?'Nachste Runde !':'Next Round!'))
+              },qcIdx<9?
+                (lang==='fr'?'Question suivante →':lang==='es'?'Siguiente pregunta →':lang==='pt'?'Proxima pergunta →':lang==='it'?'Domanda successiva →':lang==='de'?'Nachste Frage →':'Next question →'):
+                (lang==='fr'?'Voir mon resultat !':lang==='es'?'Ver mi resultado !':lang==='pt'?'Ver meu resultado !':lang==='it'?'Vedi il risultato !':lang==='de'?'Ergebnis sehen !':'See my result!')
+              )
             );
           })()
         ),
-        qcPhase==='roundend'&&e('div',{style:{textAlign:'center',padding:20}},
-          e('div',{style:{fontSize:30,marginBottom:8}},'⚽'),
-          e('div',{style:{fontSize:15,fontWeight:'bold',color:G,marginBottom:6}},lang==='fr'?'Round '+(qcRound-1)+' termine !':lang==='es'?'Ronda '+(qcRound-1)+' terminada !':lang==='pt'?'Rodada '+(qcRound-1)+' concluida !':lang==='it'?'Round '+(qcRound-1)+' completato !':lang==='de'?'Runde '+(qcRound-1)+' beendet !':'Round '+(qcRound-1)+' complete!'),
-          e('div',{style:{fontSize:12,color:'#9bb0c8',marginBottom:6}},lang==='fr'?'Score actuel: ':lang==='de'?'Aktueller Stand: ':'Current score: ',e('strong',{style:{color:G}},qcScore,' pts')),
-          e('div',{style:{fontSize:11,color:'#9bb0c8',marginBottom:14}},lang==='fr'?'Prochain: ':lang==='es'?'Siguiente: ':lang==='pt'?'Proximo: ':lang==='it'?'Prossimo: ':lang==='de'?'Nachster: ':'Next: ',e('strong',{style:{color:G}},qcOpponent)),
-          e('button',{onClick:function(){setQcPhase('playing');},style:{width:'100%',background:'linear-gradient(135deg,'+G+',#b8963e)',border:'none',borderRadius:12,padding:'13px 0',fontSize:13,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer'}},'⚽ '+(lang==='fr'?'Jouer Round '+qcRound:lang==='es'?'Jugar Ronda '+qcRound:lang==='pt'?'Jogar Rodada '+qcRound:lang==='it'?'Gioca Round '+qcRound:lang==='de'?'Runde '+qcRound+' spielen':'Play Round '+qcRound))
-        ),
-        qcPhase==='done'&&e('div',{style:{textAlign:'center'}},
-          e('div',{style:{background:'linear-gradient(135deg,rgba(212,175,55,0.2),rgba(184,150,62,0.1))',border:'2px solid '+G,borderRadius:18,padding:'22px 16px',marginBottom:12}},
-            e('div',{style:{fontSize:46,marginBottom:6}},qcScore>=35?'🏆':qcScore>=25?'🥇':qcScore>=15?'🥈':'🥉'),
-            e('div',{style:{fontSize:22,fontWeight:'bold',color:G,marginBottom:4}},qcScore,' pts'),
-            e('div',{style:{fontSize:12,color:'#eee'}},
-              qcScore>=35?(lang==='fr'?'CHAMPION DU MONDE ! Expert absolu !':lang==='es'?'CAMPEON DEL MUNDO ! Experto absoluto !':lang==='pt'?'CAMPEAO DO MUNDO ! Expert absoluto !':lang==='it'?'CAMPIONE DEL MONDO ! Esperto assoluto !':lang==='de'?'WELTMEISTER ! Absoluter Experte !':'WORLD CHAMPION! Absolute expert!'):
-              qcScore>=25?(lang==='fr'?'Excellent ! Tres bonne connaissance !':'Excellent! Great knowledge!'):
-              qcScore>=15?(lang==='fr'?'Pas mal ! Continuez !':'Not bad! Keep going!'):
-              (lang==='fr'?'Continuez a vous entrainer !':'Keep practicing!')
-            )
-          ),
-          e('button',{onClick:function(){setQcPhase('idle');setQcScore(0);setQcIdx(0);setQcRound(1);setQcSelected(null);setQcAnswered(false);},style:{width:'100%',background:'linear-gradient(135deg,'+G+',#b8963e)',border:'none',borderRadius:12,padding:'13px 0',fontSize:14,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer'}},'🔄 '+(lang==='fr'?'Rejouer':lang==='es'?'Jugar de nuevo':lang==='pt'?'Jogar novamente':lang==='it'?'Rigioca':lang==='de'?'Nochmal':'Play Again'))
+
+        // DONE
+        qcPhase==='done'&&e('div',null,
+          (function(){
+            var levelKey=qcRound===0?'easy':qcRound===1?'medium':'hard';
+            var maxPts=levelKey==='easy'?50:levelKey==='medium'?100:200;
+            var pct=Math.round(qcScore/maxPts*100);
+            var trophy=pct>=90?'🏆':pct>=70?'🥇':pct>=50?'🥈':pct>=30?'🥉':'📚';
+            return e('div',null,
+              e('div',{style:{background:'linear-gradient(135deg,rgba(212,175,55,0.2),rgba(184,150,62,0.1))',border:'2px solid '+G,borderRadius:18,padding:'18px 14px',marginBottom:10,textAlign:'center'}},
+                e('div',{style:{fontSize:44,marginBottom:4}},trophy),
+                e('div',{style:{fontSize:22,fontWeight:'bold',color:G,marginBottom:2}},qcScore,' / ',maxPts),
+                e('div',{style:{fontSize:13,color:G,marginBottom:6}},pct,'%'),
+                e('div',{style:{height:7,background:'rgba(255,255,255,0.1)',borderRadius:4,marginBottom:8,overflow:'hidden'}},
+                  e('div',{style:{width:pct+'%',height:'100%',background:'linear-gradient(90deg,'+G+',#ff9900)',borderRadius:4}})
+                ),
+                e('div',{style:{fontSize:11,color:'#eee'}},
+                  pct>=90?(lang==='fr'?'CHAMPION DU MONDE !':lang==='es'?'CAMPEON DEL MUNDO !':lang==='pt'?'CAMPEAO DO MUNDO !':lang==='it'?'CAMPIONE DEL MONDO !':lang==='de'?'WELTMEISTER !':'WORLD CHAMPION!'):
+                  pct>=70?(lang==='fr'?'Excellent ! Super connaissance !':'Excellent! Great knowledge!'):
+                  pct>=50?(lang==='fr'?'Pas mal ! Continue !':'Not bad! Keep going!'):
+                  (lang==='fr'?'Continue a apprendre !':'Keep learning!')
+                )
+              ),
+              !showLeaderboard&&e('div',{style:{background:CB,border:'1px solid '+G,borderRadius:12,padding:10,marginBottom:10}},
+                e('div',{style:{fontSize:11,color:G,fontWeight:'bold',marginBottom:7}},'🏅 '+(lang==='fr'?'Ajouter au classement':lang==='es'?'Agregar al ranking':lang==='pt'?'Adicionar ao ranking':lang==='it'?'Aggiungi alla classifica':lang==='de'?'Zur Rangliste':'Save to leaderboard')),
+                e('input',{type:'text',placeholder:lang==='fr'?'Ton prenom...':lang==='es'?'Tu nombre...':lang==='pt'?'Seu nome...':lang==='it'?'Il tuo nome...':lang==='de'?'Dein Name...':'Your name...',value:playerName,onChange:function(ev){setPlayerName(ev.target.value);},style:{width:'100%',background:'rgba(10,20,50,0.95)',color:'#eee',border:'1px solid '+G,borderRadius:8,padding:'8px 11px',fontSize:13,marginBottom:7}}),
+                e('button',{onClick:function(){
+                  if(!playerName.trim())return;
+                  var entry={name:playerName.trim(),score:qcScore,max:maxPts,pct:pct,level:levelKey==='easy'?'🟢':levelKey==='medium'?'🟡':'🔴',trophy:trophy};
+                  setLeaderboard(function(lb){return lb.concat([entry]).sort(function(a,b){return b.score-a.score;}).slice(0,10);});
+                  setShowLeaderboard(true);
+                },style:{width:'100%',background:'linear-gradient(135deg,'+G+',#b8963e)',border:'none',borderRadius:9,padding:'9px 0',fontSize:12,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer'}},'🏅 '+(lang==='fr'?'Confirmer':lang==='es'?'Confirmar':lang==='pt'?'Confirmar':lang==='it'?'Conferma':lang==='de'?'Bestatigen':'Confirm'))
+              ),
+              e('div',{style:{background:CB,border:'1px solid '+G,borderRadius:12,padding:10,marginBottom:10}},
+                e('div',{style:{fontSize:12,fontWeight:'bold',color:G,marginBottom:8,textAlign:'center'}},'🏆 '+(lang==='fr'?'CLASSEMENT':lang==='es'?'RANKING':lang==='pt'?'RANKING':lang==='it'?'CLASSIFICA':lang==='de'?'RANGLISTE':'LEADERBOARD')),
+                leaderboard.length===0&&e('div',{style:{textAlign:'center',color:'#6a86a0',fontSize:10,padding:6}},lang==='fr'?'Sois le premier !':lang==='es'?'Se el primero !':lang==='pt'?'Seja o primeiro !':lang==='it'?'Sii il primo !':lang==='de'?'Sei der Erste !':'Be the first!'),
+                leaderboard.length>0&&e('div',null,
+                  e('div',{style:{display:'grid',gridTemplateColumns:'20px 1fr 40px 32px 24px',gap:3,padding:'2px 4px',borderBottom:'1px solid rgba(212,175,55,0.2)',marginBottom:4}},
+                    ['#','Name','Pts','%','Lvl'].map(function(h){return e('div',{key:h,style:{fontSize:8,color:'#6a86a0',textAlign:h==='Name'?'left':'center'}},h);})
+                  ),
+                  leaderboard.map(function(entry,i){
+                    return e('div',{key:i,style:{display:'grid',gridTemplateColumns:'20px 1fr 40px 32px 24px',gap:3,alignItems:'center',padding:'5px 4px',background:i===0?'rgba(212,175,55,0.1)':'transparent',borderRadius:5,marginBottom:2}},
+                      e('div',{style:{fontSize:11,textAlign:'center'}},i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1),
+                      e('div',{style:{fontSize:10,fontWeight:i===0?'bold':'normal',color:i===0?G:'#eee',overflow:'hidden',whiteSpace:'nowrap',textOverflow:'ellipsis'}},entry.name),
+                      e('div',{style:{fontSize:10,fontWeight:'bold',color:G,textAlign:'center'}},entry.score),
+                      e('div',{style:{fontSize:9,color:'#9bb0c8',textAlign:'center'}},entry.pct,'%'),
+                      e('div',{style:{fontSize:11,textAlign:'center'}},entry.level)
+                    );
+                  })
+                )
+              ),
+              e('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:6,marginBottom:7}},
+                [{r:0,icon:'🟢',lbl:'Easy'},{r:1,icon:'🟡',lbl:'Expert'},{r:2,icon:'🔴',lbl:'Pro'}].map(function(lvl){
+                  return e('button',{key:lvl.r,onClick:function(){setQcRound(lvl.r);setQcIdx(0);setQcScore(0);setQcSelected(null);setQcAnswered(false);setQcPhase('playing');setShowLeaderboard(false);setPlayerName('');},style:{background:CB,border:'1px solid '+BD,borderRadius:8,padding:'8px 4px',fontSize:10,color:'#9bb0c8',cursor:'pointer'}},lvl.icon,' ',lvl.lbl);
+                })
+              ),
+              e('button',{onClick:function(){setQcPhase('idle');setQcScore(0);setQcIdx(0);setQcSelected(null);setQcAnswered(false);setShowLeaderboard(false);setPlayerName('');},style:{width:'100%',background:'rgba(255,255,255,0.05)',border:'1px solid '+BD,borderRadius:8,padding:'9px 0',fontSize:11,color:'#6a86a0',cursor:'pointer'}},'🏠 Menu')
+            );
+          })()
         )
       ),
-
-      // ── TAB 9 - FANTASY WORLD CUP ────────────────────────────
+            // ── TAB 9 - FANTASY WORLD CUP ────────────────────────────
       tab===9&&e('div',null,
         e('div',{style:{textAlign:'center',marginBottom:12}},
           e('div',{style:{fontSize:13,fontWeight:'bold',color:G,letterSpacing:2}},'⭐ FANTASY WORLD CUP'),
@@ -2041,7 +2291,7 @@ function App(){
       )
     ),
 
-    e('footer',{style:{textAlign:'center',padding:'10px',fontSize:9,color:'#2e4460',borderTop:'1px solid rgba(212,175,55,0.08)',marginTop:4}},'World Cup 2026 Fan App - ',premium?'PRO':'Free'))
+    e('footer',{style:{textAlign:'center',padding:'10px',fontSize:9,color:'#2e4460',borderTop:'1px solid rgba(212,175,55,0.08)',marginTop:4}},'World Cup 2026 Fan App - ',premium?'PRO':'Free')
   );
 }
 
