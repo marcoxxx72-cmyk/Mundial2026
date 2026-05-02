@@ -412,53 +412,50 @@ var STARS = [
   {name:'Kylian Mbappe',flag:'🇫🇷',club:'Real Madrid',pos:'FW',age:27,stat:'46 intl goals',rating:96,group:'I'},
   {name:'Erling Haaland',flag:'🇳🇴',club:'Man. City',pos:'FW',age:25,stat:'44 intl goals',rating:95,group:'I'},
   {name:'Vinicius Jr.',flag:'🇧🇷',club:'Real Madrid',pos:'FW',age:25,stat:'Ballon dOr nominee 2024',rating:94,group:'C'},
+  {name:'Lionel Messi',flag:'🇦🇷',club:'Inter Miami',pos:'FW',age:39,stat:'8x Ballon dOr winner',rating:94,group:'J'},
   {name:'Pedri',flag:'🇪🇸',club:'FC Barcelona',pos:'MF',age:23,stat:'Euro 2024 champion',rating:93,group:'H'},
   {name:'Jude Bellingham',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Real Madrid',pos:'MF',age:22,stat:'Best player Euro 2024',rating:93,group:'L'},
+  {name:'Cristiano Ronaldo',flag:'🇵🇹',club:'Al Nassr',pos:'FW',age:41,stat:'915 career goals',rating:93,group:'K'},
   {name:'Harry Kane',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Bayern Munich',pos:'FW',age:32,stat:'England all-time top scorer',rating:92,group:'L'},
   {name:'Rodri',flag:'🇪🇸',club:'Man. City',pos:'MF',age:29,stat:'Ballon dOr 2024',rating:92,group:'H'},
   {name:'Lamine Yamal',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:18,stat:'Euro 2024 champion',rating:91,group:'H'},
-  {name:'Cristiano Ronaldo',flag:'🇵🇹',club:'Al Nassr',pos:'FW',age:41,stat:'915 career goals',rating:90,group:'K'},
   {name:'Ruben Dias',flag:'🇵🇹',club:'Man. City',pos:'DF',age:28,stat:'Best defender PL 2021',rating:89,group:'K'},
   {name:'Bukayo Saka',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Arsenal',pos:'FW',age:24,stat:'PFA Young Player 2024',rating:89,group:'L'},
   {name:'Gavi',flag:'🇪🇸',club:'FC Barcelona',pos:'MF',age:21,stat:'Euro 2024 champion',rating:88,group:'H'},
   {name:'Phil Foden',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Man. City',pos:'MF',age:26,stat:'PFA Player of Year 2024',rating:88,group:'L'},
   {name:'Federico Valverde',flag:'🇺🇾',club:'Real Madrid',pos:'MF',age:27,stat:'Copa America 2024',rating:88,group:'H'},
-  {name:'Lionel Messi',flag:'🇦🇷',club:'Inter Miami',pos:'FW',age:39,stat:'8x Ballon dOr winner',rating:88,group:'J'},
+  {name:'Martin Odegaard',flag:'🇳🇴',club:'Arsenal',pos:'MF',age:27,stat:'Arsenal captain',rating:88,group:'I'},
+  {name:'Emiliano Martinez',flag:'🇦🇷',club:'Aston Villa',pos:'GK',age:32,stat:'WC 2022 Golden Glove',rating:88,group:'J'},
+  {name:'Alisson Becker',flag:'🇧🇷',club:'Liverpool',pos:'GK',age:32,stat:'Best GK 2019',rating:88,group:'C'},
   {name:'Achraf Hakimi',flag:'🇲🇦',club:'PSG',pos:'DF',age:27,stat:'African Player of Year 2022',rating:87,group:'C'},
   {name:'Marcus Thuram',flag:'🇫🇷',club:'Inter Milan',pos:'FW',age:27,stat:'Serie A champion 2024',rating:87,group:'I'},
-  {name:'Sadio Mane',flag:'🇸🇳',club:'Al Nassr',pos:'FW',age:33,stat:'AFCON winner 2022',rating:85,group:'I'},
-  {name:'Raphinha',flag:'🇧🇷',club:'FC Barcelona',pos:'FW',age:29,stat:'Champions League 2025',rating:85,group:'C'},
   {name:'Trent Alexander-Arnold',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Real Madrid',pos:'DF',age:27,stat:'Champions League winner',rating:87,group:'L'},
   {name:'Virgil van Dijk',flag:'🇳🇱',club:'Liverpool',pos:'DF',age:34,stat:'Best defender 2019',rating:87,group:'F'},
-  {name:'Manuel Neuer',flag:'🇩🇪',club:'Bayern Munich',pos:'GK',age:40,stat:'World Cup winner 2014',rating:86,group:'E'},
-  {name:'Mike Maignan',flag:'🇫🇷',club:'AC Milan',pos:'GK',age:29,stat:'Euro 2024 GK',rating:87,group:'I'},
-  {name:'Diogo Costa',flag:'🇵🇹',club:'Porto',pos:'GK',age:25,stat:'Best GK UCL 2023',rating:86,group:'K'},
-  {name:'David Raya',flag:'🇪🇸',club:'Arsenal',pos:'GK',age:29,stat:'PL Golden Glove 2024',rating:85,group:'H'},
-  {name:'Jordan Pickford',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Everton',pos:'GK',age:32,stat:'England No.1',rating:84,group:'L'},
-  {name:'Alisson Becker',flag:'🇧🇷',club:'Liverpool',pos:'GK',age:32,stat:'Best GK 2019',rating:88,group:'C'},
-  {name:'Emiliano Martinez',flag:'🇦🇷',club:'Aston Villa',pos:'GK',age:32,stat:'WC 2022 Golden Glove',rating:88,group:'J'},
-  {name:'Josko Gvardiol',flag:'🇭🇷',club:'Man. City',pos:'DF',age:23,stat:'WC 2022 finalist',rating:87,group:'L'},
   {name:'William Saliba',flag:'🇫🇷',club:'Arsenal',pos:'DF',age:24,stat:'Best young defender 2024',rating:87,group:'I'},
-  {name:'Marquinhos',flag:'🇧🇷',club:'PSG',pos:'DF',age:31,stat:'UCL finalist 2020',rating:86,group:'C'},
-  {name:'Antonio Rudiger',flag:'🇩🇪',club:'Real Madrid',pos:'DF',age:32,stat:'UCL winner 2022',rating:85,group:'E'},
-  {name:'Dayot Upamecano',flag:'🇫🇷',club:'Bayern Munich',pos:'DF',age:26,stat:'Euro 2024 finalist',rating:85,group:'I'},
   {name:'Jules Kounde',flag:'🇫🇷',club:'FC Barcelona',pos:'DF',age:26,stat:'Euro 2024 finalist',rating:86,group:'I'},
   {name:'Theo Hernandez',flag:'🇫🇷',club:'AC Milan',pos:'DF',age:27,stat:'Serie A champion',rating:86,group:'I'},
-  {name:'Kyle Walker',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'AC Milan',pos:'DF',age:35,stat:'PL champion x6',rating:83,group:'L'},
-  {name:'Marc Cucurella',flag:'🇪🇸',club:'Chelsea',pos:'DF',age:26,stat:'Euro 2024 champion',rating:84,group:'H'},
-  {name:'Dani Carvajal',flag:'🇪🇸',club:'Real Madrid',pos:'DF',age:33,stat:'UCL winner 2024',rating:85,group:'H'},
-  {name:'Frenkie de Jong',flag:'🇳🇱',club:'FC Barcelona',pos:'MF',age:28,stat:'UCL semifinal 2019',rating:86,group:'F'},
-  {name:'Granit Xhaka',flag:'🇨🇭',club:'Bayer Leverkusen',pos:'MF',age:32,stat:'Bundesliga champion 2024',rating:84,group:'B'},
-  {name:'Martin Odegaard',flag:'🇳🇴',club:'Arsenal',pos:'MF',age:27,stat:'Arsenal captain',rating:88,group:'I'},
+  {name:'Josko Gvardiol',flag:'🇭🇷',club:'Man. City',pos:'DF',age:23,stat:'WC 2022 finalist',rating:87,group:'L'},
   {name:'Declan Rice',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Arsenal',pos:'MF',age:26,stat:'PL Best midfielder 2024',rating:87,group:'L'},
-  {name:'Aurelien Tchouameni',flag:'🇫🇷',club:'Real Madrid',pos:'MF',age:25,stat:'WC 2022 finalist',rating:86,group:'I'},
-  {name:'Eduardo Camavinga',flag:'🇫🇷',club:'Real Madrid',pos:'MF',age:22,stat:'UCL winner 2024',rating:85,group:'I'},
+  {name:'Mike Maignan',flag:'🇫🇷',club:'AC Milan',pos:'GK',age:29,stat:'Euro 2024 GK',rating:87,group:'I'},
   {name:'Nico Williams',flag:'🇪🇸',club:'Athletic Bilbao',pos:'FW',age:22,stat:'Euro 2024 champion',rating:87,group:'H'},
-  {name:'Donyell Malen',flag:'🇳🇱',club:'Aston Villa',pos:'FW',age:26,stat:'PL top scorer',rating:83,group:'F'},
+  {name:'Aurelien Tchouameni',flag:'🇫🇷',club:'Real Madrid',pos:'MF',age:25,stat:'WC 2022 finalist',rating:86,group:'I'},
+  {name:'Frenkie de Jong',flag:'🇳🇱',club:'FC Barcelona',pos:'MF',age:28,stat:'UCL semifinal 2019',rating:86,group:'F'},
+  {name:'Manuel Neuer',flag:'🇩🇪',club:'Bayern Munich',pos:'GK',age:40,stat:'World Cup winner 2014',rating:86,group:'E'},
+  {name:'Diogo Costa',flag:'🇵🇹',club:'Porto',pos:'GK',age:25,stat:'Best GK UCL 2023',rating:86,group:'K'},
+  {name:'Marquinhos',flag:'🇧🇷',club:'PSG',pos:'DF',age:31,stat:'UCL finalist 2020',rating:86,group:'C'},
+  {name:'Robert Lewandowski',flag:'🇵🇱',club:'FC Barcelona',pos:'FW',age:37,stat:'5x Bundesliga top scorer',rating:86,group:null},
+  {name:'Sadio Mane',flag:'🇸🇳',club:'Al Nassr',pos:'FW',age:33,stat:'AFCON winner 2022',rating:85,group:'I'},
+  {name:'Raphinha',flag:'🇧🇷',club:'FC Barcelona',pos:'FW',age:29,stat:'Champions League 2025',rating:85,group:'C'},
+  {name:'Antonio Rudiger',flag:'🇩🇪',club:'Real Madrid',pos:'DF',age:32,stat:'UCL winner 2022',rating:85,group:'E'},
   {name:'Cody Gakpo',flag:'🇳🇱',club:'Liverpool',pos:'FW',age:26,stat:'WC 2022 top scorer',rating:85,group:'F'},
-  {name:'Dusan Vlahovic',flag:'🇷🇸',club:'Juventus',pos:'FW',age:25,stat:'Serie A top scorer',rating:85,group:null},
-  {name:'Victor Osimhen',flag:'🇳🇬',club:'Galatasaray',pos:'FW',age:26,stat:'Serie A top scorer 2023',rating:86,group:null},
-  {name:'Robert Lewandowski',flag:'🇵🇱',club:'FC Barcelona',pos:'FW',age:37,stat:'5x top scorer',rating:86,group:null}
+  {name:'David Raya',flag:'🇪🇸',club:'Arsenal',pos:'GK',age:29,stat:'PL Golden Glove 2024',rating:85,group:'H'},
+  {name:'Dani Carvajal',flag:'🇪🇸',club:'Real Madrid',pos:'DF',age:33,stat:'UCL winner 2024',rating:85,group:'H'},
+  {name:'Dayot Upamecano',flag:'🇫🇷',club:'Bayern Munich',pos:'DF',age:26,stat:'Euro 2024 finalist',rating:85,group:'I'},
+  {name:'Granit Xhaka',flag:'🇨🇭',club:'Bayer Leverkusen',pos:'MF',age:32,stat:'Bundesliga champion 2024',rating:84,group:'B'},
+  {name:'Jordan Pickford',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Everton',pos:'GK',age:32,stat:'England No.1',rating:84,group:'L'},
+  {name:'Marc Cucurella',flag:'🇪🇸',club:'Chelsea',pos:'DF',age:26,stat:'Euro 2024 champion',rating:84,group:'H'},
+  {name:'Kyle Walker',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'AC Milan',pos:'DF',age:35,stat:'PL champion x6',rating:83,group:'L'},
+  {name:'Donyell Malen',flag:'🇳🇱',club:'Aston Villa',pos:'FW',age:26,stat:'PL top scorer',rating:83,group:'F'}
 ];
 
 // - FIFA CARD STYLE - World Cup 2026 -
@@ -1668,15 +1665,15 @@ function App(){
             // HEAD
             e('ellipse',{cx:25,cy:shotResult==='saved'?22:13,rx:10,ry:11,fill:'#C68642',stroke:'#a0522d',strokeWidth:1}),
 
-            // LONG CURLY HAIR - iconic
-            e('path',{d:'M15 '+(shotResult==='saved'?16:6)+' Q19 '+(shotResult==='saved'?10:0)+' 25 '+(shotResult==='saved'?9:-1)+' Q31 '+(shotResult==='saved'?10:0)+' 35 '+(shotResult==='saved'?16:6)+' Q32 '+(shotResult==='saved'?13:3)+' 25 '+(shotResult==='saved'?12:2)+' Q18 '+(shotResult==='saved'?13:3)+' 15 '+(shotResult==='saved'?16:6),fill:'#0d0500'}),
-            e('ellipse',{cx:13,cy:shotResult==='saved'?21:11,rx:4,ry:7,fill:'#0d0500'}),
-            e('ellipse',{cx:37,cy:shotResult==='saved'?21:11,rx:4,ry:7,fill:'#0d0500'}),
-            e('circle',{cx:13,cy:shotResult==='saved'?28:18,r:3,fill:'#0d0500'}),
-            e('circle',{cx:37,cy:shotResult==='saved'?28:18,r:3,fill:'#0d0500'}),
-            e('circle',{cx:20,cy:shotResult==='saved'?11:1,r:3,fill:'#0d0500'}),
-            e('circle',{cx:25,cy:shotResult==='saved'?9:-1,r:3,fill:'#0d0500'}),
-            e('circle',{cx:30,cy:shotResult==='saved'?11:1,r:3,fill:'#0d0500'}),
+            // LONG CURLY HAIR - Higuita iconic style
+            // Top hair mass
+            e('ellipse',{cx:25,cy:shotResult==='saved'?9:0,rx:11,ry:6,fill:'#0d0500'}),
+            // Left flowing curls - long and wavy
+            e('path',{d:'M14 '+(shotResult==='saved'?14:5)+' C8 '+(shotResult==='saved'?18:8)+' 6 '+(shotResult==='saved'?24:14)+' 10 '+(shotResult==='saved'?30:20)+' C12 '+(shotResult==='saved'?34:24)+' 14 '+(shotResult==='saved'?38:28)+' 12 '+(shotResult==='saved'?42:32),stroke:'#0d0500',strokeWidth:6,fill:'none',strokeLinecap:'round'}),
+            e('path',{d:'M11 '+(shotResult==='saved'?14:5)+' C5 '+(shotResult==='saved'?20:10)+' 4 '+(shotResult==='saved'?28:18)+' 8 '+(shotResult==='saved'?34:24)+' C10 '+(shotResult==='saved'?40:30)+' 8 '+(shotResult==='saved'?46:36)+' 6 '+(shotResult==='saved'?50:40),stroke:'#0d0500',strokeWidth:5,fill:'none',strokeLinecap:'round'}),
+            // Right flowing curls
+            e('path',{d:'M36 '+(shotResult==='saved'?14:5)+' C42 '+(shotResult==='saved'?18:8)+' 44 '+(shotResult==='saved'?24:14)+' 40 '+(shotResult==='saved'?30:20)+' C38 '+(shotResult==='saved'?34:24)+' 36 '+(shotResult==='saved'?38:28)+' 38 '+(shotResult==='saved'?42:32),stroke:'#0d0500',strokeWidth:6,fill:'none',strokeLinecap:'round'}),
+            e('path',{d:'M39 '+(shotResult==='saved'?14:5)+' C45 '+(shotResult==='saved'?20:10)+' 46 '+(shotResult==='saved'?28:18)+' 42 '+(shotResult==='saved'?34:24)+' C40 '+(shotResult==='saved'?40:30)+' 42 '+(shotResult==='saved'?46:36)+' 44 '+(shotResult==='saved'?50:40),stroke:'#0d0500',strokeWidth:5,fill:'none',strokeLinecap:'round'}),
 
             // EYES
             e('ellipse',{cx:20,cy:shotResult==='saved'?22:13,rx:2.2,ry:1.8,fill:'white'}),
@@ -1946,8 +1943,7 @@ function App(){
               lang==='fr'?'🔄 Rejouer':lang==='es'?'🔄 Jugar':lang==='pt'?'🔄 Jogar':lang==='it'?'🔄 Rigioca':lang==='de'?'🔄 Nochmal':'🔄 Play Again'
             )
           )
-        )
-      ),
+        ),
 
       // ── TAB 4 - QUIZ CHAMPIONSHIP ─────────────────────────────
       tab===4&&e('div',null,
@@ -2144,7 +2140,8 @@ function App(){
           })()
         )
       ),
-            // ── TAB 9 - FANTASY WORLD CUP ────────────────────────────
+
+      // ── TAB 9 - FANTASY WORLD CUP ────────────────────────────
       tab===9&&e('div',null,
         e('div',{style:{textAlign:'center',marginBottom:12}},
           e('div',{style:{fontSize:13,fontWeight:'bold',color:G,letterSpacing:2}},'⭐ FANTASY WORLD CUP'),
@@ -2291,7 +2288,7 @@ function App(){
       )
     ),
 
-    e('footer',{style:{textAlign:'center',padding:'10px',fontSize:9,color:'#2e4460',borderTop:'1px solid rgba(212,175,55,0.08)',marginTop:4}},'World Cup 2026 Fan App - ',premium?'PRO':'Free')
+    e('footer',{style:{textAlign:'center',padding:'10px',fontSize:9,color:'#2e4460',borderTop:'1px solid rgba(212,175,55,0.08)',marginTop:4}},'World Cup 2026 Fan App - ',premium?'PRO':'Free'))
   );
 }
 
