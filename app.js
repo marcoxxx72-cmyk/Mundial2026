@@ -1904,27 +1904,17 @@ function App(){
             // Scorpion above boots!
             shotResult==='saved'&&e('text',{x:27,y:6,textAnchor:'middle',fontSize:14},'🦂'),
 
-            // ── BALL inside goal visual - always visible ──
-            e('svg',{
-              style:{
-                position:'absolute',
-                bottom:shotResult?50:6,
-                left:shotDir==='left'?'16%':shotDir==='right'?'58%':'39%',
-                width:28,height:28,
-                transition:'all 0.65s cubic-bezier(0.25,0.46,0.45,0.94)',
-                transform:shotResult==='goal'?'scale(1.4) rotate(360deg)':shotResult==='saved'?'scale(0.7)':'scale(1)',
-                filter:'drop-shadow(0 3px 6px rgba(0,0,0,0.7))'
-              },
-              viewBox:'0 0 28 28',xmlns:'http://www.w3.org/2000/svg'
-            },
-              e('circle',{cx:14,cy:14,r:13,fill:'white',stroke:'#222',strokeWidth:1.5}),
-              e('polygon',{points:'14,4 17,9 14,13 11,9',fill:'#111'}),
-              e('polygon',{points:'14,13 11,9 6,10 5,15 9,18',fill:'#111'}),
-              e('polygon',{points:'14,13 17,9 22,10 23,15 19,18',fill:'#111'}),
-              e('polygon',{points:'9,18 5,15 6,21 10,23 13,21',fill:'#111'}),
-              e('polygon',{points:'19,18 23,15 22,21 18,23 15,21',fill:'#111'}),
-              e('polygon',{points:'13,21 10,23 14,25 18,23 15,21',fill:'#111'})
-            ),
+            // ── BALL - trajectory from penalty spot ──
+            e('div',{style:{
+              position:'absolute',
+              bottom:shotResult?(shotDir==='left'?60:shotDir==='right'?60:50):12,
+              left:shotResult?(shotDir==='left'?'18%':shotDir==='right'?'64%':'39%'):'38%',
+              fontSize:shotResult?32:22,
+              transition:'all 0.65s cubic-bezier(0.25,0.46,0.45,0.94)',
+              filter:shotResult?'none':'blur(1px)',
+              transform:shotResult==='goal'?'scale(1.3)':shotResult==='saved'?'scale(0.8)':'scale(1)',
+              zIndex:3
+            }},'⚽'),
 
             // ── RESULT TEXT inside goal visual ──
             shotResult&&e('div',{style:{position:'absolute',top:'42%',left:'50%',transform:'translate(-50%,-50%)',fontSize:18,fontWeight:'bold',color:shotResult==='goal'?'#ffff00':'#ff4444',textShadow:'0 0 20px '+(shotResult==='goal'?'rgba(255,255,0,0.9)':'rgba(255,0,0,0.9)'),whiteSpace:'nowrap',letterSpacing:2}},
@@ -2748,4 +2738,3 @@ function App(){
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
-
