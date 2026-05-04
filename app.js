@@ -1781,154 +1781,126 @@ function App(){
           })
         ),
         // Goal visual with Higuita SVG
-        e('div',{style:{position:'relative',width:'100%',maxWidth:300,margin:'0 auto 12px',height:240,background:'linear-gradient(180deg,#0d3b0d,#1a6a1a,#2d8a2d)',borderRadius:12,overflow:'visible',border:'3px solid rgba(255,255,255,0.35)'}},
-          e('div',{style:{position:'absolute',top:10,left:'20%',right:'20%',height:85,border:'3px solid white',borderBottom:'none',background:'rgba(255,255,255,0.08)'}}),
+        e('div',{style:{
+          position:'relative',
+          width:'100%',
+          maxWidth:320,
+          margin:'0 auto 14px',
+          height:200,
+          background:'linear-gradient(180deg,#0a2a0a,#1a5a1a,#2d8a2d)',
+          borderRadius:10,
+          overflow:'visible',
+          border:'3px solid rgba(255,255,255,0.3)',
+          boxShadow:'inset 0 0 20px rgba(0,0,0,0.3)'
+        }},
+          // Goal posts
+          e('div',{style:{position:'absolute',top:10,left:'18%',right:'18%',height:90,border:'3px solid white',borderBottom:'none',background:'rgba(255,255,255,0.06)'}}),
+          // Net
+          e('div',{style:{position:'absolute',top:13,left:'19%',right:'19%',height:86,backgroundImage:'linear-gradient(rgba(255,255,255,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.08) 1px,transparent 1px)',backgroundSize:'18px 18px'}}),
 
-          e('div',{style:{position:'absolute',bottom:0,left:0,right:0,height:30,background:'rgba(255,255,255,0.05)',borderTop:'2px solid rgba(255,255,255,0.15)'}}),
-          // HIGUITA SVG - El Loco Higuita
+          // ── HIGUITA SVG ──
           e('svg',{
             style:{
               position:'absolute',
-              top: keeperDir==='left'?10:keeperDir==='right'?10:12,
-              left:keeperDir==='left'?'18%':keeperDir==='right'?'56%':'40%',
-              width:56,height:82,
+              top:keeperDir==='left'?10:keeperDir==='right'?10:14,
+              left:keeperDir==='left'?'12%':keeperDir==='right'?'52%':'37%',
+              width:58,height:90,
               transition:'all 0.5s cubic-bezier(0.25,0.46,0.45,0.94)',
               transform:shotResult==='saved'
                 ?'rotate(18deg)'
-                :keeperDir==='left'?'rotate(-28deg) scaleX(-1)':keeperDir==='right'?'rotate(28deg)':'rotate(0deg)',
+                :keeperDir==='left'?'rotate(-30deg) scaleX(-1)':keeperDir==='right'?'rotate(30deg)':'rotate(0deg)',
               filter:shotResult==='goal'?'grayscale(0.9) opacity(0.5)':shotResult==='saved'?'drop-shadow(0 0 10px #ffd700)':'',
-              transformOrigin:'center center'
+              transformOrigin:'center center',
+              zIndex:10
             },
             viewBox:'0 0 56 82',xmlns:'http://www.w3.org/2000/svg'
           },
-            // ── JERSEY Colombia ──
             e('rect',{x:12,y:38,width:26,height:22,rx:4,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1.5}),
             e('rect',{x:12,y:44,width:26,height:5,fill:'#CE1126'}),
             e('rect',{x:12,y:49,width:26,height:4,fill:'#003087'}),
             e('text',{x:25,y:47,textAnchor:'middle',fontSize:4,fontWeight:'bold',fill:'white'},'EL LOCO'),
-
-            // ── NECK ──
             e('rect',{x:21,y:29,width:9,height:11,rx:2,fill:'#C68642'}),
-
-            // ── HEAD ──
             e('ellipse',{cx:25,cy:20,rx:11,ry:12,fill:'#C68642',stroke:'#a0522d',strokeWidth:1}),
-
-            // ── CURLY HAIR - Higuita iconic long wavy hair ──
-            // Big dark mass on top
             e('ellipse',{cx:25,cy:9,rx:13,ry:8,fill:'#1a0a00'}),
-            // Curly top strands
             e('circle',{cx:17,cy:5,r:4,fill:'#1a0a00'}),
             e('circle',{cx:22,cy:3,r:4,fill:'#1a0a00'}),
             e('circle',{cx:28,cy:3,r:4,fill:'#1a0a00'}),
             e('circle',{cx:33,cy:5,r:4,fill:'#1a0a00'}),
-
-            // LEFT flowing hair - wide wavy mass
             e('ellipse',{cx:11,cy:18,rx:5,ry:9,fill:'#1a0a00'}),
             e('ellipse',{cx:10,cy:30,rx:5,ry:9,fill:'#1a0a00'}),
             e('ellipse',{cx:9,cy:42,rx:4,ry:8,fill:'#1a0a00'}),
-            // Left wavy edge curls
             e('circle',{cx:8,cy:22,r:4,fill:'#1a0a00'}),
             e('circle',{cx:7,cy:34,r:3.5,fill:'#1a0a00'}),
             e('circle',{cx:8,cy:46,r:3,fill:'#1a0a00'}),
             e('circle',{cx:10,cy:52,r:3.5,fill:'#1a0a00'}),
-            e('circle',{cx:7,cy:50,r:3,fill:'#1a0a00'}),
-
-            // RIGHT flowing hair - wide wavy mass
             e('ellipse',{cx:39,cy:18,rx:5,ry:9,fill:'#1a0a00'}),
             e('ellipse',{cx:40,cy:30,rx:5,ry:9,fill:'#1a0a00'}),
             e('ellipse',{cx:41,cy:42,rx:4,ry:8,fill:'#1a0a00'}),
-            // Right wavy edge curls
             e('circle',{cx:42,cy:22,r:4,fill:'#1a0a00'}),
             e('circle',{cx:43,cy:34,r:3.5,fill:'#1a0a00'}),
             e('circle',{cx:42,cy:46,r:3,fill:'#1a0a00'}),
             e('circle',{cx:40,cy:52,r:3.5,fill:'#1a0a00'}),
-            e('circle',{cx:43,cy:50,r:3,fill:'#1a0a00'}),
-
-            // ── EYES ──
-            e('ellipse',{cx:20,cy:19,rx:2.5,ry:2,fill:'white'}),
-            e('ellipse',{cx:30,cy:19,rx:2.5,ry:2,fill:'white'}),
-            e('circle',{cx:20,cy:19,r:1.4,fill:'#1a0a00'}),
-            e('circle',{cx:30,cy:19,r:1.4,fill:'#1a0a00'}),
-            e('circle',{cx:20.6,cy:18.4,r:0.5,fill:'white'}),
-            e('circle',{cx:30.6,cy:18.4,r:0.5,fill:'white'}),
-
-            // ── EYEBROWS - thick and expressive ──
+            e('ellipse',{cx:19,cy:19,rx:2.5,ry:2,fill:'white'}),
+            e('ellipse',{cx:29,cy:19,rx:2.5,ry:2,fill:'white'}),
+            e('circle',{cx:19,cy:19,r:1.4,fill:'#1a0a00'}),
+            e('circle',{cx:29,cy:19,r:1.4,fill:'#1a0a00'}),
             e('path',{d:'M17 15 Q20 13 23 15',stroke:'#1a0a00',strokeWidth:2,fill:'none',strokeLinecap:'round'}),
             e('path',{d:'M27 15 Q30 13 33 15',stroke:'#1a0a00',strokeWidth:2,fill:'none',strokeLinecap:'round'}),
-
-            // ── BIG MOUSTACHE - iconic! ──
             e('path',{d:'M14 24 Q18 21 25 23 Q32 21 36 24 Q33 29 25 27 Q17 29 14 24',fill:'#1a0a00'}),
+            keeperDir==='left'&&!shotResult?e('path',{d:'M12 42 L-4 28',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'}):null,
+            keeperDir==='right'&&!shotResult?e('path',{d:'M38 42 L54 28',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'}):null,
+            !shotResult&&keeperDir!=='left'&&keeperDir!=='right'?e('path',{d:'M12 46 L4 58',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'}):null,
+            !shotResult&&keeperDir!=='left'&&keeperDir!=='right'?e('path',{d:'M38 46 L46 58',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'}):null,
+            shotResult==='saved'?e('path',{d:'M12 44 L-3 56',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'}):null,
+            shotResult==='saved'?e('path',{d:'M38 44 L53 56',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'}):null,
+            !shotResult&&keeperDir==='left'?e('circle',{cx:-4,cy:27,r:6,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}):null,
+            !shotResult&&keeperDir==='right'?e('circle',{cx:54,cy:27,r:6,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}):null,
+            shotResult==='saved'?e('circle',{cx:-3,cy:56,r:6,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}):null,
+            shotResult==='saved'?e('circle',{cx:53,cy:56,r:6,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}):null,
+            !shotResult?e('rect',{x:14,y:59,width:10,height:14,rx:2,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1}):null,
+            !shotResult?e('rect',{x:30,y:59,width:10,height:14,rx:2,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1}):null,
+            !shotResult?e('ellipse',{cx:19,cy:74,rx:8,ry:4,fill:'#111'}):null,
+            !shotResult?e('ellipse',{cx:35,cy:74,rx:8,ry:4,fill:'#111'}):null,
+            shotResult==='saved'?e('path',{d:'M17 60 C11 56 5 47 8 36 C10 27 19 21 23 14',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round',fill:'none'}):null,
+            shotResult==='saved'?e('path',{d:'M37 60 C43 56 49 47 46 36 C44 27 35 21 31 14',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round',fill:'none'}):null,
+            shotResult==='saved'?e('ellipse',{cx:23,cy:12,rx:8,ry:3.5,fill:'#111',transform:'rotate(-22 23 12)'}):null,
+            shotResult==='saved'?e('ellipse',{cx:31,cy:12,rx:8,ry:3.5,fill:'#111',transform:'rotate(22 31 12)'}):null,
+            shotResult==='saved'?e('text',{x:27,y:6,textAnchor:'middle',fontSize:14},'🦂'):null
+          ),
 
-            // ── BEARD STUBBLE ──
-            e('path',{d:'M16 29 Q20 32 25 31 Q30 32 34 29',stroke:'#1a0a00',strokeWidth:1.3,fill:'none',strokeLinecap:'round'}),
+          // ── PENALTY SPOT ──
+          e('div',{style:{position:'absolute',bottom:28,left:'48%',width:8,height:8,borderRadius:'50%',background:'white',opacity:0.7,zIndex:5}}),
 
-            // ── ARMS ──
-            keeperDir==='left'&&!shotResult
-              ?e('path',{d:'M12 42 L-4 28',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'})
-              :!shotResult&&e('path',{d:'M12 46 L4 58',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'}),
-            keeperDir==='right'&&!shotResult
-              ?e('path',{d:'M38 42 L54 28',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'})
-              :!shotResult&&e('path',{d:'M38 46 L46 58',stroke:'#FCD116',strokeWidth:7,strokeLinecap:'round'}),
+          // ── BALL ⚽ always visible ──
+          e('div',{style:{
+            position:'absolute',
+            bottom:shotResult==='goal'?(shotDir==='left'?120:shotDir==='right'?120:105):24,
+            left:shotResult==='goal'?(shotDir==='left'?'8%':shotDir==='right'?'65%':'41%'):'41%',
+            fontSize:38,
+            lineHeight:'1',
+            transition:'all 0.9s cubic-bezier(0.2,0.8,0.3,1)',
+            filter:'drop-shadow(0 4px 10px rgba(0,0,0,1))',
+            transform:shotResult==='goal'?'scale(1.3)':shotResult==='saved'?'scale(0.7)':'scale(1)',
+            zIndex:999,
+            pointerEvents:'none'
+          }},'⚽'),
 
-            // Scorpion arms - stretched forward
-            shotResult==='saved'&&e('path',{d:'M12 44 L-3 56',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'}),
-            shotResult==='saved'&&e('path',{d:'M38 44 L53 56',stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round'}),
+          // Result text
+          shotResult&&e('div',{style:{
+            position:'absolute',
+            top:'42%',left:'50%',
+            transform:'translate(-50%,-50%)',
+            fontSize:20,fontWeight:'bold',
+            color:shotResult==='goal'?'#ffff00':'#ff4444',
+            textShadow:'0 0 20px '+(shotResult==='goal'?'rgba(255,255,0,0.9)':'rgba(255,0,0,0.9)'),
+            whiteSpace:'nowrap',
+            zIndex:1000
+          }},shotResult==='goal'?'⚽ GOAL !!':(lang==='fr'?'🦂 ARRETE !':lang==='es'?'🦂 PARADO !':lang==='pt'?'🦂 DEFENDIDO !':lang==='it'?'🦂 PARATO !':lang==='de'?'🦂 GEHALTEN !':'🦂 SAVED !!')),
 
-            // ── GLOVES ──
-            !shotResult&&keeperDir==='left'&&e('circle',{cx:-4,cy:27,r:6,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
-            !shotResult&&keeperDir==='left'&&e('circle',{cx:4,cy:58,r:5.5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
-            !shotResult&&keeperDir==='right'&&e('circle',{cx:54,cy:27,r:6,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
-            !shotResult&&keeperDir==='right'&&e('circle',{cx:46,cy:58,r:5.5,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
-            shotResult==='saved'&&e('circle',{cx:-3,cy:56,r:6,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
-            shotResult==='saved'&&e('circle',{cx:53,cy:56,r:6,fill:'#FF6B00',stroke:'#cc4400',strokeWidth:1.5}),
-
-            // ── NORMAL LEGS ──
-            !shotResult&&e('rect',{x:14,y:59,width:10,height:14,rx:2,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1}),
-            !shotResult&&e('rect',{x:30,y:59,width:10,height:14,rx:2,fill:'#FCD116',stroke:'#c8a000',strokeWidth:1}),
-            !shotResult&&e('ellipse',{cx:19,cy:74,rx:8,ry:4,fill:'#111'}),
-            !shotResult&&e('ellipse',{cx:35,cy:74,rx:8,ry:4,fill:'#111'}),
-
-            // ── SCORPION KICK - legs curl UP behind back ──
-            // Body leans forward (handled by SVG rotation)
-            shotResult==='saved'&&e('path',{
-              d:'M17 60 C11 56 5 47 8 36 C10 27 19 21 23 14',
-              stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round',fill:'none'
-            }),
-            shotResult==='saved'&&e('path',{
-              d:'M37 60 C43 56 49 47 46 36 C44 27 35 21 31 14',
-              stroke:'#FCD116',strokeWidth:8,strokeLinecap:'round',fill:'none'
-            }),
-            // Boots at top - above head!
-            shotResult==='saved'&&e('ellipse',{cx:23,cy:12,rx:8,ry:3.5,fill:'#111',stroke:'#333',strokeWidth:1,transform:'rotate(-22 23 12)'}),
-            shotResult==='saved'&&e('ellipse',{cx:31,cy:12,rx:8,ry:3.5,fill:'#111',stroke:'#333',strokeWidth:1,transform:'rotate(22 31 12)'}),
-            // Scorpion above boots!
-            shotResult==='saved'&&e('text',{x:27,y:6,textAnchor:'middle',fontSize:14},'🦂'),
-
-            // ── PENALTY SPOT white circle ──
-            e('div',{style:{position:'absolute',bottom:38,left:'47%',width:10,height:10,borderRadius:'50%',background:'white',opacity:0.8,zIndex:5}}),
-            // ── BALL - big, always visible ──
-            e('div',{style:{
-              position:'absolute',
-              bottom:shotResult==='goal'?(shotDir==='left'?130:shotDir==='right'?130:120):34,
-              left:shotResult==='goal'?(shotDir==='left'?'10%':shotDir==='right'?'64%':'41%'):'40%',
-              fontSize:44,
-              lineHeight:'1',
-              transition:'all 0.9s cubic-bezier(0.2,0.8,0.3,1)',
-              filter:'drop-shadow(0 6px 12px rgba(0,0,0,1))',
-              transform:shotResult==='goal'?'scale(1.3)':shotResult==='saved'?'scale(0.7)':'scale(1)',
-              zIndex:200
-            }},'⚽'),
-
-            // ── RESULT TEXT inside goal visual ──
-            shotResult&&e('div',{style:{position:'absolute',top:'42%',left:'50%',transform:'translate(-50%,-50%)',fontSize:18,fontWeight:'bold',color:shotResult==='goal'?'#ffff00':'#ff4444',textShadow:'0 0 20px '+(shotResult==='goal'?'rgba(255,255,0,0.9)':'rgba(255,0,0,0.9)'),whiteSpace:'nowrap',letterSpacing:2}},
-              shotResult==='goal'?'⚽ GOAL !!':(lang==='fr'?'🦂 ARRETE !':lang==='es'?'🦂 PARADO !':lang==='pt'?'🦂 DEFENDIDO !':lang==='it'?'🦂 PARATO !':lang==='de'?'🦂 GEHALTEN !':'🦂 SAVED !!')
-            ),
-
-            // Crowd reaction
-            shotResult==='goal'&&e('div',{style:{position:'absolute',bottom:4,left:0,right:0,textAlign:'center',fontSize:14}},'🎉🎊🎉'),
-            shotResult==='saved'&&e('div',{style:{position:'absolute',bottom:4,left:0,right:0,textAlign:'center',fontSize:14}},'👏🦂👏')
-          )
-          )
+          // Crowd
+          shotResult==='goal'&&e('div',{style:{position:'absolute',bottom:4,left:0,right:0,textAlign:'center',fontSize:16,zIndex:50}},'🎉🎊🎉'),
+          shotResult==='saved'&&e('div',{style:{position:'absolute',bottom:4,left:0,right:0,textAlign:'center',fontSize:16,zIndex:50}},'👏🦂👏')
+        )
         ,
         // Combo
         combo>=2&&e('div',{style:{textAlign:'center',marginBottom:8}},
