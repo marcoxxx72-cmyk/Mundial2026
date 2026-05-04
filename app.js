@@ -1,3 +1,4 @@
+
 var STADIUMS = [
   {name:'MetLife Stadium',city:'New York / New Jersey',country:'USA',flag:'🇺🇸',cap:82500,surface:'Grass',roof:'Open',matches:8,final:true,lat:40.8135,lng:-74.0745,
    facts:['Hosts the WC 2026 Final','Largest stadium in the tournament','Home of NY Giants & Jets']},
@@ -2695,4 +2696,3 @@ function App(){
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
-
