@@ -1904,16 +1904,17 @@ function App(){
             // Scorpion above boots!
             shotResult==='saved'&&e('text',{x:27,y:6,textAnchor:'middle',fontSize:14},'🦂'),
 
-            // ── BALL - trajectory from penalty spot ──
+            // ── BALL - always visible, trajectory from penalty spot ──
             e('div',{style:{
               position:'absolute',
-              bottom:shotResult?(shotDir==='left'?60:shotDir==='right'?60:50):12,
-              left:shotResult?(shotDir==='left'?'18%':shotDir==='right'?'64%':'39%'):'38%',
-              fontSize:shotResult?32:22,
-              transition:'all 0.65s cubic-bezier(0.25,0.46,0.45,0.94)',
-              filter:shotResult?'none':'blur(1px)',
-              transform:shotResult==='goal'?'scale(1.3)':shotResult==='saved'?'scale(0.8)':'scale(1)',
-              zIndex:3
+              bottom:shotResult?(shotDir==='left'?65:shotDir==='right'?65:55):10,
+              left:shotResult?(shotDir==='left'?'16%':shotDir==='right'?'62%':'41%'):'41%',
+              fontSize:shotResult?34:26,
+              transition:'all 0.7s cubic-bezier(0.25,0.46,0.45,0.94)',
+              filter:shotResult?'drop-shadow(0 0 8px yellow)':'drop-shadow(0 3px 5px rgba(0,0,0,0.9))',
+              transform:shotResult==='goal'?'scale(1.4) rotate(360deg)':shotResult==='saved'?'scale(0.7)':'scale(1)',
+              zIndex:50,
+              pointerEvents:'none'
             }},'⚽'),
 
             // ── RESULT TEXT inside goal visual ──
