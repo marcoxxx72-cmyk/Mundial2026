@@ -481,34 +481,33 @@ function getStripeLink(lang){return lang==='en'?STRIPE_GBP:STRIPE_EUR;}
 
 var STARS = [
   // ── FORWARDS (FW) ────────────────────────────────────────────
-  {name:'Kylian Mbappe',flag:'🇫🇷',club:'Real Madrid',pos:'FW',age:26,stat:'47 intl goals',rating:97},
-  {name:'Erling Haaland',flag:'🇳🇴',club:'Man. City',pos:'FW',age:24,stat:'44 intl goals',rating:95},
+  {name:'Kylian Mbappe',role:'LW',flag:'🇫🇷',club:'Real Madrid',pos:'FW',age:26,stat:'47 intl goals',rating:97},
+  {name:'Erling Haaland',role:'CF',flag:'🇳🇴',club:'Man. City',pos:'FW',age:24,stat:'44 intl goals',rating:95},
   {name:'Vinicius Jr.',flag:'🇧🇷',club:'Real Madrid',pos:'FW',age:24,stat:'Ballon dOr nominee 2024',rating:94},
   {name:'Lionel Messi',flag:'🇦🇷',club:'Inter Miami',pos:'FW',age:37,stat:'8x Ballon dOr',rating:94},
-  {name:'Lamine Yamal',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:17,stat:'Euro 2024 champion',rating:91},
-  {name:'Harry Kane',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Bayern Munich',pos:'FW',age:31,stat:'England top scorer',rating:91},
-  {name:'Cristiano Ronaldo',flag:'🇵🇹',club:'Al Nassr',pos:'FW',age:40,stat:'915 career goals',rating:91},
-  {name:'Bukayo Saka',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Arsenal',pos:'FW',age:23,stat:'PFA Young Player 2024',rating:89},
-  {name:'Nico Williams',flag:'🇪🇸',club:'Athletic Bilbao',pos:'FW',age:21,stat:'Euro 2024 champion',rating:87},
-  {name:'Lautaro Martinez',flag:'🇦🇷',club:'Inter Milan',pos:'FW',age:26,stat:'WC 2022 champion',rating:87},
-  {name:'Marcus Thuram',flag:'🇫🇷',club:'Inter Milan',pos:'FW',age:26,stat:'Serie A champion 2024',rating:87},
-  {name:'Antoine Griezmann',flag:'🇫🇷',club:'Atletico Madrid',pos:'FW',age:33,stat:'WC 2018 winner',rating:86},
-  {name:'Raphinha',flag:'🇧🇷',club:'FC Barcelona',pos:'FW',age:28,stat:'Champions League 2025',rating:86},
-  {name:'Robert Lewandowski',flag:'🇵🇱',club:'FC Barcelona',pos:'FW',age:36,stat:'5x top scorer',rating:86},
-  {name:'Cody Gakpo',flag:'🇳🇱',club:'Liverpool',pos:'FW',age:25,stat:'WC 2022 top scorer NL',rating:85},
-  {name:'Dusan Vlahovic',flag:'🇷🇸',club:'Juventus',pos:'FW',age:24,stat:'Serie A top scorer',rating:85},
-  {name:'Romelu Lukaku',flag:'🇧🇪',club:'Napoli',pos:'FW',age:31,stat:'Belgium top scorer',rating:84},
-  {name:'Jonathan David',flag:'🇨🇦',club:'Lille',pos:'FW',age:24,stat:'Ligue 1 top scorer 2024',rating:84},
+  {name:'Lamine Yamal',role:'RW',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:17,stat:'Euro 2024 champion',rating:91},
+  {name:'Harry Kane',role:'CF',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Bayern Munich',pos:'FW',age:31,stat:'England top scorer',rating:91},
+  {name:'Cristiano Ronaldo',role:'CF',flag:'🇵🇹',club:'Al Nassr',pos:'FW',age:40,stat:'915 career goals',rating:91},
+  {name:'Bukayo Saka',role:'LW',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Arsenal',pos:'FW',age:23,stat:'PFA Young Player 2024',rating:89},
+  {name:'Nico Williams',role:'RW',flag:'🇪🇸',club:'Athletic Bilbao',pos:'FW',age:21,stat:'Euro 2024 champion',rating:87},
+  {name:'Lautaro Martinez',role:'CF',flag:'🇦🇷',club:'Inter Milan',pos:'FW',age:26,stat:'WC 2022 champion',rating:87},
+  {name:'Marcus Thuram',role:'CF',flag:'🇫🇷',club:'Inter Milan',pos:'FW',age:26,stat:'Serie A champion 2024',rating:87},
+    {name:'Raphinha',role:'LW',flag:'🇧🇷',club:'FC Barcelona',pos:'FW',age:28,stat:'Champions League 2025',rating:86},
+  {name:'Robert Lewandowski',role:'CF',flag:'🇵🇱',club:'FC Barcelona',pos:'FW',age:36,stat:'5x top scorer',rating:86},
+  {name:'Cody Gakpo',role:'LW',flag:'🇳🇱',club:'Liverpool',pos:'FW',age:25,stat:'WC 2022 top scorer NL',rating:85},
+  {name:'Dusan Vlahovic',role:'CF',flag:'🇷🇸',club:'Juventus',pos:'FW',age:24,stat:'Serie A top scorer',rating:85},
+  {name:'Romelu Lukaku',role:'CF',flag:'🇧🇪',club:'Napoli',pos:'FW',age:31,stat:'Belgium top scorer',rating:84},
+  {name:'Jonathan David',role:'CF',flag:'🇨🇦',club:'Lille',pos:'FW',age:24,stat:'Ligue 1 top scorer 2024',rating:84},
   {name:'Alvaro Morata',flag:'🇪🇸',club:'AC Milan',pos:'FW',age:31,stat:'Euro 2024 champion',rating:84},
-  {name:'Richarlison',flag:'🇧🇷',club:'Tottenham',pos:'FW',age:27,stat:'WC 2022 Brazil',rating:84},
-  {name:'Sadio Mane',flag:'🇸🇳',club:'Al Nassr',pos:'FW',age:32,stat:'AFCON winner 2022',rating:84},
-  {name:'Donyell Malen',flag:'🇳🇱',club:'Aston Villa',pos:'FW',age:26,stat:'Bundesliga top scorer 2023',rating:83},
-  {name:'Memphis Depay',flag:'🇳🇱',club:'Atletico Madrid',pos:'FW',age:30,stat:'Dutch all-time top scorer',rating:83},
-  {name:'Victor Boniface',flag:'🇳🇬',club:'Bayer Leverkusen',pos:'FW',age:23,stat:'Bundesliga champion 2024',rating:83},
-  {name:'Rasmus Hojlund',flag:'🇩🇰',club:'Man. Utd',pos:'FW',age:22,stat:'Denmark top striker',rating:83},
-  {name:'Santiago Gimenez',flag:'🇲🇽',club:'AC Milan',pos:'FW',age:23,stat:'Mexico WC 2026 host',rating:83},
-  {name:'Ivan Toney',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Al-Ahli',pos:'FW',age:29,stat:'England squad 2024',rating:82},
-    {name:'Evan Ferguson',flag:'🇮🇪',club:'Brighton',pos:'FW',age:20,stat:'Ireland rising star',rating:81},
+  {name:'Richarlison',role:'RW',flag:'🇧🇷',club:'Tottenham',pos:'FW',age:27,stat:'WC 2022 Brazil',rating:84},
+  {name:'Sadio Mane',role:'LW',flag:'🇸🇳',club:'Al Nassr',pos:'FW',age:32,stat:'AFCON winner 2022',rating:84},
+  {name:'Donyell Malen',role:'RW',flag:'🇳🇱',club:'Aston Villa',pos:'FW',age:26,stat:'Bundesliga top scorer 2023',rating:83},
+  {name:'Memphis Depay',role:'LW',flag:'🇳🇱',club:'Atletico Madrid',pos:'FW',age:30,stat:'Dutch all-time top scorer',rating:83},
+  {name:'Victor Boniface',role:'CF',flag:'🇳🇬',club:'Bayer Leverkusen',pos:'FW',age:23,stat:'Bundesliga champion 2024',rating:83},
+  {name:'Rasmus Hojlund',role:'CF',flag:'🇩🇰',club:'Man. Utd',pos:'FW',age:22,stat:'Denmark top striker',rating:83},
+  {name:'Santiago Gimenez',role:'CF',flag:'🇲🇽',club:'AC Milan',pos:'FW',age:23,stat:'Mexico WC 2026 host',rating:83},
+  {name:'Ivan Toney',role:'CF',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Al-Ahli',pos:'FW',age:29,stat:'England squad 2024',rating:82},
+    {name:'Evan Ferguson',role:'CF',flag:'🇮🇪',club:'Brighton',pos:'FW',age:20,stat:'Ireland rising star',rating:81},
   {name:'Youssoufa Moukoko',flag:'🇩🇪',club:'Nice',pos:'FW',age:20,stat:'Germany young star',rating:81},
 
   // ── MIDFIELDERS (MF) ─────────────────────────────────────────
@@ -588,16 +587,15 @@ var STARS = [
   {name:'Gregor Kobel',flag:'🇨🇭',club:'Borussia Dortmund',pos:'GK',age:27,stat:'UCL finalist 2024',rating:84},
   {name:'Ibrahim Sehic',flag:'🇧🇦',club:'Rizespor',pos:'GK',age:33,stat:'Bosnia No.1',rating:80},
   // ── MORE FORWARDS ──
-  {name:'Gabriel Jesus',flag:'🇧🇷',club:'Arsenal',pos:'FW',age:27,stat:'PL champion 2022',rating:83},
-  {name:'Edin Dzeko',flag:'🇧🇦',club:'Fenerbahce',pos:'FW',age:38,stat:'Bosnia legend',rating:80},
-  {name:'Memphis Depay',flag:'🇳🇱',club:'Atletico Madrid',pos:'FW',age:30,stat:'Dutch top scorer',rating:83},
+  {name:'Gabriel Jesus',role:'CF',flag:'🇧🇷',club:'Arsenal',pos:'FW',age:27,stat:'PL champion 2022',rating:83},
+    {name:'Memphis Depay',flag:'🇳🇱',club:'Atletico Madrid',pos:'FW',age:30,stat:'Dutch top scorer',rating:83},
   {name:'Andre Silva',flag:'🇵🇹',club:'Leipzig',pos:'FW',age:29,stat:'Bundesliga top scorer 2021',rating:82},
-  {name:'Breel Embolo',flag:'🇨🇭',club:'Monaco',pos:'FW',age:27,stat:'Switzerland captain',rating:82},
-  {name:'Darwin Nunez',flag:'🇺🇾',club:'Liverpool',pos:'FW',age:25,stat:'Copa America 2024',rating:84},
-  {name:'Hwang Hee-chan',flag:'🇰🇷',club:'Wolves',pos:'FW',age:28,stat:'South Korea No.9',rating:82},
-  {name:'Ferran Torres',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:24,stat:'Euro 2024 champion',rating:83},
-  {name:'Ansu Fati',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:22,stat:'Spain young star',rating:82},
-  {name:'Kaoru Mitoma',flag:'🇯🇵',club:'Brighton',pos:'FW',age:27,stat:'Japan best player',rating:83},
+  {name:'Breel Embolo',role:'CF',flag:'🇨🇭',club:'Monaco',pos:'FW',age:27,stat:'Switzerland captain',rating:82},
+  {name:'Darwin Nunez',role:'CF',flag:'🇺🇾',club:'Liverpool',pos:'FW',age:25,stat:'Copa America 2024',rating:84},
+  {name:'Hwang Hee-chan',role:'RW',flag:'🇰🇷',club:'Wolves',pos:'FW',age:28,stat:'South Korea No.9',rating:82},
+  {name:'Ferran Torres',role:'LW',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:24,stat:'Euro 2024 champion',rating:83},
+  {name:'Ansu Fati',role:'RW',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:22,stat:'Spain young star',rating:82},
+  {name:'Kaoru Mitoma',role:'RW',flag:'🇯🇵',club:'Brighton',pos:'FW',age:27,stat:'Japan best player',rating:83},
 
   // ── MORE MIDFIELDERS ──
   {name:'Kai Havertz',flag:'🇩🇪',club:'Arsenal',pos:'MF',age:25,stat:'UCL winner 2021',rating:84},
@@ -631,11 +629,10 @@ var STARS = [
   {name:'Lukasz Fabianski',flag:'🇵🇱',club:'West Ham',pos:'GK',age:39,stat:'Poland veteran',rating:80},
   // ── EXTRA FORWARDS (target 50 FW) ──
   {name:'Richarlison',flag:'🇧🇷',club:'Tottenham',pos:'FW',age:27,stat:'WC 2022 Brazil',rating:84},
-  {name:'Gabriel Martinelli',flag:'🇧🇷',club:'Arsenal',pos:'FW',age:23,stat:'PL top scorer 2024',rating:84},
-  {name:'Pedro',flag:'🇧🇷',club:'Flamengo',pos:'FW',age:27,stat:'Copa Libertadores winner',rating:83},
-  {name:'Neymar Jr',flag:'🇧🇷',club:'Al-Hilal',pos:'FW',age:33,stat:'Brazil record scorer',rating:85},
-  {name:'Karim Benzema',flag:'🇫🇷',club:'Al-Ittihad',pos:'FW',age:36,stat:'Ballon dOr 2022',rating:86},
-  {name:'Ollie Watkins',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Aston Villa',pos:'FW',age:29,stat:'PL top scorer 2024',rating:84},
+  {name:'Gabriel Martinelli',role:'LW',flag:'🇧🇷',club:'Arsenal',pos:'FW',age:23,stat:'PL top scorer 2024',rating:84},
+  {name:'Pedro',role:'CF',flag:'🇧🇷',club:'Flamengo',pos:'FW',age:27,stat:'Copa Libertadores winner',rating:83},
+  {name:'Neymar Jr',role:'CF',flag:'🇧🇷',club:'Al-Hilal',pos:'FW',age:33,stat:'Brazil record scorer',rating:85},
+    {name:'Ollie Watkins',role:'CF',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Aston Villa',pos:'FW',age:29,stat:'PL top scorer 2024',rating:84},
   {name:'Darwin Nunez',flag:'🇺🇾',club:'Liverpool',pos:'FW',age:25,stat:'Copa America 2024',rating:84},
   {name:'Ferran Torres',flag:'🇪🇸',club:'FC Barcelona',pos:'FW',age:24,stat:'Euro 2024 champion',rating:83},
   {name:'Kaoru Mitoma',flag:'🇯🇵',club:'Brighton',pos:'FW',age:27,stat:'Japan best player',rating:83},
@@ -643,18 +640,17 @@ var STARS = [
   {name:'Gabriel Jesus',flag:'🇧🇷',club:'Arsenal',pos:'FW',age:27,stat:'PL champion 2022',rating:83},
   {name:'Breel Embolo',flag:'🇨🇭',club:'Monaco',pos:'FW',age:27,stat:'Switzerland striker',rating:82},
   {name:'Andre Silva',flag:'🇵🇹',club:'Leipzig',pos:'FW',age:29,stat:'Bundesliga top scorer 2021',rating:82},
-  {name:'Patrik Schick',flag:'🇨🇿',club:'Bayer Leverkusen',pos:'FW',age:29,stat:'Euro 2020 top scorer',rating:83},
+  {name:'Patrik Schick',role:'CF',flag:'🇨🇿',club:'Bayer Leverkusen',pos:'FW',age:29,stat:'Euro 2020 top scorer',rating:83},
   {name:'Edin Dzeko',flag:'🇧🇦',club:'Fenerbahce',pos:'FW',age:38,stat:'Bosnia legend',rating:80},
-  {name:'Wissam Ben Yedder',flag:'🇫🇷',club:'Monaco',pos:'FW',age:34,stat:'Ligue 1 top scorer',rating:82},
-  {name:'Teemu Pukki',flag:'🇫🇮',club:'Celtic',pos:'FW',age:34,stat:'Finland captain',rating:80},
-  {name:'Timo Werner',flag:'🇩🇪',club:'Tottenham',pos:'FW',age:28,stat:'Germany Euro 2024',rating:82},
-  {name:'Serhou Guirassy',flag:'🇬🇳',club:'Borussia Dortmund',pos:'FW',age:28,stat:'Bundesliga top scorer 2024',rating:84},
+    {name:'Teemu Pukki',flag:'🇫🇮',club:'Celtic',pos:'FW',age:34,stat:'Finland captain',rating:80},
+  {name:'Timo Werner',role:'CF',flag:'🇩🇪',club:'Tottenham',pos:'FW',age:28,stat:'Germany Euro 2024',rating:82},
+  {name:'Serhou Guirassy',role:'CF',flag:'🇬🇳',club:'Borussia Dortmund',pos:'FW',age:28,stat:'Bundesliga top scorer 2024',rating:84},
   {name:'Che Adams',flag:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',club:'Torino',pos:'FW',age:28,stat:'Scotland top scorer',rating:81},
   {name:'Jonathan Burkardt',flag:'🇩🇪',club:'Mainz',pos:'FW',age:24,stat:'Germany U21',rating:81},
   {name:'Loic Mbe Soh',flag:'🇨🇲',club:'Nottm Forest',pos:'FW',age:23,stat:'Cameroon rising star',rating:80},
-  {name:'Mohamed Salah',flag:'🇪🇬',club:'Liverpool',pos:'FW',age:32,stat:'Egypt legend',rating:88},
+  {name:'Mohamed Salah',role:'RW',flag:'🇪🇬',club:'Liverpool',pos:'FW',age:32,stat:'Egypt legend',rating:88},
   {name:'Sadio Mane',flag:'🇸🇳',club:'Al Nassr',pos:'FW',age:32,stat:'AFCON winner 2022',rating:84},
-  {name:'Riyad Mahrez',flag:'🇩🇿',club:'Al Ahli',pos:'FW',age:33,stat:'Algeria captain',rating:84},
+  {name:'Riyad Mahrez',role:'LW',flag:'🇩🇿',club:'Al Ahli',pos:'FW',age:33,stat:'Algeria captain',rating:84},
 
   // ── EXTRA MIDFIELDERS (target 50 MF) ──
   {name:'Kai Havertz',flag:'🇩🇪',club:'Arsenal',pos:'MF',age:25,stat:'UCL winner 2021',rating:84},
@@ -669,9 +665,7 @@ var STARS = [
   {name:'Bruno Guimaraes',flag:'🇧🇷',club:'Newcastle',pos:'MF',age:26,stat:'Brazil WC 2026',rating:85},
   {name:'Mateus Fernandes',flag:'🇵🇹',club:'Southampton',pos:'MF',age:21,stat:'Portugal rising star',rating:81},
   {name:'Gabri Veiga',flag:'🇪🇸',club:'Al-Qadsiah',pos:'MF',age:22,stat:'Spain U21',rating:81},
-  {name:'Alexis Sanchez',flag:'🇨🇱',club:'Udinese',pos:'MF',age:36,stat:'Chile legend',rating:80},
-  {name:'Ivan Rakitic',flag:'🇭🇷',club:'HADJUK Split',pos:'MF',age:36,stat:'Croatia legend',rating:80},
-  {name:'Thomas Partey',flag:'🇬🇭',club:'Arsenal',pos:'MF',age:31,stat:'Ghana captain',rating:83},
+      {name:'Thomas Partey',flag:'🇬🇭',club:'Arsenal',pos:'MF',age:31,stat:'Ghana captain',rating:83},
   {name:'Ruben Neves',flag:'🇵🇹',club:'Al Hilal',pos:'MF',age:27,stat:'Portugal squad',rating:83},
   {name:'Conor Gallagher',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Atletico Madrid',pos:'MF',age:24,stat:'England Euro 2024',rating:82},
   {name:'Matias Vecino',flag:'🇺🇾',club:'Lazio',pos:'MF',age:33,stat:'Uruguay captain',rating:81},
@@ -680,8 +674,7 @@ var STARS = [
   {name:'Przemyslaw Frankowski',flag:'🇵🇱',club:'Lens',pos:'MF',age:29,stat:'Poland wing',rating:81},
   {name:'Ivan Ilic',flag:'🇷🇸',club:'Torino',pos:'MF',age:23,stat:'Serbia rising star',rating:81},
   {name:'Kevin De Bruyne',flag:'🇧🇪',club:'Man. City',pos:'MF',age:33,stat:'PL best midfielder',rating:91},
-  {name:'Paul Pogba',flag:'🇫🇷',club:'Juventus',pos:'MF',age:31,stat:'WC 2018 winner',rating:83},
-  {name:'N Golo Kante',flag:'🇫🇷',club:'Al Ittihad',pos:'MF',age:33,stat:'WC 2018 winner',rating:85},
+    {name:'N Golo Kante',flag:'🇫🇷',club:'Al Ittihad',pos:'MF',age:33,stat:'WC 2018 winner',rating:85},
 
   // ── EXTRA DEFENDERS (target 50 DF) ──
   {name:'Ibrahima Konate',flag:'🇫🇷',club:'Liverpool',pos:'DF',age:25,stat:'UCL winner 2022',rating:85},
@@ -720,7 +713,17 @@ var STARS = [
   {name:'Dean Henderson',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',club:'Crystal Palace',pos:'GK',age:27,stat:'England squad',rating:82},
   {name:'Giorgi Mamardashvili',flag:'🇬🇪',club:'Liverpool',pos:'GK',age:23,stat:'Georgia hero Euro 2024',rating:84},
   {name:'Filip Jorgensen',flag:'🇩🇰',club:'Chelsea',pos:'GK',age:22,stat:'Denmark rising star',rating:82},
-  {name:'Altay Bayindir',flag:'🇹🇷',club:'Man. Utd',pos:'GK',age:26,stat:'Turkey Euro 2024',rating:81}
+  {name:'Altay Bayindir',flag:'🇹🇷',club:'Man. Utd',pos:'GK',age:26,stat:'Turkey Euro 2024',rating:81},
+  // ── NOUVEAUX JOUEURS 2026 ──
+  {name:'Michael Olise',role:'RW',flag:'🇫🇷',club:'Bayern Munich',pos:'FW',age:23,stat:'Bundesliga champion 2025',rating:86},
+  {name:'Desire Doue',role:'LW',flag:'🇫🇷',club:'PSG',pos:'FW',age:20,stat:'France espoir 2024',rating:84},
+  {name:'Rayan Cherki',role:'LW',flag:'🇫🇷',club:'Liverpool',pos:'FW',age:21,stat:'France golden boy 2025',rating:84},
+  {name:'Warren Zaire-Emery',flag:'🇫🇷',club:'PSG',pos:'MF',age:19,stat:'Plus jeune buteur PSG',rating:84},
+  {name:'Mathys Tel',role:'LW',flag:'🇫🇷',club:'Bayern Munich',pos:'FW',age:20,stat:'Bundesliga 2025',rating:82},
+    {name:'Endrick',role:'CF',flag:'🇧🇷',club:'Real Madrid',pos:'FW',age:18,stat:'Brazil youngest scorer',rating:83},
+  {name:'Alejandro Garnacho',role:'LW',flag:'🇦🇷',club:'Man. Utd',pos:'FW',age:21,stat:'Argentina WC 2026',rating:83},
+  {name:'Heorhiy Sudakov',flag:'🇺🇦',club:'Shakhtar',pos:'MF',age:22,stat:'Ukraine captain',rating:82},
+  {name:'Evan Ferguson',flag:'🇮🇪',club:'Brighton',pos:'FW',age:21,stat:'Ireland No.9',rating:81}
 ];
 
 // - FIFA CARD STYLE - World Cup 2026 -
@@ -1807,7 +1810,7 @@ function App(){
 
         // START screen
         iPhase==='idle'&&e('div',{style:{textAlign:'center',marginBottom:16}},
-          e('div',{style:{fontSize:11,color:'#9bb0c8',marginBottom:14,lineHeight:1.6}},'Simulez tout le tournoi match par match ! Entrez les scores et voyez qui se qualifie !'),
+          e('div',{style:{fontSize:11,color:'#9bb0c8',marginBottom:14,lineHeight:1.6}},(lang==='fr'?'Simulez tout le tournoi match par match ! Entrez les scores et voyez qui se qualifie !':lang==='es'?'Simula todo el torneo partido a partido ! Introduce los marcadores y ve quien se clasifica !':lang==='pt'?'Simule todo o torneio jogo a jogo ! Insira os placares e veja quem se qualifica !':lang==='it'?'Simula tutto il torneo partita per partita ! Inserisci i risultati e scopri chi si qualifica !':lang==='de'?'Simuliere das gesamte Turnier Spiel fur Spiel ! Gib die Ergebnisse ein und sieh wer sich qualifiziert !':'Simulate the entire tournament match by match ! Enter the scores and see who qualifies !')),
           e('button',{onClick:initInteractive,style:{width:'100%',background:'linear-gradient(135deg,'+G+',#b8963e)',border:'none',borderRadius:12,padding:'14px 0',fontSize:14,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer'}},'⚽ START TOURNAMENT')
         ),
 
@@ -1955,7 +1958,7 @@ function App(){
             ),
             e('button',{onClick:quickSimPhase,style:{width:'100%',background:'rgba(212,175,55,0.12)',border:'1px solid rgba(212,175,55,0.3)',borderRadius:9,padding:'9px 0',fontSize:11,color:G,cursor:'pointer',marginBottom:10}},'🎲 Auto-sim ce tour'),
             iMatches.every(function(m){return m.played;})&&e('button',{onClick:advancePhase,style:{width:'100%',background:'linear-gradient(135deg,#1a8a3a,#2ab858)',border:'none',borderRadius:12,padding:'13px 0',fontSize:13,fontWeight:'bold',color:'#fff',cursor:'pointer',marginBottom:10}},
-              iPhase==='final'?'🎉 Proclamer le Champion !':
+              iPhase==='final'?(lang==='fr'?'🎉 Proclamer le Champion !':lang==='es'?'🎉 Proclamar el Campeon !':lang==='pt'?'🎉 Proclamar o Campeao !':lang==='it'?'🎉 Proclama il Campione !':lang==='de'?'🎉 Den Champion ernennen !':'🎉 Proclaim the Champion !'):
               '>> Tour suivant ->'
             )
           )
@@ -2194,7 +2197,7 @@ function App(){
             e('div',{style:{
               position:'absolute',
               top:shotResult==='saved'?10:keeperDir==='left'?15:keeperDir==='right'?15:25,
-              left:keeperDir==='left'?'14%':keeperDir==='right'?'52%':'36%',
+              left:keeperDir==='left'?'12%':keeperDir==='right'?'56%':'41%',
               fontSize:48,
               transition:'all 0.45s cubic-bezier(0.25,0.46,0.45,0.94)',
               transform:shotResult==='saved'
@@ -2535,7 +2538,7 @@ function App(){
           e('div',{style:{textAlign:'center',fontSize:10,color:'rgba(255,255,255,0.6)',marginBottom:10}},'4 - 3 - 3'),
           e('div',{style:{display:'flex',justifyContent:'space-around',marginBottom:10}},
             ['LW','CF','RW'].map(function(pos){
-              var pl=fantasyTeam.find(function(p){return p.pos===pos;});
+              var pl=fantasyTeam.find(function(p){return (p.role===pos)||(p.pos==='FW'&&!p.role&&p.pos===pos);});
               return e('div',{key:pos,onClick:function(){if(!fantasyDone)setFantasyPos(pos);},style:{textAlign:'center',cursor:'pointer'}},
                 e('div',{style:{width:50,height:50,borderRadius:'50%',background:pl?'linear-gradient(135deg,'+G+',#b8963e)':'rgba(255,255,255,0.15)',border:'2px solid '+(pl?G:'rgba(255,255,255,0.3)'),display:'flex',alignItems:'center',justifyContent:'center',marginBottom:3}},
                   pl?e('div',{style:{textAlign:'center'}},e('div',{style:{fontSize:8,fontWeight:'bold',color:'#0a0a1a',lineHeight:1}},pl.name.split(' ').pop()),e('div',{style:{fontSize:9}},pl.flag)):e('div',{style:{fontSize:18,color:'rgba(255,255,255,0.4)'}},'＋')
@@ -2546,7 +2549,9 @@ function App(){
           ),
           e('div',{style:{display:'flex',justifyContent:'space-around',marginBottom:10}},
             ['LM','CM','RM'].map(function(pos){
-              var pl=fantasyTeam.find(function(p){return p.pos===pos;});
+              var subMap={LM:0,CM:1,RM:2};
+              var mfPlayers=fantasyTeam.filter(function(p){return p.pos==='MF';});
+              var pl=mfPlayers[subMap[pos]];
               return e('div',{key:pos,onClick:function(){if(!fantasyDone)setFantasyPos(pos);},style:{textAlign:'center',cursor:'pointer'}},
                 e('div',{style:{width:46,height:46,borderRadius:'50%',background:pl?'linear-gradient(135deg,#4a90e2,#2c5fa8)':'rgba(255,255,255,0.15)',border:'2px solid '+(pl?'#4a90e2':'rgba(255,255,255,0.3)'),display:'flex',alignItems:'center',justifyContent:'center',marginBottom:3}},
                   pl?e('div',{style:{textAlign:'center'}},e('div',{style:{fontSize:7,fontWeight:'bold',color:'#fff',lineHeight:1}},pl.name.split(' ').pop()),e('div',{style:{fontSize:8}},pl.flag)):e('div',{style:{fontSize:16,color:'rgba(255,255,255,0.4)'}},'＋')
@@ -2579,9 +2584,17 @@ function App(){
             })()
           )
         ),
-        fantasyPos&&!fantasyDone&&e('div',{style:{background:CB,border:'1px solid '+G,borderRadius:12,padding:12,marginBottom:10}},
+        fantasyPos&&!fantasyDone&&e('div',null,
+          // Saved banner
+          e('div',{style:{background:'rgba(144,238,144,0.15)',border:'1px solid rgba(144,238,144,0.4)',borderRadius:10,padding:'8px 16px',marginBottom:10,textAlign:'center',display:'flex',alignItems:'center',justifyContent:'center',gap:8}},
+            e('span',null,'✅'),
+            e('span',{style:{fontSize:11,color:'#90ee90',fontWeight:'bold'}},
+              lang==='fr'?'Equipe sauvegardée !':lang==='es'?'Equipo guardado !':lang==='pt'?'Time salvo !':lang==='it'?'Squadra salvata !':lang==='de'?'Team gespeichert !':'Team saved !'
+            )
+          )),
+          e('div',{style:{background:CB,border:'1px solid '+G,borderRadius:12,padding:12,marginBottom:10}},
           e('div',{style:{fontSize:11,color:G,fontWeight:'bold',marginBottom:8}},(function(){
-              var posMap={LW:'FW',CF:'FW',RW:'FW',LM:'MF',CM:'MF',RM:'MF',LB:'DF',CB:'DF',CB1:'DF',CB2:'DF',RB:'DF',GK:'GK'};
+              var posMap={LW:'FW',CF:'FW',RW:'FW',LM:'MF',CM:'MF',RM:'MF',LB:'DF',CB:'DF',CB1:'DF',CB2:'DF',RB:'DF',GK:'GK'}; var roleMap={LW:'LW',RW:'RW',CF:'CF'};
               var posLabels={
                 GK:{fr:'Gardien de but',en:'Goalkeeper',es:'Portero',pt:'Goleiro',it:'Portiere',de:'Torwart'},
                 DF:{fr:'Defenseur',en:'Defender',es:'Defensa',pt:'Defensor',it:'Difensore',de:'Verteidiger'},
@@ -2604,7 +2617,13 @@ function App(){
             STARS.filter(function(s){
               var posMap={LW:'FW',CF:'FW',RW:'FW',LM:'MF',CM:'MF',RM:'MF',LB:'DF',CB:'DF',CB1:'DF',CB2:'DF',RB:'DF',GK:'GK'};
               var needed=posMap[fantasyPos]||fantasyPos;
-              return s.pos===needed&&!fantasyTeam.find(function(p){return p.name===s.name;});
+              var roleNeeded=fantasyPos==='LW'||fantasyPos==='RW'||fantasyPos==='CF'?fantasyPos:null;
+              var notPicked=!fantasyTeam.find(function(p){return p.name===s.name;});
+              if(roleNeeded){
+                // Show role-matched first, then other FW
+                return s.pos===needed&&notPicked;
+              }
+              return s.pos===needed&&notPicked;
             }).map(function(s){
               return e('button',{key:s.name,onClick:function(){
                 setFantasyTeam(function(t){return t.filter(function(p){return p.pos!==fantasyPos;}).concat([{name:s.name,flag:s.flag,pos:fantasyPos,rating:s.rating}]);});
@@ -2621,11 +2640,33 @@ function App(){
           ),
           e('button',{onClick:function(){setFantasyPos(null);},style:{width:'100%',background:'rgba(255,60,60,0.12)',border:'1px solid rgba(255,60,60,0.3)',borderRadius:7,padding:'7px 0',fontSize:10,color:'#ff6b6b',cursor:'pointer',marginTop:6}},lang==='fr'?'Annuler':lang==='es'?'Cancelar':lang==='pt'?'Cancelar':lang==='it'?'Annulla':lang==='de'?'Abbrechen':'Cancel')
         ),
-        e('div',{style:{display:'flex',gap:8}},
-          e('button',{onClick:function(){if(fantasyTeam.length>=11)setFantasyDone(true);},style:{flex:2,background:fantasyTeam.length>=11?'linear-gradient(135deg,'+G+',#b8963e)':'rgba(255,255,255,0.08)',border:'none',borderRadius:10,padding:'12px 0',fontSize:12,fontWeight:'bold',color:fantasyTeam.length>=11?'#0a0a1a':'#6a86a0',cursor:fantasyTeam.length>=11?'pointer':'default'}},
-            fantasyDone?'✅ '+(lang==='fr'?'Equipe sauvegardee !':'Team saved!'):'💾 '+(lang==='fr'?'Sauvegarder ('+fantasyTeam.length+'/11)':lang==='es'?'Guardar ('+fantasyTeam.length+'/11)':lang==='pt'?'Salvar ('+fantasyTeam.length+'/11)':lang==='it'?'Salva ('+fantasyTeam.length+'/11)':lang==='de'?'Speichern ('+fantasyTeam.length+'/11)':'Save ('+fantasyTeam.length+'/11)')
-          ),
-          e('button',{onClick:function(){setFantasyTeam([]);setFantasyPos(null);setFantasyDone(false);},style:{flex:1,background:'rgba(255,60,60,0.12)',border:'1px solid rgba(255,60,60,0.3)',borderRadius:10,padding:'12px 0',fontSize:11,color:'#ff6b6b',cursor:'pointer'}},'Reset')
+        e('div',{style:{display:'flex',gap:8,marginTop:10}},
+          // Progress indicator
+          e('div',{style:{width:'100%',marginBottom:8,textAlign:'center',fontSize:10,color:fantasyTeam.length>=11?'#90ee90':'#6a86a0'}},
+            (lang==='fr'?'Joueurs selectionnes':lang==='es'?'Jugadores':lang==='pt'?'Jogadores':lang==='de'?'Spieler':'Players')+': '+fantasyTeam.length+'/11 '+
+            (fantasyTeam.length>=11?'✅':'')
+          )),
+          e('div',{style:{display:'flex',gap:8}},
+          e('button',{onClick:function(){
+                if(fantasyTeam.length>=11){
+                  setFantasyDone(true);
+                  try{
+                    localStorage.setItem('wc2026_fantasy_team',JSON.stringify(fantasyTeam));
+                    localStorage.setItem('wc2026_fantasy_done','true');
+                  }catch(e){}
+                }
+              },style:{flex:2,background:fantasyTeam.length>=11?'linear-gradient(135deg,'+G+',#ff9900)':'rgba(212,175,55,0.15)',border:'2px solid '+(fantasyTeam.length>=11?G:'rgba(212,175,55,0.3)'),borderRadius:12,padding:'14px 0',fontSize:13,fontWeight:'bold',color:fantasyTeam.length>=11?'#0a0a1a':'#6a86a0',cursor:fantasyTeam.length>=11?'pointer':'default',transition:'all 0.3s'}},
+            fantasyTeam.length<11
+              ?(lang==='fr'?'Selectionner '+fantasyTeam.length+'/11 joueurs':lang==='es'?'Selecciona '+fantasyTeam.length+'/11 jugadores':lang==='pt'?'Selecione '+fantasyTeam.length+'/11 jogadores':lang==='it'?'Seleziona '+fantasyTeam.length+'/11 giocatori':lang==='de'?'Wahle '+fantasyTeam.length+'/11 Spieler':'Select '+fantasyTeam.length+'/11 players')
+              :fantasyDone
+              ?'✅ '+(lang==='fr'?'Equipe sauvegardee !':lang==='es'?'Equipo guardado !':lang==='pt'?'Time salvo !':lang==='it'?'Squadra salvata !':lang==='de'?'Team gespeichert !':'Team saved !')
+              :'💾 '+(lang==='fr'?'Sauvegarder mon equipe':lang==='es'?'Guardar mi equipo':lang==='pt'?'Salvar meu time':lang==='it'?'Salva la mia squadra':lang==='de'?'Team speichern':'Save my team')),
+          e('button',{onClick:function(){
+                setFantasyTeam([]);setFantasyPos(null);setFantasyDone(false);
+                try{localStorage.removeItem('wc2026_fantasy_team');localStorage.removeItem('wc2026_fantasy_done');}catch(e){}
+              },style:{flex:1,background:'rgba(255,60,60,0.12)',border:'1px solid rgba(255,60,60,0.3)',borderRadius:12,padding:'14px 0',fontSize:12,color:'#ff6b6b',cursor:'pointer',fontWeight:'bold'}},
+            lang==='fr'?'🗑️ Reset':lang==='es'?'🗑️ Reset':lang==='pt'?'🗑️ Reset':lang==='it'?'🗑️ Reset':lang==='de'?'🗑️ Reset':'🗑️ Reset'
+          )
         )
       )):null,
 
