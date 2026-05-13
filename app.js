@@ -1534,9 +1534,40 @@ function App(){
       e('a',{href:getStripeLink(lang),target:'_blank',rel:'noopener',style:{background:'linear-gradient(135deg,'+G+',#b8963e)',border:'none',borderRadius:8,padding:'5px 11px',fontSize:11,fontWeight:'bold',color:'#0a0a1a',cursor:'pointer',whiteSpace:'nowrap',textDecoration:'none',display:'inline-block'}},t.premiumBtn+' - '+getPrice(lang))
     ),
 
-    e('nav',{style:{position:'sticky',top:0,zIndex:20,display:'flex',justifyContent:'center',flexWrap:'wrap',gap:3,background:'rgba(6,9,26,0.97)',backdropFilter:'blur(14px)',padding:'7px 10px',borderBottom:'1px solid rgba(212,175,55,0.16)'}},
-      t.nav.map(function(label,i){return e('button',{key:i,onClick:function(){setTab(i);},style:{background:tab===i?'linear-gradient(135deg,'+G+',#b8963e)':'transparent',color:tab===i?'#0a0a1a':'#7a96b0',border:tab===i?'none':'1px solid rgba(212,175,55,0.25)',borderRadius:18,padding:'5px 11px',fontSize:11,cursor:'pointer',fontWeight:tab===i?'bold':'normal'}},label);})
-    ),
+ e('nav',{style:{position:'sticky',top:0,zIndex:20,background:'rgba(6,9,26,0.97)',backdropFilter:'blur(14px)',borderBottom:'2px solid rgba(212,175,55,0.2)',overflowX:'auto',WebkitOverflowScrolling:'touch',scrollbarWidth:'none'}},
+  e('div',{style:{display:'flex',gap:4,padding:'8px 10px',minWidth:'max-content'}},
+    t.nav.map(function(label,i){
+      var TM=[
+        {icon:'🏠',c1:'#1565c0',c2:'#42a5f5'},
+        {icon:'🏆',c1:'#bf360c',c2:'#ff7043'},
+        {icon:'📅',c1:'#1b5e20',c2:'#66bb6a'},
+        {icon:'🎯',c1:'#b71c1c',c2:'#ef5350'},
+        {icon:'🧠',c1:'#4a148c',c2:'#ab47bc'},
+        {icon:'⚽',c1:'#01579b',c2:'#29b6f6'},
+        {icon:'📊',c1:'#004d40',c2:'#26a69a'},
+        {icon:'🎮',c1:'#880e4f',c2:'#f06292'},
+        {icon:'🥅',c1:'#263238',c2:'#78909c'},
+        {icon:'💫',c1:'#e65100',c2:'#ffd54f'},
+        {icon:'👑',c1:'#7b5e00',c2:'#d4af37'}
+      ];
+      var m=TM[i]||{icon:'⚽',c1:'#333',c2:'#555'};
+      var on=tab===i;
+      return e('button',{key:i,onClick:function(){setTab(i);},style:{
+        background:on?'linear-gradient(135deg,'+m.c1+','+m.c2+')':'rgba(255,255,255,0.05)',
+        color:on?'#fff':'#6a86a0',
+        border:'1px solid '+(on?m.c2:'rgba(255,255,255,0.08)'),
+        borderRadius:10,padding:'7px 10px 6px',fontSize:9,cursor:'pointer',
+        fontWeight:on?'bold':'normal',display:'flex',flexDirection:'column',
+        alignItems:'center',gap:3,minWidth:50,
+        transform:on?'scale(1.07)':'scale(1)',transition:'all 0.18s ease'
+      }},
+        e('span',{style:{fontSize:15}},m.icon),
+        e('span',null,label)
+      );
+    })
+  )
+),
+    
 
     e('main',{style:{padding:'16px 13px',maxWidth:740,margin:'0 auto'}},
 
