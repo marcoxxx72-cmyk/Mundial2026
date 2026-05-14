@@ -378,7 +378,19 @@ var QUIZ_CHAMPIONSHIP = {
     {q:'Who scored the winning goal in the 2010 final?',opts:['Torres','Villa','Iniesta','Xavi'],a:2,pts:5,cat:'History'},
     {q:'How often is the World Cup held?',opts:['Every 2 years','Every 3 years','Every 4 years','Every 5 years'],a:2,pts:5,cat:'General'},
     {q:'Which stadium hosts the opening match of WC 2026?',opts:['MetLife','SoFi','AT&T','Azteca'],a:3,pts:5,cat:'2026'},
-    {q:'Who won the World Cup in 1998?',opts:['Brazil','France','Italy','Germany'],a:1,pts:5,cat:'Winners'}
+    {q:'Who won the World Cup in 1998?',opts:['Brazil','France','Italy','Germany'],a:1,pts:5,cat:'Winners'},
+    {q:'Who scored the Golden Goal in the 1998 WC final?',opts:['Zidane','Petit','Desailly','Henry'],a:1,pts:5,cat:'History'},
+    {q:'Which country hosted the 2006 World Cup?',opts:['France','Spain','Italy','Germany'],a:3,pts:5,cat:'Hosts'},
+    {q:'Who won the 2006 World Cup?',opts:['France','Germany','Italy','Portugal'],a:2,pts:5,cat:'Winners'},
+    {q:'Which country hosted the 2002 World Cup?',opts:['Japan only','South Korea only','Japan & South Korea','China'],a:2,pts:5,cat:'Hosts'},
+    {q:'Who won the Golden Boot at the 2018 World Cup?',opts:['Griezmann','Lukaku','Mbappe','Kane'],a:3,pts:5,cat:'Awards'},
+    {q:'In which city is the 2026 WC opening match?',opts:['New York','Los Angeles','Miami','Dallas'],a:3,pts:5,cat:'2026'},
+    {q:'How many groups in the 2026 World Cup?',opts:['8','10','12','16'],a:2,pts:5,cat:'2026'},
+    {q:'Who won the first ever World Cup Golden Boot?',opts:['Pele','Just Fontaine','Eusebio','Gerd Muller'],a:1,pts:5,cat:'Awards'},
+    {q:'Which country has never won the World Cup?',opts:['England','Argentina','Germany','Netherlands'],a:3,pts:5,cat:'General'},
+    {q:'What color jersey does Brazil wear at home?',opts:['Blue','Red','White','Yellow'],a:3,pts:5,cat:'General'},
+    {q:'Who did France beat in the 2018 WC final?',opts:['Belgium','England','Croatia','Argentina'],a:2,pts:5,cat:'History'},
+    {q:'How many teams qualified from Europe for WC 2026?',opts:['13','14','16','18'],a:2,pts:5,cat:'2026'}
   ],
   medium:[
     {q:'Who scored the fastest goal in WC history (10.8 sec)?',opts:['Inzaghi','Hakan Sukur','Owen','Batistuta'],a:1,pts:10,cat:'Records'},
@@ -398,7 +410,19 @@ var QUIZ_CHAMPIONSHIP = {
     {q:'Tim Howard made record saves (16) against which team in 2014?',opts:['Germany','France','Belgium','Argentina'],a:2,pts:10,cat:'Records'},
     {q:'Who performed Waka Waka at the 2010 World Cup?',opts:['Rihanna','Shakira','Beyonce','Jennifer Lopez'],a:1,pts:10,cat:'Culture'},
     {q:'Which country was first from Africa to host the WC?',opts:['Nigeria','Egypt','Morocco','South Africa'],a:3,pts:10,cat:'Hosts'},
-    {q:'First WC to use goal-line technology?',opts:['South Africa 2010','Brazil 2014','Russia 2018','Qatar 2022'],a:1,pts:10,cat:'History'}
+    {q:'First WC to use goal-line technology?',opts:['South Africa 2010','Brazil 2014','Russia 2018','Qatar 2022'],a:1,pts:10,cat:'History'},
+    {q:'Who scored the Panenka penalty in the 1976 Euros — a style later used at WCs?',opts:['Panenka','Platini','Zidane','Beckenbauer'],a:0,pts:10,cat:'Legends'},
+    {q:'Which nation eliminated France in 2002 group stage?',opts:['Senegal','South Korea','Denmark','Turkey'],a:2,pts:10,cat:'History'},
+    {q:'Who was top scorer at WC 1994 in USA?',opts:['Romario','Stoichkov','Salenko','Bebeto'],a:1,pts:10,cat:'Records'},
+    {q:'Country that has played in every single World Cup?',opts:['Germany','Italy','Argentina','Brazil'],a:3,pts:10,cat:'Records'},
+    {q:'Which goalkeeper saved penalties in 2022 WC shootout vs France?',opts:['Livakovic','Martinez','Lloris','Donnarumma'],a:1,pts:10,cat:'History'},
+    {q:'Who scored the goal that eliminated defending champions Germany in 2018 group stage?',opts:['Son','Ju Se-jong','Kim Young-gwon','Hwang Hee-chan'],a:2,pts:10,cat:'History'},
+    {q:'First African team to reach a WC semi-final?',opts:['Nigeria','Cameroon','Senegal','Morocco'],a:3,pts:10,cat:'History'},
+    {q:'How many penalties did Argentina score in 2022 WC final shootout?',opts:['3','4','5','6'],a:1,pts:10,cat:'History'},
+    {q:'Who won the Golden Glove at the 2022 WC?',opts:['Lloris','Bono','Livakovic','Martinez'],a:3,pts:10,cat:'Awards'},
+    {q:'What was the score after 90 mins in the 2022 WC final?',opts:['2-0','3-0','3-2','2-2'],a:3,pts:10,cat:'History'},
+    {q:'Which WC saw the introduction of VAR?',opts:['Brazil 2014','Russia 2018','Qatar 2022','Germany 2006'],a:1,pts:10,cat:'History'},
+    {q:'Most goals scored by a single team in one WC (2022)?',opts:['Portugal','England','France','Spain'],a:0,pts:10,cat:'Records'}
   ],
   hard:[
     {q:'First player to receive a red card at a WC (1974)?',opts:['Montero','Carlos Caszely','Tardelli','Cruyff'],a:1,pts:20,cat:'History'},
@@ -418,6 +442,18 @@ var QUIZ_CHAMPIONSHIP = {
     {q:'Which country withdrew from 1950 WC to play barefoot?',opts:['Haiti','Bolivia','India','Peru'],a:2,pts:20,cat:'History'},
     {q:'What is the WC Trophy made of?',opts:['Silver','Platinum','18-karat gold','Bronze'],a:2,pts:20,cat:'Trophy'},
     {q:'Highest scoring WC game ever (1954)?',opts:['Austria 7-5 Switzerland','Hungary 10-1 El Salvador','Germany 8-0 Saudi Arabia','Brazil 7-1 Sweden'],a:0,pts:20,cat:'Records'},
+    {q:'Which referee disallowed Germanys goal in the 2010 WC?',opts:['Webb','Larrionda','Busacca','De Bleeckere'],a:1,pts:20,cat:'History'},
+    {q:'In 1994 WC final, who missed the penalty to give Brazil the title?',opts:['Baggio','Maldini','Albertini','Donadoni'],a:0,pts:20,cat:'History'},
+    {q:'Which country scored first but lost 6-1 in WC 1954?',opts:['West Germany','Austria','Hungary','Yugoslavia'],a:2,pts:20,cat:'History'},
+    {q:'Who is the only player to score for and against in a WC final?',opts:['Zidane','Mbappe','Pirlo','Beckenbauer'],a:0,pts:20,cat:'Records'},
+    {q:'What was Mbappe age when he scored in the 2018 WC final?',opts:['17','18','19','20'],a:2,pts:20,cat:'Legends'},
+    {q:'First WC to feature extra time AND penalty shootout?',opts:['1974','1978','1982','1986'],a:2,pts:20,cat:'History'},
+    {q:'Which country scored the most own goals in WC history?',opts:['USA','England','France','Germany'],a:1,pts:20,cat:'Records'},
+    {q:'WC 1950 final round — which match decided the champion?',opts:['Uruguay vs Brazil','Spain vs Brazil','Sweden vs Uruguay','Spain vs Sweden'],a:0,pts:20,cat:'History'},
+    {q:'Who was the youngest player to score at a World Cup (17y 1m)?',opts:['Pele','Coman','Yamal','Mbappe'],a:0,pts:20,cat:'Records'},
+    {q:'Which WC mascot was a chili pepper?',opts:['Pique USA 1994','Zakumi SA 2010','Fuleco Brazil 2014','Naranjito Spain 1982'],a:0,pts:20,cat:'Mascots'},
+    {q:'Longest penalty shootout in WC history (how many kicks)?',opts:['14','16','18','20'],a:2,pts:20,cat:'Records'},
+    {q:'First player ever sent off twice in World Cup history?',opts:['Rigobert Song','Zinedine Zidane','Carlos Caszely','Batista'],a:0,pts:20,cat:'Records'},
     {q:'Only player to score for two different nations at WC?',opts:['Zidane','Prosinecki','Suarez','Di Stefano'],a:1,pts:20,cat:'History'}
   ]
 };
@@ -2709,6 +2745,7 @@ function App(){
                   e('path',{d:'M46,682 A28,28 0 0,1 18,654',fill:'none',stroke:'white',strokeWidth:'2'}),
                   // Ligne médiane + point central
                   e('line',{x1:'18',y1:'350',x2:'582',y2:'350',stroke:'white',strokeWidth:'2'}),
+                  e('circle',{cx:'300',cy:'350',r:'60',fill:'none',stroke:'white',strokeWidth:'2'}),
                   e('circle',{cx:'300',cy:'350',r:'4',fill:'white'}),
                   // But haut
                   e('rect',{x:'252',y:'5',width:'96',height:'16',fill:'rgba(200,200,200,0.2)',stroke:'white',strokeWidth:'1.8'}),
