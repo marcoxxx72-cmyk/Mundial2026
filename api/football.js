@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   
   const response = await fetch(url, {
     headers: {
-      'X-Auth-Token': 'TON_API_KEY'
+      'X-Auth-Token': '756b5806bcc542e2bd2d3a09de10d732'
     }
   });
   
