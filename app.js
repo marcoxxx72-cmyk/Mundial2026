@@ -1711,7 +1711,7 @@ function App(){
           ),
           // Table header
           e('div',{style:{display:'grid',gridTemplateColumns:'1fr 24px 24px 24px 24px 24px 24px 24px 28px',gap:1,alignItems:'center',padding:'4px 6px',marginBottom:4,borderBottom:'1px solid rgba(212,175,55,0.3)'}},
-            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold'}},'Team'),
+            e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold'}},(lang==='fr'?'Équipe':lang==='es'?'Equipo':lang==='pt'?'Equipa':lang==='it'?'Squadra':lang==='de'?'Team':'Team')),
             e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'MP'),
             e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'W'),
             e('div',{style:{fontSize:9,color:'#6a86a0',fontWeight:'bold',textAlign:'center'}},'D'),
@@ -1744,9 +1744,9 @@ function App(){
           e('div',{style:{display:'flex',gap:12,marginTop:8,paddingTop:6,borderTop:'1px solid rgba(212,175,55,0.1)'}},
             e('div',{style:{display:'flex',alignItems:'center',gap:4}},
               e('div',{style:{width:10,height:10,borderRadius:2,background:'rgba(40,200,40,0.5)'}}),
-              e('span',{style:{fontSize:8,color:'#6a86a0'}},'Qualified')
+              e('span',{style:{fontSize:8,color:'#6a86a0'}},(lang==='fr'?'Qualifié':lang==='es'?'Clasificado':lang==='pt'?'Qualificado':lang==='it'?'Qualificato':lang==='de'?'Qualifiziert':'Qualified'))
             ),
-            e('div',{style:{fontSize:8,color:'#6a86a0'}},'MP=Played W=Won D=Draw L=Lost GF/GA=Goals GD=Diff')
+            e('div',{style:{fontSize:8,color:'#6a86a0'}},(lang==='fr'?'MJ=Matchs J=Gagnés N=Nuls D=Défaites BP/BC=Buts DB=Diff':'MJ=Played W=Won D=Draw L=Lost GF/GA=Goals GD=Diff'))
           )
         ),
         e('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:7}},
@@ -1928,12 +1928,12 @@ function App(){
 
               // Table header
               e('div',{style:{display:'grid',gridTemplateColumns:'58px 1fr 30px 10px 30px 1fr',gap:2,padding:'4px 4px 6px',borderBottom:'1px solid rgba(212,175,55,0.3)',marginBottom:4}},
-                e('div',{style:{fontSize:8,color:'#6a86a0'}},'DATE'),
-                e('div',{style:{fontSize:8,color:'#6a86a0',textAlign:'right'}},'HOME'),
+                e('div',{style:{fontSize:8,color:'#6a86a0'}},lang==='fr'?'DATE':lang==='es'?'FECHA':lang==='pt'?'DATA':lang==='it'?'DATA':lang==='de'?'DATUM':'DATE'),
+                e('div',{style:{fontSize:8,color:'#6a86a0',textAlign:'right'}},lang==='fr'?'DOMICILE':lang==='es'?'LOCAL':lang==='pt'?'CASA':lang==='it'?'CASA':lang==='de'?'HEIM':'HOME'),
                 e('div',{style:{fontSize:8,color:G,textAlign:'center'}},''),
                 e('div',{style:{fontSize:8,color:'#6a86a0',textAlign:'center'}},'-'),
                 e('div',{style:{fontSize:8,color:G,textAlign:'center'}},''),
-                e('div',{style:{fontSize:8,color:'#6a86a0'}},'AWAY')
+                e('div',{style:{fontSize:8,color:'#6a86a0'}},lang==='fr'?'EXTÉRIEUR':lang==='es'?'VISITANTE':lang==='pt'?'FORA':lang==='it'?'TRASFERTA':lang==='de'?'GAST':'AWAY')
               ),
 
               // Matches by date
