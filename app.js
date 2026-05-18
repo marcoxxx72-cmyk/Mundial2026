@@ -2059,7 +2059,7 @@ function App(){
       // ── TAB 8 - PENALTY GAME ──────────────────────────────────
       tab===8?e('div',{style:{paddingBottom:16}},
         e('div',{style:{textAlign:'center',marginBottom:10}},
-          e('div',{style:{fontSize:13,fontWeight:'bold',color:G,letterSpacing:1}},'⚽ PENALTY GAME'),
+          e('div',{style:{fontSize:13,fontWeight:'bold',color:G,letterSpacing:1}},(lang==='fr'?'⚽ JEU DE PENALTY':lang==='es'?'⚽ JUEGO DE PENALES':lang==='pt'?'⚽ JOGO DE PENALTIS':lang==='it'?'⚽ RIGORI':lang==='de'?'⚽ ELFMETERSCHIESSEN':'⚽ PENALTY GAME')),
           e('div',{style:{fontSize:10,color:'#6a86a0',marginTop:3}},
             lang==='fr'?'5 tirs - Battez Higuita !':lang==='es'?'5 penaltis - Vence a Higuita !':lang==='pt'?'5 penaltis - Venca Higuita !':lang==='it'?'5 rigori - Batti Higuita !':lang==='de'?'5 Elfmeter - Bezwinge Higuita !':'5 penalties - Beat Higuita!'
           )
@@ -2067,15 +2067,15 @@ function App(){
         e('div',{style:{display:'flex',justifyContent:'center',gap:10,marginBottom:10}},
           e('div',{style:{textAlign:'center',background:'rgba(40,160,40,0.2)',border:'1px solid rgba(40,200,40,0.4)',borderRadius:10,padding:'7px 14px'}},
             e('div',{style:{fontSize:20,fontWeight:'bold',color:'#90ee90'}},'⚽ ',gameScore),
-            e('div',{style:{fontSize:9,color:'#6a86a0'}},'GOALS')
+            e('div',{style:{fontSize:9,color:'#6a86a0'}},lang==='fr'?'BUTS':lang==='es'?'GOLES':lang==='pt'?'GOLOS':lang==='it'?'GOL':lang==='de'?'TORE':'GOALS')
           ),
           e('div',{style:{textAlign:'center',background:'rgba(212,175,55,0.1)',border:'1px solid '+G,borderRadius:10,padding:'7px 14px'}},
             e('div',{style:{fontSize:20,fontWeight:'bold',color:G}},shotsLeft),
-            e('div',{style:{fontSize:9,color:'#6a86a0'}},'LEFT')
+            e('div',{style:{fontSize:9,color:'#6a86a0'}},lang==='fr'?'RESTANTS':lang==='es'?'RESTANTES':lang==='pt'?'RESTANTES':lang==='it'?'RIMASTI':lang==='de'?'VERBLEIBEND':'LEFT')
           ),
           e('div',{style:{textAlign:'center',background:'rgba(200,40,40,0.2)',border:'1px solid rgba(200,60,60,0.4)',borderRadius:10,padding:'7px 14px'}},
             e('div',{style:{fontSize:20,fontWeight:'bold',color:'#ff8888'}},'✗ ',gameMiss),
-            e('div',{style:{fontSize:9,color:'#6a86a0'}},'SAVED')
+            e('div',{style:{fontSize:9,color:'#6a86a0'}},lang==='fr'?'ARRÊTÉS':lang==='es'?'PARADOS':lang==='pt'?'DEFENDIDOS':lang==='it'?'PARATI':lang==='de'?'GEHALTEN':'SAVED')
           )
         ),
         e('div',{style:{display:'flex',justifyContent:'center',gap:5,marginBottom:10}},
@@ -2326,15 +2326,15 @@ function App(){
           e('div',{style:{display:'flex',justifyContent:'center',gap:10,marginBottom:10}},
             e('div',{style:{textAlign:'center',background:'linear-gradient(135deg,rgba(40,160,40,0.3),rgba(40,200,40,0.1))',border:'1px solid rgba(40,200,40,0.5)',borderRadius:10,padding:'8px 14px',boxShadow:'0 0 10px rgba(40,200,40,0.1)'}},
               e('div',{style:{fontSize:22,fontWeight:'bold',color:'#90ee90'}},'⚽ ',gameScore),
-              e('div',{style:{fontSize:9,color:'#6a86a0'}},'GOALS')
+              e('div',{style:{fontSize:9,color:'#6a86a0'}},lang==='fr'?'BUTS':lang==='es'?'GOLES':lang==='pt'?'GOLOS':lang==='it'?'GOL':lang==='de'?'TORE':'GOALS')
             ),
             e('div',{style:{textAlign:'center',background:'linear-gradient(135deg,rgba(212,175,55,0.2),rgba(184,150,62,0.05))',border:'1px solid '+G,borderRadius:10,padding:'8px 14px'}},
               e('div',{style:{fontSize:22,fontWeight:'bold',color:G}},shotsLeft),
-              e('div',{style:{fontSize:9,color:'#6a86a0'}},'LEFT')
+              e('div',{style:{fontSize:9,color:'#6a86a0'}},lang==='fr'?'RESTANTS':lang==='es'?'RESTANTES':lang==='pt'?'RESTANTES':lang==='it'?'RIMASTI':lang==='de'?'VERBLEIBEND':'LEFT')
             ),
             e('div',{style:{textAlign:'center',background:'linear-gradient(135deg,rgba(200,40,40,0.3),rgba(200,60,60,0.1))',border:'1px solid rgba(200,60,60,0.5)',borderRadius:10,padding:'8px 14px'}},
               e('div',{style:{fontSize:22,fontWeight:'bold',color:'#ff8888'}},'✗ ',gameMiss),
-              e('div',{style:{fontSize:9,color:'#6a86a0'}},'SAVED')
+              e('div',{style:{fontSize:9,color:'#6a86a0'}},lang==='fr'?'ARRÊTÉS':lang==='es'?'PARADOS':lang==='pt'?'DEFENDIDOS':lang==='it'?'PARATI':lang==='de'?'GEHALTEN':'SAVED')
             )
           ),
 
@@ -2408,7 +2408,7 @@ function App(){
       // ── TAB 4 - QUIZ CHAMPIONSHIP ─────────────────────────────
       tab===4?e('div',null,
         e('div',{style:{textAlign:'center',marginBottom:14}},
-          e('div',{style:{fontSize:14,fontWeight:'bold',color:G,letterSpacing:2}},'🏆 QUIZ CHAMPIONSHIP'),
+          e('div',{style:{fontSize:14,fontWeight:'bold',color:G,letterSpacing:2}},(lang==='fr'?'🏆 QUIZ CHAMPIONNAT':lang==='es'?'🏆 QUIZ CAMPEONATO':lang==='pt'?'🏆 QUIZ CAMPEONATO':lang==='it'?'🏆 QUIZ CAMPIONATO':lang==='de'?'🏆 QUIZ MEISTERSCHAFT':'🏆 QUIZ CHAMPIONSHIP')),
           e('div',{style:{fontSize:10,color:'#6a86a0',marginTop:3}},
             lang==='fr'?'30 questions sur l histoire de la Coupe du Monde !':
             lang==='es'?'30 preguntas sobre la historia del Mundial !':
@@ -2674,7 +2674,7 @@ function App(){
 
             // HEADER
             e('div',{style:{textAlign:'center',marginBottom:10}},
-              e('div',{style:{fontSize:13,fontWeight:'bold',color:'#d4af37',letterSpacing:2}},'⭐ FANTASY WORLD CUP'),
+              e('div',{style:{fontSize:13,fontWeight:'bold',color:'#d4af37',letterSpacing:2}},(lang==='fr'?'⭐ FANTASY COUPE DU MONDE':lang==='es'?'⭐ FANTASY COPA MUNDIAL':lang==='pt'?'⭐ FANTASY COPA DO MUNDO':lang==='it'?'⭐ FANTASY COPPA DEL MONDO':lang==='de'?'⭐ FANTASY WELTMEISTERSCHAFT':'⭐ FANTASY WORLD CUP')),
               e('div',{style:{fontSize:10,color:'#6a86a0',marginTop:2}},
                 lang==='fr'?'Composez votre equipe de reve !':
                 lang==='es'?'Compone tu equipo de suenos !':
@@ -3017,7 +3017,7 @@ function App(){
                     ),
                     e('div',{style:{textAlign:'center',background:'rgba(40,160,40,0.1)',borderRadius:8,padding:8}},
                       e('div',{style:{fontSize:16,fontWeight:'bold',color:'#90ee90'}},leg.goals),
-                      e('div',{style:{fontSize:9,color:'#6a86a0'}},'GOALS')
+                      e('div',{style:{fontSize:9,color:'#6a86a0'}},lang==='fr'?'BUTS':lang==='es'?'GOLES':lang==='pt'?'GOLOS':lang==='it'?'GOL':lang==='de'?'TORE':'GOALS')
                     ),
                     e('div',{style:{textAlign:'center',background:'rgba(255,150,0,0.1)',borderRadius:8,padding:8}},
                       e('div',{style:{fontSize:16,fontWeight:'bold',color:'orange'}},leg.wc),
