@@ -1,4 +1,7 @@
-// Service worker - clears all caches and unregisters
+// OneSignal Service Worker
+importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js');
+
+// Clear caches
 self.addEventListener('install', function() { self.skipWaiting(); });
 self.addEventListener('activate', function(e) {
   e.waitUntil(
