@@ -1568,6 +1568,28 @@ function App(){
 
       // - HOME -
       tab===0?e('div',null,
+        // Notification button
+        e('button',{onClick:function(){
+          if(window.OneSignal){
+            window.OneSignal.push(function(){
+              window.OneSignal.showNativePrompt();
+            });
+          }
+        },style:{
+          background:'linear-gradient(135deg,#1565c0,#42a5f5)',
+          border:'none',borderRadius:10,padding:'10px 16px',
+          fontSize:11,fontWeight:'bold',color:'#fff',
+          cursor:'pointer',marginBottom:10,width:'100%',
+          display:'flex',alignItems:'center',justifyContent:'center',gap:6
+        }},
+        '🔔 '+(lang==='fr'?'Activer les notifications':
+                lang==='es'?'Activar notificaciones':
+                lang==='pt'?'Ativar notificações':
+                lang==='de'?'Benachrichtigungen aktivieren':
+                lang==='it'?'Attiva notifiche':
+                'Enable notifications')
+        ),
+
         // Pick your team banner
         e('div',{style:{background:'linear-gradient(135deg,rgba(212,175,55,0.15),rgba(184,150,62,0.08))',border:'1px solid '+G,borderRadius:14,padding:'12px 16px',marginBottom:13,display:'flex',justifyContent:'space-between',alignItems:'center'}},
           e('div',null,
